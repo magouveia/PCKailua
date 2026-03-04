@@ -159,12 +159,12 @@ const TreeNode: React.FC<{ node: OrgNodeData; depth?: number }> = ({ node, depth
               
               if (Array.isArray(roleItem)) {
                 return (
-                  <div key={idx} className="flex flex-row justify-center gap-2 relative">
+                  <div key={idx} className="flex flex-row justify-center gap-4 relative">
                     {idx > 0 && <div className="w-px h-2 bg-brand-stone/30 absolute -top-2 left-1/2 -translate-x-1/2"></div>}
                     {roleItem.map((role, rIdx) => (
                       <div key={rIdx} className="flex flex-col items-center relative">
                         {rIdx > 0 && <div className="w-px h-full bg-brand-stone/30 absolute -left-2 top-0"></div>}
-                        <span className={`text-xs text-center leading-tight ${idx === 0 && rIdx === 0 ? 'font-bold text-brand-dark' : 'text-brand-stone font-medium'}`}>
+                        <span className={`text-xs text-center leading-tight ${idx === 0 ? 'font-bold text-brand-dark' : 'text-brand-stone font-medium'}`}>
                           {role}
                         </span>
                       </div>
