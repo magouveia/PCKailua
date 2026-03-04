@@ -48,7 +48,7 @@ export const hardcodedSlides: Slide[] = [
     title: "Como Funciona a Progressão Salarial",
     content: [
       "Atualização Anual | BASE ESTRUTURAL | Garante que a remuneração acompanha a evolução do mercado e o custo de vida. | Indexada ao SMN ou inflação anual. | Condicionada ao atingimento de um EBITDA mínimo definido pela empresa. | Aplicável a todos (exceto avaliação Insatisfatória).",
-      "Fim de Nível | MÉRITO & DESEMPENHO | Percentuais de aumento aplicados ao concluir o tempo de permanência no nível: | Bom: +0,5% (Horizontal) | Muito Bom: +2% (Vertical) | Excelente: +4% (Vertical Acelerada)",
+      "Fim de Nível | MÉRITO & DESEMPENHO | Percentuais de aumento aplicados ao concluir o tempo de permanência no nível: | Bom: +0,5% (Horizontal) | Muito Bom: +2% (Vertical) | Excelente: +4% (Vertical Acelerada com avaliações de Excelente durante os anos de um nível)",
       "Aceleração | PERFORMANCE EXCECIONAL | Mecanismo de 'Fast Track' para talentos de alto rendimento. | Critério: Avaliações 'Excelente' em todos os anos do nível atual. | Benefício: Encurtamento do tempo mínimo no nível seguinte. | Exemplo: Redução de 24 para 12 meses."
     ],
     layout: "salary-progression",

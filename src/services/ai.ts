@@ -41,7 +41,7 @@ export const generateSlides = async (text: string): Promise<Slide[]> => {
        - Title: "Como Funciona a Progressão Salarial"
        - Content array MUST have exactly 3 items corresponding to the 3 cards:
          - Item 1: "Atualização Anual | BASE ESTRUTURAL | Garante que a remuneração acompanha a evolução do mercado e o custo de vida. | Indexada ao SMN ou inflação anual. | Condicionada ao atingimento de um EBITDA mínimo definido pela empresa. | Aplicável a todos (exceto avaliação Insatisfatória)."
-         - Item 2: "Fim de Nível | MÉRITO & DESEMPENHO | Percentuais de aumento aplicados ao concluir o tempo de permanência no nível: | Bom:+0,5% Horizontal | Muito Bom:+2% Vertical | Excelente:+4% Vertical Acelerada"
+         - Item 2: "Fim de Nível | MÉRITO & DESEMPENHO | Percentuais de aumento aplicados ao concluir o tempo de permanência no nível: | Bom:+0,5% Horizontal | Muito Bom:+2% Vertical | Excelente:+4% Vertical Acelerada com avaliações de Excelente durante os anos de um nível"
          - Item 3: "Aceleração | PERFORMANCE EXCECIONAL | Mecanismo de 'Fast Track' para talentos de alto rendimento. | Critério: Avaliações 'Excelente' em todos os anos do nível atual. | Benefício: Encurtamento do tempo mínimo no nível seguinte. | Exemplo: Redução de 24 para 12 meses."
     6. Follow with the rest of the content (Rules, Career Paths, etc.) using appropriate layouts ('content', 'section', 'quote').
 
