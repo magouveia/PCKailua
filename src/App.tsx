@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Slide } from './services/ai';
 import { hardcodedSlides } from './data/slides';
 import { PresentationView } from './components/PresentationView';
+import { HomeView } from './components/HomeView';
+import { OrganogramView } from './components/OrganogramView';
 import { Loader2 } from 'lucide-react';
+
+type ViewState = 'home' | 'career' | 'organogram';
 
 function App() {
   const [slides, setSlides] = useState<Slide[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentView, setCurrentView] = useState<ViewState>('home');
 
   useEffect(() => {
     // Load slides immediately without artificial delay
@@ -24,7 +29,14 @@ function App() {
     );
   }
 
-  return <PresentationView slides={slides} onClose={() => {}} />;
+  switch (currentView) {
+    case 'career':
+      return <PresentationView slides={slides} onClose={() => setCurrentView('home')} />;
+    case 'organogram':
+      return <OrganogramView onBack={() => setCurrentView('home')} />;
+    default:
+      return <HomeView onNavigate={(view) => setCurrentView(view)} />;
+  }
 }
 
 export default App;

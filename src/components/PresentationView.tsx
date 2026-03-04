@@ -708,6 +708,9 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
     <div className="fixed inset-0 z-50 bg-brand-dark flex flex-col">
       {/* Controls */}
       <div className="absolute top-4 right-4 z-50 flex gap-2 opacity-0 hover:opacity-100 transition-opacity">
+        <button onClick={onClose} className="p-2 bg-brand-dark/10 text-brand-dark rounded-full hover:bg-brand-dark/20" title="Fechar Apresentação">
+          <X size={20} />
+        </button>
         <button onClick={handleShare} className="p-2 bg-brand-dark/10 text-brand-dark rounded-full hover:bg-brand-dark/20" title="Partilhar Link">
           <Share2 size={20} />
         </button>
