@@ -736,10 +736,8 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
             <BackgroundElements />
             {renderContent()}
             
-            {/* Footer / Page Number */}
-            <div className="absolute bottom-8 left-8 text-brand-stone/50 font-sans text-xs tracking-widest">
-              {currentSlideIndex + 1} — {slides.length}
-            </div>
+            {/* Footer / Page Number - Removed as per request */}
+
           </motion.div>
         </AnimatePresence>
       </div>
