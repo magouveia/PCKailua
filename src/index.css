@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #f1e7dd;
+  --color-brand-dark: #26211c;
+  --color-brand-gray: #9e948d;
+  --color-brand-tan: #c49874;
+  --color-brand-stone: #7c746c;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(var(--color-brand-gray) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center;
+  opacity: 0.3;
+}
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+  
+  body {
+    background: white;
+  }
+
+  /* Hide everything by default */
+  body > * {
+    display: none !important;
+  }
+
+  /* Only show the print container */
+  #print-container {
+    display: block !important;
+  }
+
+  .print-slide {
+    break-after: page;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--color-brand-cream) !important;
+    color: var(--color-brand-dark) !important;
+    border: none !important;
+  }
+}
