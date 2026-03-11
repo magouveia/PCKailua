@@ -183,7 +183,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               <span className="text-brand-stone uppercase tracking-widest text-sm">ESCALA DE DESEMPENHO</span>
             </div>
 
-            <div className={`grid grid-cols-1 ${currentSlide.content.length === 4 ? 'md:grid-cols-4' : 'md:grid-cols-5'} gap-4 h-full`}>
+            <div className={`grid grid-cols-1 ${currentSlide.content.length === 4 ? 'md:grid-cols-4' : 'md:grid-cols-5'} gap-4 mb-8`}>
               {currentSlide.content.map((item, i) => {
                 // Parse content: "Title | Subtitle | Description | Consequence"
                 const parts = item.split('|').map(s => s.trim());
@@ -198,7 +198,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * i }}
-                    className="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full border-t-4 border-transparent relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+                    className="bg-white rounded-xl shadow-lg p-6 flex flex-col border-t-4 border-transparent relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
                     style={{ borderTopColor: i === 0 ? '#ef4444' : i === 1 ? '#eab308' : i === 2 ? '#22c55e' : i === 3 ? '#3b82f6' : '#d97706' }}
                   >
                     <div className={`w-12 h-12 rounded-full ${getCardColor(i)} flex items-center justify-center mb-4 shadow-md`}>
@@ -217,6 +217,18 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                   </motion.div>
                 );
               })}
+            </div>
+            
+            <div className="bg-brand-stone/5 border border-brand-stone/10 rounded-xl p-6 mt-auto">
+              <h4 className="text-brand-dark font-bold mb-2 flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-brand-tan/20 flex items-center justify-center text-brand-tan">
+                  <span className="text-xs">i</span>
+                </div>
+                Nota Importante
+              </h4>
+              <p className="text-brand-stone text-sm leading-relaxed">
+                {currentSlide.notes || "Insira aqui o texto adicional sobre os critérios de avaliação."}
+              </p>
             </div>
             
             <div className="mt-6 flex justify-between items-center text-xs text-brand-stone/60 font-sans">
