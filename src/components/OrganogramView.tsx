@@ -67,7 +67,7 @@ export const OrganogramView: React.FC<OrganogramViewProps> = ({ onBack }) => {
             style={{ transform: `scale(${scale})` }}
           >
             <img 
-              src="https://imgur.com/HWTRg7y.png" 
+              src="https://imgur.com/b1Vfh4j.png" 
               alt="Organograma" 
               className="max-w-none shadow-xl rounded-xl"
               referrerPolicy="no-referrer"
