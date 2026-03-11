@@ -74,8 +74,8 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
       case 0: return <ThumbsDown className="text-white" size={24} />;
       case 1: return <AlertTriangle className="text-white" size={24} />;
       case 2: return <CheckCircle className="text-white" size={24} />;
-      case 3: return <TrendingUp className="text-white" size={24} />;
-      case 4: return <Star className="text-white" size={24} />;
+      case 3: return <Star className="text-white" size={24} />;
+      case 4: return <TrendingUp className="text-white" size={24} />;
       default: return <CheckCircle className="text-white" size={24} />;
     }
   };
@@ -183,7 +183,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               <span className="text-brand-stone uppercase tracking-widest text-sm">ESCALA DE DESEMPENHO</span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 h-full">
+            <div className={`grid grid-cols-1 ${currentSlide.content.length === 4 ? 'md:grid-cols-4' : 'md:grid-cols-5'} gap-4 h-full`}>
               {currentSlide.content.map((item, i) => {
                 // Parse content: "Title | Subtitle | Description | Consequence"
                 const parts = item.split('|').map(s => s.trim());

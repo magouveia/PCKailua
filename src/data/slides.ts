@@ -34,14 +34,13 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-3",
     title: "Critérios de Avaliação",
     content: [
-      "Insatisfatório | ABAIXO DO MÍNIMO | Não corresponde às expectativas da função. | Não elegível para progressão. Análise de saída.",
-      "Satisfatório | NECESSITA MELHORIA | Abaixo das expectativas em alguns aspetos. | Mantém função/nível. Plano de melhoria obrigatório.",
-      "Bom | CUMPRE REQUISITOS | Corresponde às expectativas. | Condição mínima para permanência. Plano de melhoria.",
-      "Muito Bom | SUPERA EXPECTATIVAS | Acima das expectativas. | Elegível para progressão vertical (mudança de função/nível).",
-      "Excelente | EXCECIONAL | Excede largamente as expectativas. | Elegível para progressão vertical e acelerada."
+      "Incumpridor | ABAIXO DO MÍNIMO | Não elegível para progressão funcional ou salarial. | Análise de opções para cessação de contrato.",
+      "Cumpridor | CONDIÇÃO MÍNIMA | Condição mínima para permanência na função. Não permite progressão de carreira. | Deve ser definido um plano de melhoria com acompanhamento.",
+      "Bom | ELEGÍVEL | Elegível para progressão vertical (mudança de função e nível). | Desde que o tempo mínimo indicativo no nível esteja cumprido e exista vaga.",
+      "Excelente | PROGRESSÃO ACELERADA | Elegível para progressão vertical (mudança de função e nível), desde que o tempo mínimo indicativo no nível esteja cumprido e exista vaga. | Permite progressão acelerada."
     ],
     layout: "cards",
-    notes: "A nossa escala de avaliação tem 5 níveis. É fundamental perceber que a progressão só é possível a partir do nível 'Muito Bom'. O nível 'Bom' garante a permanência, mas não a subida."
+    notes: "A nossa escala de avaliação tem 4 níveis. É fundamental perceber que a progressão só é possível a partir do nível 'Bom'. O nível 'Cumpridor' garante a permanência, mas não a subida."
   },
   {
     id: "slide-4",
