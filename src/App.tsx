@@ -4,9 +4,10 @@ import { hardcodedSlides } from './data/slides';
 import { PresentationView } from './components/PresentationView';
 import { HomeView } from './components/HomeView';
 import { OrganogramView } from './components/OrganogramView';
+import { JobDescriptionsView } from './components/JobDescriptionsView';
 import { Loader2 } from 'lucide-react';
 
-type ViewState = 'home' | 'career' | 'organogram';
+type ViewState = 'home' | 'career' | 'organogram' | 'job-descriptions';
 
 function App() {
   const [slides, setSlides] = useState<Slide[]>([]);
@@ -34,6 +35,8 @@ function App() {
       return <PresentationView slides={slides} onClose={() => setCurrentView('home')} />;
     case 'organogram':
       return <OrganogramView onBack={() => setCurrentView('home')} />;
+    case 'job-descriptions':
+      return <JobDescriptionsView onBack={() => setCurrentView('home')} />;
     default:
       return <HomeView onNavigate={(view) => setCurrentView(view)} />;
   }

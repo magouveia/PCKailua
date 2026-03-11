@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Slide } from '../services/ai';
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles, ArrowLeft } from 'lucide-react';
 
 // ... (existing code)
 
@@ -706,8 +706,19 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
 
   return (
     <div className="fixed inset-0 z-50 bg-brand-dark flex flex-col">
+      {/* Top Left Back Button */}
+      <div className="absolute top-4 left-4 z-50">
+        <button 
+          onClick={onClose} 
+          className="flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full hover:bg-white/20 transition-colors backdrop-blur-sm border border-white/10"
+        >
+          <ArrowLeft size={18} />
+          <span className="font-medium text-sm tracking-wide">Voltar ao Início</span>
+        </button>
+      </div>
+
       {/* Controls */}
-      <div className="absolute top-4 right-4 z-50 flex gap-2 opacity-0 hover:opacity-100 transition-opacity">
+      <div className="absolute top-4 right-4 z-50 flex gap-2">
         <button onClick={onClose} className="p-2 bg-brand-dark/10 text-brand-dark rounded-full hover:bg-brand-dark/20" title="Fechar Apresentação">
           <X size={20} />
         </button>
