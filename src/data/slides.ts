@@ -34,37 +34,39 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-3",
     title: "Critérios de Avaliação",
     content: [
-      "Incumpridor | ABAIXO DO MÍNIMO | Não elegível para progressão funcional ou salarial. | Análise de opções para cessação de contrato.",
-      "Cumpridor | CONDIÇÃO MÍNIMA | Condição mínima para permanência na função. Não permite progressão de carreira. | Deve ser definido um plano de melhoria com acompanhamento.",
-      "Bom | ELEGÍVEL | Elegível para progressão vertical (mudança de função e nível). | Desde que o tempo mínimo indicativo no nível esteja cumprido e exista vaga.",
-      "Excelente | PROGRESSÃO ACELERADA | Elegível para progressão vertical (mudança de função e nível), desde que o tempo mínimo indicativo no nível esteja cumprido e exista vaga. | Permite progressão acelerada."
+      "Incumpridor | ABAIXO DO MÍNIMO | Não elegível para progressão funcional ou salarial.\n\nAnálise de opções para cessação de contrato.",
+      "Cumpridor | CONDIÇÃO MÍNIMA | Não permite progressão de carreira.\n\nDefinição de um plano de melhoria com acompanhamento.",
+      "Bom | Elegível para Progressão | Permite a progressão vertical (mudança de função e nível).\n\nTempo mínimo no nível cumprido.\n\nExistência de vaga.",
+      "Excelente | Elegível para progressão acelerada | Permite a progressão vertical acelerada (mudança de função e nível).\n\nTempo mínimo no nível cumprido.\n\nExistência de vaga."
     ],
     layout: "cards",
     notes: "A nossa escala de avaliação tem 4 níveis. É fundamental perceber que a progressão só é possível a partir do nível 'Bom'. O nível 'Cumpridor' garante a permanência, mas não a subida."
   },
   {
     id: "slide-4",
-    title: "Como Funciona a Progressão Salarial",
-    content: [
-      "Atualização Anual | BASE ESTRUTURAL | Garante que a remuneração acompanha a evolução do mercado e o custo de vida. | Indexada ao SMN ou inflação anual. | Condicionada ao atingimento de um EBITDA mínimo definido pela empresa. | Aplicável a todos (exceto avaliação Insatisfatória).",
-      "Fim de Nível | MÉRITO & DESEMPENHO | Percentuais de aumento aplicados ao concluir o tempo de permanência no nível: | Bom: +0,5% (Horizontal) | Muito Bom: +2% (Vertical) | Excelente: +4% (Vertical Acelerada com avaliações de Excelente durante os anos de um nível)",
-      "Aceleração | PERFORMANCE EXCECIONAL | Mecanismo de 'Fast Track' para talentos de alto rendimento. | Critério: Avaliações 'Excelente' em todos os anos do nível atual. | Benefício: Encurtamento do tempo mínimo no nível seguinte. | Exemplo: Redução de 24 para 12 meses."
-    ],
-    layout: "salary-progression",
-    notes: "A evolução salarial assenta em três pilares: a atualização anual para todos (baseada no SMN/Inflação e EBITDA), os aumentos por mérito no fim de cada nível, e a via verde para talentos excecionais."
-  },
-  {
-    id: "slide-5",
     title: "Condições e Regras de Aplicação",
     content: [
-      "Condição de Vaga | DISPONIBILIDADE | A progressão não é automática; depende estritamente da existência de vaga disponível na estrutura organizacional.",
-      "Regra de Coerência | LIMITES SALARIAIS | O vencimento base não pode ultrapassar o mínimo do nível seguinte. | Benefício: Ao atingir o teto: +1 dia de férias por 'fim de nível'.",
-      "Regra de Consistência | BLOQUEIO | O desempenho consistente é obrigatório. | Penalização: Avaliações 'Insatisfatório' ou 'Satisfatório' bloqueiam a progressão por +1 ano.",
-      "Topo de Carreira | DIRETOR R&B | Teto salarial fixo definido para a função máxima. | Prémio Variável: 5% do EBITDA excedente (se avaliação Excelente).",
-      "Mobilidade | FLEXIBILIDADE | A mobilidade entre empresas do grupo é possível e incentivada, conforme a necessidade operacional e perfil do colaborador."
+      "Condição de Vaga | DISPONIBILIDADE | A progressão não é automática, depende de vaga.\n\nNa ausência de vaga, mantém o nível e função e fica sinalizado para futura progressão. | Contrapartida: Se atingir o teto máximo do nível, por cada fim de nível, beneficiará da atualização salarial alinhada com a evolução do SMN + 1 dia de férias.",
+      "Regra de Coerência | DESEMPENHO CONSISTENTE | A progressão não ocorre pela inexistência de interesse em progredir. | Contrapartida: Se atingir o teto máximo do nível, por cada fim de nível, beneficiará da atualização salarial alinhada com a evolução do SMN + 0,5 dia de férias.",
+      "Regra de Consistência | BLOQUEIO | A progressão exige consistência, não apenas um pico de desempenho no final de nível. | Penalização: Com 1 avaliação Incumpridor e/ou 2 Cumpridor dentro de um nível, bloqueia a progressão mais 1 ano no nível.",
+      "Mobilidade | FLEXIBILIDADE | A mobilidade entre empresas do grupo é possível e incentivada, conforme a necessidade operacional e perfil do colaborador.",
+      "Acesso à Liderança/Direção | RECRUTAMENTO ESPECÍFICO | O acesso a estas funções depende de:\n✓ Avaliação de desempenho\n✓ Aprovação em Processo Interno de recrutamento especifico"
     ],
     layout: "rules",
     notes: "Estas são as regras de ouro. Destaco a dependência de vagas e a possibilidade de mobilidade entre empresas do grupo, o que aumenta as vossas oportunidades."
+  },
+  {
+    id: "slide-5",
+    title: "Como Funciona a Progressão Salarial",
+    content: [
+      "Atualização Estrutural | Base Estrutural para regra | Atualização salarial anual alinhada com a evolução do SMN. | Condicionada à sustentabilidade financeira da empresa. | Indexada à inflação anual na inexistência de atualização do SMN. | Aplicável a todos (exceto avaliação Incumpridor).",
+      "Fim de Nível | MÉRITO & DESEMPENHO | Percentuais de aumento aplicados ao concluir o tempo de permanência no nível: | Cumpridor: +1% (Horizontal) | Bom: +4% (Vertical) | Excelente: +8% (Vertical)* | * É permitida a atualização salarial anual com base no desempenho em qualquer avaliação anual Excelente. No entanto, com exceção do fim de nivel, é necessária a validação da Liderança Superior.",
+      "Aceleração | PERFORMANCE EXCECIONAL | Mecanismo de 'Fast Track' para talentos de alto rendimento. | ✓ Avaliações 'Excelente' em todos os anos de um nível. | Benefício: Encurtamento do tempo mínimo no nível seguinte. | Exemplo: Redução de 24 para 12 meses.",
+      "Topo de Carreira | DIRETOR R&B | Teto salarial fixo definido para a função máxima. | Prémio Variável: 5% do EBITDA excedente (se avaliação Excelente).",
+      "Revisão do Sistema | MELHORIA CONTÍNUA | O modelo de progressão é avaliado periodicamente para garantir a sua sustentabilidade e adequação ao mercado."
+    ],
+    layout: "salary-progression",
+    notes: "A evolução salarial assenta em três pilares: a atualização anual para todos (baseada no SMN/Inflação e EBITDA), os aumentos por mérito no fim de cada nível, e a via verde para talentos excecionais."
   },
   {
     id: "slide-6",
