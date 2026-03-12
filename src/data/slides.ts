@@ -97,7 +97,7 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-9",
     title: "COPA",
     content: [
-      "Entrada típica (nível II) Copeiro",
+      "Entrada típica (nível II) Copeiro Júnior",
       "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
       "Entrada | Copeiro Júnior (até dois anos) | II | 2 anos | 0–2 anos | 923€ - 1023€",
       "Consolidação | Copeiro Sénior (mais de dois anos) | III | 2 anos | 2–4 anos | 926€ - 1026€",
@@ -131,7 +131,7 @@ export const hardcodedSlides: Slide[] = [
       "Consolidação | Carpinteiro em geral de 2ª | V | 1 ano | 1-2 anos | 936€ - 1186€",
       "Profissionalização | Carpinteiro em geral de 1ª | VI | 3 anos | 2–5 anos | 952€ - 1302€",
       "Coordenação | Chefe de manutenção | VIII | 3 anos | 5–8 anos | 926€ - 1026€",
-      "Liderança | Chefe de manutenção, conservação e serviços técnicos | IX | (... 3 anos...) | +8 anos | 1136€ - 1961€"
+      "Liderança | Chefe de manutenção, conservação e serviços técnicos | IX | (...) | +8 anos | 1136€ - 1961€"
     ],
     layout: "table",
     notes: "A manutenção exige conhecimentos técnicos especializados que evoluem com a experiência."
@@ -196,7 +196,7 @@ export const hardcodedSlides: Slide[] = [
       "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
       "Entrada e Consolidação | Controlador-caixa | V | 2 anos | 0-2 anos | 936€ - 1186€",
       "Profissionalização | Controlador | VII | 2 anos | 2-4 anos | 974€ - 1424€",
-      "Liderança | Chefe de Controlo | VIII | ... | +4 anos | 1028€ - 1628€"
+      "Liderança | Chefe de Controlo | VIII | (...) | +4 anos | 1028€ - 1628€"
     ],
     layout: "table",
     notes: "A carreira de controlo foca-se no suporte e auditoria das operações."
@@ -208,10 +208,10 @@ export const hardcodedSlides: Slide[] = [
       "Entrada típica (nível III) Ajudante de todas as secções | Estagiário de restauração e bebidas",
       "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
       "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano | 926€ - 1026€",
-      "Consolidação | Assistente de vendas de 2ª / Rececionista de 2ª | VI | 2 anos | 1-3 anos | 952€ - 1302€",
-      "Profissionalização | Assistente de vendas de 1ª / Rececionista de 1ª | VII | 2 anos | 3–5 anos | 974€ - 1424€",
-      "Coordenação | Subgerente (Comercial) | VII | 2 anos | 5–7 anos | 974€ - 1424€",
-      "Liderança | Gerente (Comercial) | VIII | 2 anos | 7-9 anos | 1028€ - 1628€"
+      "Consolidação | Assistente de vendas de 2ª\nRececionista de 2ª | VI | 2 anos | 1-3 anos | 952€ - 1302€",
+      "Profissionalização | Assistente de vendas de 1ª\nRececionista de 1ª | VII | 2 anos | 3–5 anos | 974€ - 1424€",
+      "Coordenação | Subgerente | VII | 2 anos | 5–7 anos | 974€ - 1424€",
+      "Liderança | Gerente | VIII | 2 anos | 7-9 anos | 1028€ - 1628€"
     ],
     layout: "table",
     notes: "A carreira de felicidade combina competências de vendas, acolhimento e gestão, com um percurso claro até à gerência."
@@ -223,7 +223,7 @@ export const hardcodedSlides: Slide[] = [
       "Entrada típica (nível X) Assistente de Direção",
       "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
       "Subdireção | Assistente de Direção | X | 5 anos | 1-5 anos | 1364€ - 2489€",
-      "Direção | Diretor de Restauração e Bebidas | XI | … | +5 anos | 1431€ - 3006€"
+      "Direção | Diretor de Restauração e Bebidas | XI | (...) | +5 anos | 1431€ - 3006€"
     ],
     layout: "table",
     notes: "A direção operacional representa o topo da carreira, com foco estratégico e de liderança."
@@ -238,7 +238,7 @@ export const hardcodedSlides: Slide[] = [
       "Consolidação | Escriturário de 2ª | VI | 2 anos | 2-4 anos | 952€ - 1302€",
       "Especialização | Escriturário de 1ª | VII | 2 anos | 4-6 anos | 974€ - 1424€",
       "Coordenação | Chefe de Secção | VIII | 2 anos | 6-8 anos | 1028€ - 1628€",
-      "Direção | Diretor de Serviços (Administrativos e Financeiros) / Diretor de Serviços Técnicos (Recursos Humanos) | X | ... | +8 anos | 1364€ - 2489€"
+      "Direção | Diretor de Serviços (Administrativos e Financeiros)\nDiretor de Serviços Técnicos (Recursos Humanos) | X | (...) | +8 anos | 1364€ - 2489€"
     ],
     layout: "table",
     notes: "A direção corporativa foca-se na gestão financeira, administrativa e de recursos humanos."
@@ -247,7 +247,7 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-19",
     title: "Mensagem Final",
     content: [
-      "\"Todos progridem com o tempo. Os melhores progridem mais depressa.\""
+      "Quando todos sabemos para onde ir e o que é esperado, tornamo-nos mais fortes.\nA partir daqui, o crescimento passa a depender do compromisso e empenho de cada um!"
     ],
     layout: "quote",
     notes: "O nosso sistema é justo: garante evolução a quem cumpre, e acelera a quem supera. O vosso crescimento está nas vossas mãos."

@@ -680,7 +680,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                <motion.h2 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-3xl md:text-4xl font-serif font-bold text-brand-dark uppercase"
+                className="text-2xl md:text-3xl font-serif font-bold text-brand-dark uppercase"
               >
                 {currentSlide.title}
               </motion.h2>
@@ -693,12 +693,12 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-6 bg-brand-cream/50 p-4 rounded-lg border border-brand-tan/20"
+                className="mb-4 bg-brand-cream/50 p-3 rounded-lg border border-brand-tan/20"
               >
-                <div className="text-xs font-bold text-brand-tan uppercase tracking-wider mb-1">
+                <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-1">
                   {currentSlide.content[0].split(':')[0]}
                 </div>
-                <div className="text-brand-dark font-medium flex gap-4">
+                <div className="text-brand-dark text-sm font-medium flex gap-4">
                   {currentSlide.content[0].split(':')[1]?.split('|').map((part, i) => (
                     <div key={i} className="flex items-center gap-2">
                       {i > 0 && <div className="w-1 h-1 rounded-full bg-brand-tan"></div>}
@@ -710,9 +710,9 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
             )}
 
             {/* Table */}
-            <div className="flex-1 overflow-hidden bg-white rounded-xl shadow-lg border border-gray-100 flex flex-col">
+            <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-gray-100 flex flex-col min-h-0">
               {/* Header */}
-              <div className="bg-brand-dark text-white grid grid-cols-12 gap-4 p-4 text-xs font-bold uppercase tracking-wider">
+              <div className="bg-brand-dark text-white grid grid-cols-12 gap-3 px-4 py-2 text-[11px] font-bold uppercase tracking-wider shrink-0">
                 {currentSlide.content[1]?.split('|').map((header, i) => {
                   const numCols = currentSlide.content[1].split('|').length;
                   let span = 'col-span-2';
@@ -739,7 +739,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               </div>
 
               {/* Rows */}
-              <div className="overflow-y-auto flex-1">
+              <div className="overflow-y-auto">
                 {currentSlide.content.slice(2).map((row, rowIndex) => {
                   const cells = row.split('|').map(c => c.trim());
                   const numCols = cells.length;
@@ -749,12 +749,12 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 * rowIndex }}
-                      className={`grid grid-cols-12 gap-4 p-4 border-b border-gray-50 text-sm items-center hover:bg-brand-cream/10 transition-colors ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
+                      className={`grid grid-cols-12 gap-3 px-4 py-2 border-b border-gray-50 text-xs items-center hover:bg-brand-cream/10 transition-colors ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
                     >
                       {numCols === 6 ? (
                         <>
                           <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
-                          <div className="col-span-3 font-medium text-brand-dark">{cells[1]}</div>
+                          <div className="col-span-3 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
                           <div className="col-span-1 text-center">
                             <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-[10px] font-bold border border-brand-dark/10">
                               {cells[2]}
@@ -767,7 +767,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       ) : (
                         <>
                           <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
-                          <div className="col-span-4 font-medium text-brand-dark">{cells[1]}</div>
+                          <div className="col-span-4 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
                           <div className="col-span-2 text-center">
                             <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-xs font-bold border border-brand-dark/10">
                               {cells[2]}
@@ -790,7 +790,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
              <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="text-5xl md:text-7xl font-serif italic text-brand-dark leading-tight max-w-4xl"
+              className="text-3xl md:text-5xl font-serif italic text-brand-dark leading-tight max-w-4xl whitespace-pre-line"
             >
               "{currentSlide.content[0]}"
             </motion.div>
