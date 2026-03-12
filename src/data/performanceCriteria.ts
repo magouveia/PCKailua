@@ -120,8 +120,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Executa corretamente as tarefas operacionais atribuídas.",
       "Cumpre os procedimentos de higiene, segurança e organização do armazém.",
       "Contribui para a manutenção da limpeza e organização do espaço de trabalho.",
-      "Colabora com a equipa para assegurar o bom funcionamento das atividades do",
-      "armazém."
+      "Colabora com a equipa para assegurar o bom funcionamento das atividades do armazém."
     ],
     "behavioral": [
       "Cumpre horários e escalas definidos.",
@@ -135,14 +134,11 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Assistente de Armazém",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Executa tarefas de receção, armazenamento e reposição de mercadorias com",
-      "autonomia.",
+      "Executa tarefas de receção, armazenamento e reposição de mercadorias com autonomia.",
       "Garante a correta organização e identificação dos produtos no armazém.",
       "Cumpre e aplica os procedimentos de controlo e registo de materiais.",
-      "Assegura a disponibilidade dos materiais necessários às diferentes áreas da",
-      "operação.",
-      "Contribui para a eficiência do funcionamento do armazém através da correta",
-      "gestão das tarefas atribuídas."
+      "Assegura a disponibilidade dos materiais necessários às diferentes áreas da operação.",
+      "Contribui para a eficiência do funcionamento do armazém através da correta gestão das tarefas atribuídas."
     ],
     "behavioral": [
       "Cumpre horários e as responsabilidades atribuídas.",
@@ -174,12 +170,10 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Encarregado de Armazém",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Planeia e coordena a gestão de stocks garantindo o abastecimento adequado da",
-      "operação.",
+      "Planeia e coordena a gestão de stocks garantindo o abastecimento adequado da operação.",
       "Organiza e supervisiona o trabalho da equipa do armazém.",
       "Garante a fiabilidade dos registos de stock e dos inventários.",
-      "Negocia com fornecedores e acompanha processos de encomenda e",
-      "abastecimento.",
+      "Negocia com fornecedores e acompanha processos de encomenda e abastecimento.",
       "Identifica e implementa melhorias na organização e funcionamento do armazém."
     ],
     "behavioral": [
@@ -258,8 +252,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Lidera a equipa com clareza.",
       "Toma decisões técnicas em tempo útil.",
       "Comunica eficazmente com a direção e áreas operacionais.",
-      "Identifica riscos técnicos nas instalações e planeia intervenções antes de",
-      "ocorrerem falhas.",
+      "Identifica riscos técnicos nas instalações e planeia intervenções antes de ocorrerem falhas.",
       "Mantém uma postura profissional e apresentação adequadas."
     ]
   },
@@ -305,7 +298,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "technical": [
       "Executa preparações simples conforme fichas técnicas ou orientações.",
       "Cumpre tempos e métodos de confeção definidos.",
-      "Mantém organização e limpeza do posto de trabalho.",
+      "Mantém organization e limpeza do posto de trabalho.",
       "Cumpre normas de higiene e segurança alimentar.",
       "Utiliza corretamente os equipamentos e utensílios da cozinha."
     ],
@@ -361,12 +354,10 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Garante qualidade, sabor e apresentação consistentes dos pratos da sua secção.",
       "Cumpre e aplica corretamente fichas técnicas, métodos e padrões definidos.",
       "Organiza e coordena o funcionamento da sua secção durante o serviço.",
-      "Assume a coordenação da cozinha na ausência do Subchefe ou Chefe de Cozinha,",
-      "garantindo organização e continuidade do serviço."
+      "Assume a coordenação da cozinha na ausência do Subchefe ou Chefe de Cozinha, garantindo organização e continuidade do serviço."
     ],
     "behavioral": [
-      "Mantém desempenho consistente mesmo em períodos de maior pressão",
-      "operacional.",
+      "Mantém desempenho consistente mesmo em períodos de maior pressão operacional.",
       "Apoia tecnicamente cozinheiros menos experientes quando necessário.",
       "Comunica de forma clara com a equipa de cozinha durante o serviço.",
       "Demonstra sentido de responsabilidade no cumprimento dos padrões da cozinha.",
@@ -387,8 +378,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Lidera a equipa com clareza e firmeza.",
       "Mantém controlo emocional em períodos de pressão.",
       "Comunica de forma eficaz com a equipa e liderança.",
-      "Identifica falhas na organização da cozinha e corrige-as antes de afetarem o",
-      "serviço.",
+      "Identifica falhas na organização da cozinha e corrige-as antes de afetarem o serviço.",
       "Mantém uma postura profissional e apresentação adequadas."
     ]
   },
@@ -396,13 +386,11 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Chefe de Cozinha",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Planeia e organiza o funcionamento global da cozinha e supervisiona o",
-      "desempenho técnico da equipa.",
+      "Planeia e organiza o funcionamento global da cozinha e supervisiona o desempenho técnico da equipa.",
       "Define e implementa padrões de qualidade e produção.",
       "Garante o cumprimento das normas legais, de higiene e segurança.",
       "Controla custos, desperdícios e recursos da cozinha.",
-      "Controla o food cost da cozinha através da gestão eficiente das matérias-primas,",
-      "cumprimento rigoroso das fichas técnicas e redução consistente do desperdício."
+      "Controla o food cost da cozinha através da gestão eficiente das matérias-primas, cumprimento rigoroso das fichas técnicas e redução consistente do desperdício."
     ],
     "behavioral": [
       "Lidera e desenvolve a equipa de cozinha.",
@@ -440,8 +428,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Mantém organização das mesas e áreas de serviço durante o turno."
     ],
     "behavioral": [
-      "Demonstra orientação para o cliente no atendimento prestado, comunicando de",
-      "forma clara.",
+      "Demonstra orientação para o cliente no atendimento prestado, comunicando de forma clara.",
       "Comunica de forma clara com a equipa e colabora garantindo a fluidez do serviço.",
       "Mantém desempenho consistente durante períodos de maior movimento.",
       "Mantém uma apresentação pessoal adequada ao padrão da empresa."
@@ -461,8 +448,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Mantém o desempenho consistente sob pressão.",
       "Comunica de forma clara com equipa e liderança.",
       "Apoia tecnicamente elementos menos experientes do setor das mesas.",
-      "Intervém quando identifica situações que possam comprometer o serviço ao",
-      "cliente.",
+      "Intervém quando identifica situações que possam comprometer o serviço ao cliente.",
       "Mantém uma apresentação pessoal adequada ao padrão da empresa."
     ]
   },
@@ -480,8 +466,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Lidera a equipa com clareza.",
       "Mantém controlo emocional em períodos de maior pressão.",
       "Comunica eficazmente com cozinha, bar e receção.",
-      "Identifica problemas operacionais durante o serviço e intervém antes de afetarem",
-      "o cliente.",
+      "Identifica problemas operacionais durante o serviço e intervém antes de afetarem o cliente.",
       "Mantém uma apresentação pessoal adequada ao padrão da empresa."
     ]
   },
@@ -489,33 +474,27 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Chefe de Sala",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Organiza o funcionamento do setor das mesas garantindo qualidade e fluidez do",
-      "serviço.",
-      "Acompanha o desempenho da equipa assegurando cumprimento dos padrões de",
-      "atendimento.",
+      "Organiza o funcionamento do setor das mesas garantindo qualidade e fluidez do serviço.",
+      "Acompanha o desempenho da equipa assegurando cumprimento dos padrões de atendimento.",
       "Garante uma gestão eficiente do fluxo de clientes e organização das mesas.",
       "Resolve situações operacionais e reclamações garantindo a satisfação do cliente.",
-      "Promove o aumento da venda média através da organização do serviço, orientação",
-      "da equipa e aplicação consistente de técnicas de sugestão de venda."
+      "Promove o aumento da venda média através da organização do serviço, orientação da equipa e aplicação consistente de técnicas de sugestão de venda."
     ],
     "behavioral": [
       "Lidera a equipa das mesas com clareza e consistência durante o serviço.",
       "Intervém e resolve situações de insatisfação ou conflito com clientes.",
       "Demonstra capacidade de decisão em momentos de pressão operacional.",
       "Desenvolve a equipa incentivando sugestões e melhoria da venda média.",
-      "Mantém uma apresentação pessoal adequada ao padrão da empresa, postura",
-      "profissional e exemplo de comportamento para a equipa."
+      "Mantém uma apresentação pessoal adequada ao padrão da empresa, postura profissional e exemplo de comportamento para a equipa."
     ]
   },
   {
     "title": "Controlador-caixa",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Regista corretamente as operações de caixa garantindo fiabilidade dos valores",
-      "faturados.",
+      "Regista corretamente as operações de caixa garantindo fiabilidade dos valores faturados.",
       "Executa abertura e fecho de caixa de acordo com os procedimentos definidos.",
-      "Confere pagamentos e meios de pagamento garantindo correspondência com a",
-      "faturação.",
+      "Confere pagamentos e meios de pagamento garantindo correspondência com a faturação.",
       "Organiza e prepara a documentação de suporte às caixas diárias.",
       "Identifica e comunica discrepâncias ou irregularidades nos movimentos de caixa."
     ],
@@ -530,13 +509,10 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Controlador",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Controla e valida a informação de faturação garantindo fiabilidade dos dados",
-      "registados.",
-      "Acompanha indicadores operacionais garantindo consistência da informação",
-      "utilizada pela gestão.",
+      "Controla e valida a informação de faturação garantindo fiabilidade dos dados registados.",
+      "Acompanha indicadores operacionais garantindo consistência da informação utilizada pela gestão.",
       "Identifica e comunica inconsistências ou erros na informação operacional.",
-      "Apoia o Chefe de Controlo na monitorização das condições operacionais da",
-      "equipa.",
+      "Apoia o Chefe de Controlo na monitorização das condições operacionais da equipa.",
       "Organiza informação de suporte à análise do desempenho da operação."
     ],
     "behavioral": [
@@ -550,27 +526,18 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Chefe de Controlo",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Coordena a equipa de limpeza garantindo que os espaços operacionais se",
-      "mantêm organizados, funcionais e alinhados com os padrões definidos.",
-      "Assegura o funcionamento contínuo dos sistemas e equipamentos necessários à",
-      "operação, articulando intervenções técnicas sempre que necessário.",
-      "Acompanha o funcionamento do armazém garantindo que os recursos e materiais",
-      "necessários à operação estão disponíveis em tempo útil.",
-      "Identifica antecipadamente falhas ou necessidades operacionais e implementa",
-      "soluções eficazes, garantindo continuidade da operação sem impacto no serviço.",
-      "Garante eficiência na utilização da equipa através de planeamento eficaz de",
-      "horários e distribuição equilibrada de recursos humanos, assegurando",
-      "rentabilidade da operação."
+      "Coordena a equipa de limpeza garantindo que os espaços operacionais se mantêm organizados, funcionais e alinhados com os padrões definidos.",
+      "Assegura o funcionamento contínuo dos sistemas e equipamentos necessários à operação, articulando intervenções técnicas sempre que necessário.",
+      "Acompanha o funcionamento do armazém garantindo que os recursos e materiais necessários à operação estão disponíveis em tempo útil.",
+      "Identifica antecipadamente falhas ou necessidades operacionais e implementa soluções eficazes, garantindo continuidade da operação sem impacto no serviço.",
+      "Garante eficiência na utilização da equipa através de planeamento eficaz de horários e distribuição equilibrada de recursos humanos, assegurando rentabilidade da operação."
     ],
     "behavioral": [
-      "Atua rapidamente na resolução de problemas que possam afetar o desempenho",
-      "da equipa.",
+      "Atua rapidamente na resolução de problemas que possam afetar o desempenho da equipa.",
       "Demonstra capacidade de organização e priorização de tarefas operacionais.",
       "Comunica de forma clara com as diferentes equipas e lideranças operacionais.",
-      "Mantém uma postura proativa na identificação de melhorias na organização da",
-      "operação.",
-      "Assume a coordenação da sala na ausência do Chefe de Sala garantindo",
-      "continuidade do serviço."
+      "Mantém uma postura proativa na identificação de melhorias na organização da operação.",
+      "Assume a coordenação da sala na ausência do Chefe de Sala garantindo continuidade do serviço."
     ]
   },
   {
@@ -623,8 +590,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Mantém o desempenho consistente sob pressão.",
       "Comunica de forma clara com equipa e liderança.",
       "Apoia tecnicamente elementos menos experientes do setor de bar.",
-      "Garante qualidade e apresentação consistentes das bebidas servidas aos",
-      "clientes.",
+      "Garante qualidade e apresentação consistentes das bebidas servidas aos clientes.",
       "Mantém uma postura profissional e apresentação adequadas."
     ]
   },
@@ -636,8 +602,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Organiza o funcionamento do bar assegurando eficiência durante o serviço.",
       "Controla stocks e garante correta conservação dos produtos do bar.",
       "Forma e orienta a equipa de bar garantindo cumprimento dos padrões definidos.",
-      "Garante controlo consistente do beverage cost, assegurando utilização eficiente",
-      "das bebidas, cumprimento das margens definidas e redução de desperdícios."
+      "Garante controlo consistente do beverage cost, assegurando utilização eficiente das bebidas, cumprimento das margens definidas e redução de desperdícios."
     ],
     "behavioral": [
       "Coordena a equipa de bar garantindo organização e ritmo durante o serviço.",
@@ -669,8 +634,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Assistente de Vendas de 2ª",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Identifica oportunidades de contacto com potenciais clientes para eventos ou",
-      "serviços.",
+      "Identifica oportunidades de contacto com potenciais clientes para eventos ou serviços.",
       "Regista corretamente pedidos e contactos comerciais no sistema.",
       "Apoia a preparação de propostas comerciais para eventos.",
       "Acompanha pedidos de clientes garantindo resposta dentro dos prazos definidos.",
@@ -680,8 +644,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Demonstra iniciativa na prospeção de novos contactos comerciais.",
       "Comunica de forma clara e profissional com potenciais clientes.",
       "Mantém organização no acompanhamento de contactos e pedidos.",
-      "Demonstra persistência no acompanhamento de contactos comerciais até obter",
-      "resposta do cliente.",
+      "Demonstra persistência no acompanhamento de contactos comerciais até obter resposta do cliente.",
       "Mantém uma postura profissional e apresentação irrepreensível."
     ]
   },
@@ -693,8 +656,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Atualiza a lista de reservas garantindo informação clara para o setor das mesas.",
       "Presta informações corretas sobre funcionamento e serviços do restaurante.",
       "Mantém organização da área de receção.",
-      "Comunica à operação da frente alterações ou informações relevantes sobre",
-      "reservas."
+      "Comunica à operação da frente alterações ou informações relevantes sobre reservas."
     ],
     "behavioral": [
       "Recebe os clientes de forma cordial e profissional.",
@@ -712,44 +674,32 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Elabora propostas comerciais claras e adequadas aos pedidos dos clientes.",
       "Acompanha clientes desde o primeiro contacto até à confirmação do evento.",
       "Negocia condições comerciais dentro dos limites definidos pela empresa.",
-      "Garante que a informação necessária para a realização do evento é transmitida à",
-      "operação."
+      "Garante que a informação necessária para a realização do evento é transmitida à operação."
     ],
     "behavioral": [
       "Demonstra iniciativa na captação de novos clientes.",
       "Comunica de forma persuasiva e profissional com clientes.",
       "Mantém organização no acompanhamento de processos comerciais.",
-      "Acompanha oportunidades comerciais com foco na conversão de pedidos em",
-      "eventos confirmados.",
-      "Mantém uma postura profissional e apresentação irrepreensível e representa a",
-      "empresa de forma profissional no relacionamento com clientes."
+      "Acompanha oportunidades comerciais com foco na conversão de pedidos em eventos confirmados.",
+      "Mantém uma postura profissional e apresentação irrepreensível e representa a empresa de forma profissional no relacionamento com clientes."
     ]
   },
   {
     "title": "Rececionista de 1ª",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Coordena a gestão diária das reservas garantindo organização dos espaços e",
-      "equilíbrio no fluxo de clientes.",
-      "Distribui reservas de forma equilibrada de acordo com a capacidade do",
-      "restaurante.",
+      "Coordena a gestão diária das reservas garantindo organização dos espaços e equilíbrio no fluxo de clientes.",
+      "Distribui reservas de forma equilibrada de acordo com a capacidade do restaurante.",
       "Gere alterações ou imprevistos relacionados com reservas.",
-      "Garante uma comunicação eficaz com a operação da frente sobre o fluxo de",
-      "clientes.",
+      "Garante uma comunicação eficaz com a operação da frente sobre o fluxo de clientes.",
       "Apoia rececionistas menos experientes na gestão da receção."
     ],
     "behavioral": [
-      "Comunica de forma clara e profissional com clientes, garantindo um atendimento",
-      "consistente na receção.",
-      "Mantém organização e rigor no acompanhamento das reservas e pedidos dos",
-      "clientes.",
-      "Demonstra autonomia na resolução de situações relacionadas com reservas ou",
-      "atendimento.",
-      "Colabora com a equipa da frente garantindo alinhamento na preparação do",
-      "serviço.",
-      "Mantém postura profissional e acolhedora, garantindo uma apresentação",
-      "irrepreensível e contribuindo para que os padrões de atendimento da receção",
-      "sejam cumpridos."
+      "Comunica de forma clara e profissional com clientes, garantindo um atendimento consistente na receção.",
+      "Mantém organização e rigor no acompanhamento das reservas e pedidos dos clientes.",
+      "Demonstra autonomia na resolução de situações relacionadas com reservas ou atendimento.",
+      "Colabora com a equipa da frente garantindo alinhamento na preparação do serviço.",
+      "Mantém postura profissional e acolhedora, garantindo uma apresentação irrepreensível e contribuindo para que os padrões de atendimento da receção sejam cumpridos."
     ]
   },
   {
@@ -763,14 +713,11 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Apoia a execução de ações e campanhas comerciais."
     ],
     "behavioral": [
-      "Orienta a equipa comercial e de receção garantindo alinhamento nas práticas de",
-      "atendimento e acompanhamento de clientes.",
+      "Orienta a equipa comercial e de receção garantindo alinhamento nas práticas de atendimento e acompanhamento de clientes.",
       "Comunica objetivos e orientações de forma eficaz.",
-      "Identifica problemas operacionais ou comerciais e intervém antes de afetarem o",
-      "serviço ao cliente.",
+      "Identifica problemas operacionais ou comerciais e intervém antes de afetarem o serviço ao cliente.",
       "Mantém o alinhamento entre receção, comercial e operação.",
-      "Mantém postura profissional e imagem alinhadas com os padrões da empresa,",
-      "dando o exemplo e assegurando o mesmo nível de rigor na equipa."
+      "Mantém postura profissional e imagem alinhadas com os padrões da empresa, dando o exemplo e assegurando o mesmo nível de rigor na equipa."
     ]
   },
   {
@@ -778,40 +725,28 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
       "Garante o funcionamento eficiente da receção e correta gestão das reservas.",
-      "Acompanha e orienta a atividade comercial promovendo captação de eventos e",
-      "desenvolvimento de clientes.",
-      "Assegura comunicação eficaz entre área comercial e operação para preparação",
-      "dos eventos.",
-      "Define prioridades e acompanha o trabalho da equipa garantindo consistência no",
-      "atendimento e acompanhamento comercial.",
-      "Garante elevados níveis de satisfação e felicidade do cliente, assegurando que a",
-      "experiência global corresponde de forma consistente aos padrões definidos."
+      "Acompanha e orienta a atividade comercial promovendo captação de eventos e desenvolvimento de clientes.",
+      "Assegura comunicação eficaz entre área comercial e operação para preparação dos eventos.",
+      "Define prioridades e acompanha o trabalho da equipa garantindo consistência no atendimento e acompanhamento comercial.",
+      "Garante elevados níveis de satisfação e felicidade do cliente, assegurando que a experiência global corresponde de forma consistente aos padrões definidos."
     ],
     "behavioral": [
-      "Orienta a equipa de receção e comercial garantindo alinhamento nas práticas de",
-      "atendimento e acompanhamento de clientes.",
+      "Orienta a equipa de receção e comercial garantindo alinhamento nas práticas de atendimento e acompanhamento de clientes.",
       "Mantém comunicação clara e profissional com clientes, parceiros e equipa.",
-      "Demonstra capacidade de decisão e intervenção na resolução de situações que",
-      "possam afetar o serviço.",
+      "Demonstra capacidade de decisão e intervention na resolução de situações que possam afetar o serviço.",
       "Promove a organização e consistência no acompanhamento de clientes e eventos.",
-      "Mantém postura profissional exemplar e assegura que os padrões de atendimento",
-      "e imagem da empresa são consistentemente aplicados na receção e na área",
-      "comercial."
+      "Mantém postura profissional exemplar e assegura que os padrões de atendimento e imagem da empresa são consistentemente aplicados na receção e na área comercial."
     ]
   },
   {
     "title": "Supervisor de Operações",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Supervisiona a operação das mesas e bar garantindo organização, ritmo e fluidez",
-      "do serviço.",
-      "Identifica falhas operacionais e intervém rapidamente para garantir continuidade",
-      "do serviço.",
+      "Supervisiona a operação das mesas e bar garantindo organização, ritmo e fluidez do serviço.",
+      "Identifica falhas operacionais e intervém rapidamente para garantir continuidade do serviço.",
       "Garante alinhamento entre as equipas das mesas e bar durante o serviço.",
-      "Verifica o cumprimento dos padrões de serviço e apresentação nas áreas de",
-      "mesas e bar.",
-      "Assegura equilíbrio entre faturação e beverage cost, garantindo eficiência",
-      "operacional da área e contribuindo para a rentabilidade global da operação."
+      "Verifica o cumprimento dos padrões de serviço e apresentação nas áreas de mesas e bar.",
+      "Assegura equilíbrio entre faturação e beverage cost, garantindo eficiência operacional da área e contribuindo para a rentabilidade global da operação."
     ],
     "behavioral": [
       "Comunica orientações operacionais de forma clara às equipas.",
@@ -828,13 +763,12 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Apoia o Diretor de R&B na coordenação global da operação.",
       "Acompanha resultados operacionais e financeiros da unidade.",
       "Coordena e acompanha lideranças intermédias no cumprimento de objetivos.",
-      "Garante aplicação das políticas, procedimentos e orientações da Direção",
-      "Operacional.",
+      "Garante aplicação das políticas, procedimentos e orientações da Direção Operacional.",
       "Representa o Diretor de R&B na sua ausência em decisões operacionais."
     ],
     "behavioral": [
       "Demonstra capacidade de liderança transversal.",
-      "Comunica de forma clara e profissional com equipas e lideranças.",
+      "Comunica de forma clara e profissional with equipas e lideranças.",
       "Atua com discrição e confidencialidade na gestão de informação.",
       "Mantém controlo emocional em contextos de pressão.",
       "Mantém postura profissional e imagem alinhadas com a Direção."
@@ -847,11 +781,8 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Garante rentabilidade e sustentabilidade financeira da operação.",
       "Define padrões de qualidade, serviço e produto.",
       "Analisa indicadores estratégicos e toma decisões corretivas.",
-      "Define prioridades estratégicas, identifica oportunidades de melhoria na operação",
-      "e lidera mudanças.",
-      "Garante o desempenho económico positivo da área de restauração e bebidas,",
-      "assegurando evolução do EBITDA através da otimização da operação, crescimento",
-      "da faturação e controlo de custos."
+      "Define prioridades estratégicas, identifica oportunidades de melhoria na operação e lidera mudanças.",
+      "Garante o desempenho económico positivo da área de restauração e bebidas, assegurando evolução do EBITDA através da otimização da operação, crescimento da faturação e controlo de custos."
     ],
     "behavioral": [
       "Lidera a organização com visão estratégica.",
@@ -865,41 +796,32 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Escriturário de 3ª",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Executa tarefas administrativas básicas garantindo organização e rigor na",
-      "informação tratada.",
-      "Regista e atualiza dados em sistemas administrativos de forma correta e",
-      "atempada.",
-      "Organiza e arquiva documentação física e digital garantindo fácil acesso à",
-      "informação.",
+      "Executa tarefas administrativas básicas garantindo organização e rigor na informação tratada.",
+      "Regista e atualiza dados em sistemas administrativos de forma correta e atempada.",
+      "Organiza e arquiva documentação física e digital garantindo fácil acesso à informação.",
       "Cumpre os procedimentos administrativos definidos para cada processo.",
-      "Apoia tarefas administrativas das diferentes áreas conforme orientação da",
-      "liderança."
+      "Apoia tarefas administrativas das diferentes áreas conforme orientação da liderança."
     ],
     "behavioral": [
       "Cumpre as tarefas atribuídas com responsabilidade e atenção ao detalhe.",
       "Comunica de forma clara com colegas e liderança sobre o trabalho realizado.",
       "Demonstra disponibilidade para aprender novos processos e tarefas.",
-      "Colabora com a equipa garantindo bom funcionamento das atividades",
-      "administrativas."
+      "Colabora com a equipa garantindo bom funcionamento das atividades administrativas."
     ]
   },
   {
     "title": "Escriturário de 2ª",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Executa tarefas administrativas com autonomia garantindo cumprimento de",
-      "prazos definidos.",
+      "Executa tarefas administrativas com autonomia garantindo cumprimento de prazos definidos.",
       "Apoia processos administrativos das áreas financeira e de recursos humanos.",
-      "Atualiza e controla informação em sistemas administrativos garantindo fiabilidade",
-      "dos dados.",
-      "Organiza documentação administrativa assegurando rastreabilidade da",
-      "informação.",
+      "Atualiza e controla informação em sistemas administrativos garantindo fiabilidade dos dados.",
+      "Organiza documentação administrativa assegurando rastreabilidade da informação.",
       "Acompanha processos administrativos garantindo o seu correto seguimento."
     ],
     "behavioral": [
       "Demonstra organização e método na execução das tarefas.",
-      "Comunica de forma clara com colegas e liderança sobre processos",
-      "administrativos.",
+      "Comunica de forma clara com colegas e liderança sobre processos administrativos.",
       "Assume responsabilidade pelo cumprimento dos prazos administrativos.",
       "Colabora com diferentes áreas garantindo fluidez nos processos internos."
     ]
@@ -908,16 +830,11 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Escriturário de 1ª",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Gere processos administrativos com elevado grau de autonomia garantindo rigor e",
-      "fiabilidade da informação tratada.",
-      "Apoia a área financeira no acompanhamento e organização da informação",
-      "administrativa necessária ao controlo da atividade.",
-      "Apoia a gestão administrativa de recursos humanos garantindo organização e",
-      "atualização da documentação dos colaboradores.",
-      "Organiza e prepara documentação administrativa necessária ao funcionamento",
-      "dos processos financeiros e de recursos humanos.",
-      "Analisa e verifica informação administrativa garantindo fiabilidade dos dados",
-      "utilizados nos processos financeiros e de recursos humanos."
+      "Gere processos administrativos com elevado grau de autonomia garantindo rigor e fiabilidade da informação tratada.",
+      "Apoia a área financeira no acompanhamento e organização da informação administrativa necessária ao controlo da atividade.",
+      "Apoia a gestão administrativa de recursos humanos garantindo organização e atualização da documentação dos colaboradores.",
+      "Organiza e prepara documentação administrativa necessária ao funcionamento dos processos financeiros e de recursos humanos.",
+      "Analisa e verifica informação administrativa garantindo fiabilidade dos dados utilizados nos processos financeiros e de recursos humanos."
     ],
     "behavioral": [
       "Demonstra elevado sentido de responsabilidade na gestão da informação.",
@@ -930,22 +847,16 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Chefe de Secção",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Coordena a equipa administrativa garantindo organização e eficiência dos",
-      "processos.",
-      "Supervisiona processos administrativos e de recursos humanos garantindo",
-      "cumprimento de procedimentos e fiabilidade de informação.",
-      "Assegura cumprimento de obrigações administrativas e legais aplicáveis à",
-      "empresa e à sua atividade.",
-      "Valida registos administrativos e informação de suporte ao processamento salarial",
-      "garantindo correção dos dados.",
-      "Assegura a gestão administrativa da loja, incluindo controlo de encomendas,",
-      "acompanhamento de stocks e atualização de preçários."
+      "Coordena a equipa administrativa garantindo organização e eficiência dos processos.",
+      "Supervisiona processos administrativos e de recursos humanos garantindo cumprimento de procedimentos e fiabilidade de informação.",
+      "Assegura cumprimento de obrigações administrativas e legais aplicáveis à empresa e à sua atividade.",
+      "Valida registos administrativos e informação de suporte ao processamento salarial garantindo correção dos dados.",
+      "Assegura a gestão administrativa da loja, incluindo controlo de encomendas, acompanhamento de stocks e atualização de preçários."
     ],
     "behavioral": [
       "Lidera a equipa administrativa com clareza e organização.",
       "Comunica de forma eficaz com direção e diferentes áreas da empresa.",
-      "Toma decisões operacionais garantindo continuidade dos processos",
-      "administrativos.",
+      "Toma decisões operacionais garantindo continuidade dos processos administrativos.",
       "Desenvolve competências da equipa administrativa."
     ]
   },
@@ -956,45 +867,31 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Define e implementa a estratégia administrativa e financeira da empresa.",
       "Supervisiona a gestão financeira garantindo controlo rigoroso de resultados.",
       "Assegura conformidade legal, fiscal e administrativa da organização.",
-      "Analisa indicadores financeiros e apoia a direção na tomada de decisões",
-      "estratégicas.",
-      "Avalia propostas e acordos com base na análise de indicadores financeiros",
-      "garantindo a sua viabilidade económica."
+      "Analisa indicadores financeiros e apoia a direção na tomada de decisões estratégicas.",
+      "Avalia propostas e acordos com base na análise de indicadores financeiros garantindo a sua viabilidade económica."
     ],
     "behavioral": [
       "Demonstra visão estratégica na gestão administrativa e financeira.",
-      "Comunica de forma clara e estruturada com a direção e restantes áreas da",
-      "organização.",
-      "Toma decisões fundamentadas com base na análise financeira e nos indicadores",
-      "de gestão.",
-      "Demonstra rigor analítico e sentido crítico na interpretação de informação",
-      "financeira, apoiando decisões com base em dados fiáveis."
+      "Comunica de forma clara e estruturada com a direção e restantes áreas da organização.",
+      "Toma decisões fundamentadas com base na análise financeira e nos indicadores de gestão.",
+      "Demonstra rigor analítico e sentido crítico na interpretação de informação financeira, apoiando decisões com base em dados fiáveis."
     ]
   },
   {
     "title": "Diretor de Serviços Técnicos (Recursos Humanos)",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Define e implementa a estratégia de recursos humanos garantindo alinhamento",
-      "entre necessidades da operação e desenvolvimento das equipas.",
-      "Assegura o cumprimento da legislação laboral e dos procedimentos internos",
-      "relacionados com a gestão de pessoas.",
-      "Garante a implementação eficaz dos processos de recrutamento, avaliação de",
-      "desempenho e desenvolvimento de colaboradores.",
-      "Apoia a liderança no desenvolvimento das equipas e na gestão de desempenho",
-      "dos colaboradores.",
-      "Monitoriza e controla os custos totais de recursos humanos, garantindo que a",
-      "percentagem anual definida pela empresa é respeitada através do",
-      "acompanhamento rigoroso dos indicadores e apoio técnico à tomada de decisão."
+      "Define e implementa a estratégia de recursos humanos garantindo alinhamento entre necessidades da operação e desenvolvimento das equipas.",
+      "Assegura o cumprimento da legislação laboral e dos procedimentos internos relacionados com a gestão de pessoas.",
+      "Garante a implementação eficaz dos processos de recrutamento, avaliação de desempenho e desenvolvimento de colaboradores.",
+      "Apoia a liderança no desenvolvimento das equipas e na gestão de desempenho dos colaboradores.",
+      "Monitoriza e controla os custos totais de recursos humanos, garantindo que a percentagem anual definida pela empresa é respeitada através do acompanhamento rigoroso dos indicadores e apoio técnico à tomada de decisão."
     ],
     "behavioral": [
-      "Demonstra capacidade de influência junto da liderança promovendo boas práticas",
-      "de gestão de pessoas.",
+      "Demonstra capacidade de influência junto da liderança promovendo boas práticas de gestão de pessoas.",
       "Comunica de forma clara e estruturada com direção, lideranças e colaboradores.",
-      "Atua com elevado sentido de ética, confidencialidade e responsabilidade",
-      "institucional.",
-      "Promove um ambiente organizacional equilibrado através da mediação",
-      "construtiva de situações relacionadas com pessoas e equipas."
+      "Atua com elevado sentido de ética, confidencialidade e responsabilidade institucional.",
+      "Promove um ambiente organizacional equilibrado através da mediação construtiva de situações relacionadas com pessoas e equipas."
     ]
   }
 ];

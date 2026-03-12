@@ -53,7 +53,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           </h2>
           
           <p className="relative z-10 text-brand-stone text-xs md:text-sm mb-6 max-w-[200px] opacity-80 group-hover:opacity-100 transition-opacity">
-            Visualiza a estrutura organizacional e departamentos.
+            Estrutura organizacional e departamentos.
           </p>
 
           <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:gap-4 transition-all duration-300">
@@ -81,7 +81,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           </h2>
           
           <p className="relative z-10 text-brand-stone text-xs md:text-sm mb-6 max-w-[200px] opacity-80 group-hover:opacity-100 transition-opacity">
-            Consulta os critérios de progressão, avaliação de desempenho e benefícios.
+            Critérios de progressão e benefícios.
           </p>
 
           <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:gap-4 transition-all duration-300">
@@ -109,7 +109,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           </h2>
           
           <p className="relative z-10 text-brand-stone text-xs md:text-sm mb-6 max-w-[200px] opacity-80 group-hover:opacity-100 transition-opacity">
-            Consulta as responsabilidades e requisitos de cada função.
+            Responsabilidades, requisitos e expetativas de cada função
           </p>
 
           <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:gap-4 transition-all duration-300">
@@ -128,6 +128,15 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-cream opacity-100 transition-opacity duration-500 group-hover:opacity-90" />
           <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-tan/30 rounded-2xl transition-colors duration-500" />
           
+          {/* Stamp "IN PROGRESS" */}
+          <div className="absolute top-6 right-6 rotate-12 z-20 pointer-events-none opacity-70 mix-blend-multiply">
+            <div className="border-2 border-red-600/80 px-2 py-0.5 rounded-sm transform scale-90">
+              <span className="text-red-600/90 font-stamp text-sm md:text-base font-bold tracking-widest uppercase whitespace-nowrap">
+                In Progress
+              </span>
+            </div>
+          </div>
+
           <div className="relative z-10 mb-4 w-16 h-16 shrink-0 rounded-full bg-brand-tan/10 flex items-center justify-center group-hover:bg-brand-tan group-hover:text-white transition-colors duration-500 text-brand-tan">
             <Goal size={32} />
           </div>
@@ -137,7 +146,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           </h2>
           
           <p className="relative z-10 text-brand-stone text-xs md:text-sm mb-6 max-w-[200px] opacity-80 group-hover:opacity-100 transition-opacity">
-            Acompanha o teu progresso e consulta as tuas avaliações.
+            Medir, alinhar e desenvolver
           </p>
 
           <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:gap-4 transition-all duration-300">
