@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Slide } from '../services/ai';
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles, ArrowLeft, Handshake, ArrowUp } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles, ArrowLeft, Handshake, ArrowUp, Wine, ClipboardCheck, HeartHandshake, ConciergeBell } from 'lucide-react';
 
 // ... (existing code)
 
@@ -581,7 +581,11 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                   if (sect.includes('Copa')) return <Coffee size={20} />;
                   if (sect.includes('Armazém')) return <Package size={20} />;
                   if (sect.includes('Manutenção')) return <Wrench size={20} />;
-                  if (sect.includes('Higiene')) return <Sparkles size={20} />;
+                  if (sect.includes('HouseKeeping') || sect.includes('Higiene')) return <Sparkles size={20} />;
+                  if (sect.includes('Mesas')) return <ConciergeBell size={20} />;
+                  if (sect.includes('Drinks') || sect.includes('Bar')) return <Wine size={20} />;
+                  if (sect.includes('Controlo')) return <ClipboardCheck size={20} />;
+                  if (sect.includes('Felicidade')) return <HeartHandshake size={20} />;
                   return <Layers size={20} />;
                 };
 

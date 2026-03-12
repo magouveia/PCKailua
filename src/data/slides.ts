@@ -66,23 +66,14 @@ export const hardcodedSlides: Slide[] = [
       "Copa | APOIO & LIMPEZA | Copeiro | Nível II | Chefe de Copa / Coz. 3ª | Nível V | II → III-IV → V",
       "Armazém | LOGÍSTICA | Ajudante | Nível III | Encarregado | Nível VIII | III → IV-VII → VIII",
       "Manutenção | TÉCNICA | Ajudante | Nível III | Chefe de Manutenção | Nível IX | III → IV-VIII → IX",
-      "Higiene | TÉCNICO | Técnico | Nível III | Encarregado | Nível IV | III → IV"
+      "HouseKeeping | TÉCNICO | Técnico | Nível III | Encarregado | Nível IV | III → IV",
+      "Mesas | SERVIÇO DE SALA | Estagiário | Nível III | Gerente de Sala | Nível VIII | III → IV-VII → VIII",
+      "Drinks | BEBIDAS & MIXOLOGIA | Estagiário | Nível III | Chefe de Bar | Nível VIII | III → IV-VII → VIII",
+      "Controlo | AUDITORIA & QUALIDADE | Assistente | Nível III | Controller | Nível VIII | III → IV-VII → VIII",
+      "Felicidade | ACOLHIMENTO & VENDAS | Estagiário | Nível III | Gerente Comercial | Nível VIII | III → IV-VII → VIII"
     ],
     layout: "career-structure",
     notes: "Apresentamos aqui a estrutura detalhada das carreiras operacionais, definindo claramente os pontos de entrada, o topo da carreira e os níveis de evolução para cada setor."
-  },
-  {
-    id: "slide-7",
-    title: "Estrutura de Carreira por Setor",
-    content: [
-      "Mesas / Sala | SERVIÇO DE SALA | Estagiário | Nível III | Gerente de Sala | Nível VIII | III → IV-VII → VIII",
-      "Bar | BEBIDAS & MIXOLOGIA | Estagiário | Nível III | Chefe de Bar | Nível VIII | III → IV-VII → VIII",
-      "Recepção / Com. | ACOLHIMENTO & VENDAS | Estagiário | Nível III | Gerente Comercial | Nível VIII | III → IV-VII → VIII",
-      "Operação | SUPERVISÃO GERAL | Supervisor | Nível IX | — | — | Nível IX",
-      "Direção | GESTÃO ESTRATÉGICA | Assistente de Direção | Nível X | Diretor | Nível XI | X → XI"
-    ],
-    layout: "career-structure",
-    notes: "Para as equipas de sala, bar e receção, a estrutura segue um modelo semelhante. A direção e operação têm níveis específicos de alta responsabilidade."
   },
   {
     id: "slide-8",
