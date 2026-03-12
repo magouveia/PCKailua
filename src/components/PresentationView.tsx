@@ -105,7 +105,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               className="mb-8"
             >
               <img 
-                src="https://imgur.com/vXQWtfI.png" 
+                src="https://imgur.com/yykIOZ8.png" 
                 alt="Kailua Logo" 
                 className="h-24 w-auto object-contain mix-blend-multiply"
                 referrerPolicy="no-referrer"
@@ -574,7 +574,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                 const progression = parts[6];
 
                 const getIcon = (sect: string) => {
-                  if (sect.includes('Cozinha')) return <Utensils size={20} />;
+                  if (sect.includes('Food') || sect.includes('Cozinha')) return <Utensils size={20} />;
                   if (sect.includes('Copa')) return <Coffee size={20} />;
                   if (sect.includes('Armazém')) return <Package size={20} />;
                   if (sect.includes('Manutenção')) return <Wrench size={20} />;
@@ -790,21 +790,9 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
              <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="text-3xl md:text-5xl font-serif italic text-brand-dark leading-tight max-w-4xl whitespace-pre-line"
+              className="text-3xl md:text-5xl font-serif italic text-brand-dark leading-tight max-w-6xl whitespace-pre-line"
             >
               "{currentSlide.content[0]}"
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="mt-12 flex items-center gap-4"
-            >
-              <div className="w-12 h-[1px] bg-brand-tan"></div>
-              <span className="text-lg text-brand-stone font-sans uppercase tracking-widest font-medium">
-                {currentSlide.title}
-              </span>
-              <div className="w-12 h-[1px] bg-brand-tan"></div>
             </motion.div>
           </div>
         );

@@ -1,0 +1,1358 @@
+export interface FunctionalProfile {
+  title: string;
+  mission: string;
+  responsibilities: string[];
+  technicalSkills: string[];
+  behavioralSkills: string[];
+}
+
+export interface Sector {
+  name: string;
+  roles: FunctionalProfile[];
+}
+
+export const functionalProfilesData: Sector[] = [
+  {
+    name: 'Armazém',
+    roles: [
+      {
+        title: 'Ajudante de Todas as Secções (Armazém)',
+        mission: 'Apoiar as diferentes secções do armazém nas tarefas de receção, movimentação e organização de mercadorias, contribuindo para o bom funcionamento logístico da operação.',
+        responsibilities: [
+          'Colaborar na receção e conferência de mercadorias',
+          'Auxiliar na arrumação de produtos nos locais definidos',
+          'Apoiar a distribuição interna de mercadorias',
+          'Cumprir normas de higiene, segurança e organização',
+          'Executar tarefas operacionais sob orientação',
+          'Colaborar com diferentes áreas conforme necessidade'
+        ],
+        technicalSkills: [
+          'Noções básicas de logística e armazenagem',
+          'Capacidade de manuseamento de cargas',
+          'Organização básica do espaço',
+          'Cumprimento de procedimentos internos'
+        ],
+        behavioralSkills: [
+          'Polivalência',
+          'Espírito de equipa',
+          'Responsabilidade',
+          'Disponibilidade',
+          'Capacidade de aprendizagem'
+        ]
+      },
+      {
+        title: 'Assistente de Armazém',
+        mission: 'Assegurar a execução correta das operações de armazém, garantindo a organização, controlo e disponibilidade dos produtos necessários à operação.',
+        responsibilities: [
+          'Receber, conferir e registar mercadorias',
+          'Organizar e manter o armazém funcional',
+          'Preparar pedidos internos',
+          'Executar tarefas de gestão e reposição de stocks',
+          'Cumprir procedimentos e normas de segurança',
+          'Identificar e comunicar anomalias'
+        ],
+        technicalSkills: [
+          'Técnicas básicas de armazenagem (FIFO)',
+          'Conferência de mercadorias',
+          'Organização de stocks',
+          'Utilização básica de sistemas ou registos',
+          'Normas de segurança no trabalho'
+        ],
+        behavioralSkills: [
+          'Atenção ao detalhe',
+          'Autonomia operacional',
+          'Sentido de organização',
+          'Comunicação eficaz',
+          'Fiabilidade'
+        ]
+      },
+      {
+        title: 'Fiel de Armazém',
+        mission: 'Garantir o controlo rigoroso dos stocks e a fiabilidade da informação do armazém, assegurando a correta gestão de entradas, saídas e inventários.',
+        responsibilities: [
+          'Controlar entradas e saídas de mercadorias',
+          'Assegurar registos corretos de stock',
+          'Realizar inventários periódicos',
+          'Controlar validade e rotação de produtos',
+          'Apoiar o controlo de desperdícios',
+          'Articular com compras e operação'
+        ],
+        technicalSkills: [
+          'Gestão e controlo de stocks',
+          'Técnicas de inventário',
+          'Conhecimento aprofundado de FIFO/FEFO',
+          'Registo e análise de dados',
+          'Organização documental'
+        ],
+        behavioralSkills: [
+          'Rigor e precisão',
+          'Sentido de responsabilidade',
+          'Capacidade analítica',
+          'Organização',
+          'Integridade'
+        ]
+      },
+      {
+        title: 'Encarregado de Armazém',
+        mission: 'Coordenar a operação do armazém, assegurando a eficiência logística, o controlo de stocks e a liderança da equipa, alinhado com as necessidades da operação.',
+        responsibilities: [
+          'Garantir o abastecimento contínuo da operação através de planeamento eficaz de stocks, encomendas e compras.',
+          'Assegurar a gestão e reposição da caixa de primeiros socorros e do material necessário aos nadadores-salvadores, garantindo a sua disponibilidade e organização.',
+          'Certificar a fiabilidade da informação de stock através de controlo rigoroso de entradas, saídas e inventários.',
+          'Negociar as condições de fornecimento com fornecedores garantindo equilíbrio entre custo, qualidade e prazos de entrega.',
+          'Coordenar a equipa de armazém garantindo organização, segurança e eficiência logística.',
+          'Identificar oportunidades de melhoria nos processos de armazenagem e distribuição interna.'
+        ],
+        technicalSkills: [
+          'Gestão operacional de armazém',
+          'Planeamento logístico',
+          'Controlo avançado de stocks',
+          'Liderança de equipas',
+          'Conhecimento de sistemas de gestão'
+        ],
+        behavioralSkills: [
+          'Liderança',
+          'Capacidade de decisão',
+          'Visão global',
+          'Comunicação clara',
+          'Orientação para resultados'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Drinks',
+    roles: [
+      {
+        title: 'Estagiário / Ajudante de Todas as Secções (Bar)',
+        mission: 'Apoiar o funcionamento do bar na preparação, organização e reposição, garantindo condições adequadas para o serviço e desenvolvimento de competências básicas de bar.',
+        responsibilities: [
+          'Apoiar na preparação do bar antes do serviço',
+          'Repor bebidas, gelo e materiais',
+          'Auxiliar na limpeza e organização do bar',
+          'Apoiar o barman durante o serviço',
+          'Cumprir normas de higiene e segurança',
+          'Executar tarefas sob orientação da liderança'
+        ],
+        technicalSkills: [
+          'Noções básicas de funcionamento de bar',
+          'Conhecimento elementar de bebidas',
+          'Organização do posto de trabalho',
+          'Cumprimento de procedimentos'
+        ],
+        behavioralSkills: [
+          'Vontade de aprender',
+          'Espírito de equipa',
+          'Responsabilidade',
+          'Boa apresentação',
+          'Disponibilidade'
+        ]
+      },
+      {
+        title: 'Barman / Barmaid de 2ª',
+        mission: 'Executar o serviço de bar com autonomia operacional, assegurando qualidade, rapidez e cumprimento dos padrões definidos.',
+        responsibilities: [
+          'Preparar e servir bebidas simples',
+          'Cumprir receitas e procedimentos do bar',
+          'Manter o bar limpo e organizado durante o serviço',
+          'Gerir reposição básica de produtos',
+          'Atender clientes ao balcão',
+          'Apoiar colegas e fluxo do serviço'
+        ],
+        technicalSkills: [
+          'Técnicas básicas de bar e bebidas',
+          'Conhecimento de receitas standard',
+          'Organização do serviço',
+          'Noções de controlo de desperdício'
+        ],
+        behavioralSkills: [
+          'Agilidade',
+          'Comunicação eficaz',
+          'Atenção ao cliente',
+          'Capacidade de trabalhar sob pressão',
+          'Responsabilidade'
+        ]
+      },
+      {
+        title: 'Barman / Barmaid de 1ª',
+        mission: 'Garantir excelência técnica e operacional no serviço de bar, sendo referência de qualidade, eficiência e atendimento ao cliente.',
+        responsibilities: [
+          'Preparar cocktails e bebidas de maior complexidade',
+          'Garantir consistência e qualidade do serviço',
+          'Apoiar a organização e funcionamento do bar',
+          'Formar e acompanhar elementos menos experientes',
+          'Resolver situações com clientes',
+          'Controlar consumos da área',
+          'Apoiar a liderança do bar na manutenção dos padrões técnicos e no acompanhamento de elementos do setor menos experientes.'
+        ],
+        technicalSkills: [
+          'Domínio avançado de técnicas de bar',
+          'Conhecimento aprofundado de bebidas e cocktails',
+          'Organização e gestão do posto',
+          'Noções de controlo de custos'
+        ],
+        behavioralSkills: [
+          'Liderança informal',
+          'Capacidade de decisão',
+          'Organização',
+          'Orientação para resultados'
+        ]
+      },
+      {
+        title: 'Chefe de Bar',
+        mission: 'Coordenar e liderar a operação do bar, garantindo qualidade do serviço, rentabilidade da área e desenvolvimento da equipa.',
+        responsibilities: [
+          'Garantir consistência técnica e apresentação das bebidas, assegurando cumprimento das receitas e padrões definidos.',
+          'Assegurar rentabilidade do setor de bar através do controlo de consumos, desperdício e níveis de stock.',
+          'Coordenar a equipa de bar garantindo rapidez, organização e fluidez no serviço.',
+          'Desenvolver novas propostas de bebidas em conjunto com a liderança, contribuindo para a atratividade e atualização da carta.',
+          'Assegurar correta conservação e rotação de produtos, evitando perdas e ruturas.',
+          'Promover boas práticas de higiene, segurança e organização no bar.',
+          'Desenvolver competências da equipa garantindo consistência na execução do serviço.'
+        ],
+        technicalSkills: [
+          'Domínio técnico de preparação de bebidas e cocktails.',
+          'Conhecimento de ingredientes, bebidas e combinações.',
+          'Capacidade de organização operacional do bar.',
+          'Conhecimento de gestão de stocks e conservação de produtos.',
+          'Capacidade de desenvolvimento de receitas e bebidas.'
+        ],
+        behavioralSkills: [
+          'Liderança operacional da equipa.',
+          'Organização e capacidade de trabalhar sob pressão.',
+          'Criatividade e iniciativa.',
+          'Comunicação clara com equipa e sala.',
+          'Atenção ao detalhe e consistência na execução.'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Felicidade',
+    roles: [
+      {
+        title: 'Estagiário / Ajudante de Todas as Secções (Receção)',
+        mission: 'Assegurar o atendimento inicial ao cliente e apoiar as atividades de receção, garantindo organização, encaminhamento correto e uma primeira experiência positiva.',
+        responsibilities: [
+          'Realizar atendimento presencial, telefónico e digital',
+          'Encaminhar clientes, pedidos e informações',
+          'Apoiar registos e organização administrativa',
+          'Assegurar imagem, ordem e funcionamento da receção',
+          'Cumprir procedimentos de atendimento e comunicação',
+          'Executar tarefas sob orientação da liderança'
+        ],
+        technicalSkills: [
+          'Noções básicas de atendimento ao público',
+          'Utilização elementar de sistemas informáticos',
+          'Organização administrativa básica',
+          'Cumprimento de procedimentos internos',
+          'Inglês fluente (obrigatório)'
+        ],
+        behavioralSkills: [
+          'Simpatia e cordialidade',
+          'Boa comunicação',
+          'Vontade de aprender',
+          'Organização',
+          'Responsabilidade',
+          'Boa apresentação'
+        ]
+      },
+      {
+        title: 'Assistente de Vendas de 2ª',
+        mission: 'Apoiar a atividade comercial da empresa através da prospeção de novos clientes e do acompanhamento de pedidos comerciais, contribuindo para o desenvolvimento do negócio e para a realização de eventos.',
+        responsibilities: [
+          'Apoiar a prospeção de novos clientes e oportunidades comerciais.',
+          'Responder a pedidos de informação relacionados com eventos e serviços.',
+          'Apoiar a preparação de propostas comerciais.',
+          'Registar e acompanhar contactos comerciais em sistema, garantindo organização da informação comercial.',
+          'Apoiar a organização e preparação de eventos confirmados.',
+          'Garantir comunicação eficaz com as equipas operacionais relativamente aos eventos.',
+          'Acompanhar pedidos comerciais garantindo resposta dentro dos prazos definidos.',
+          'Apoiar a operação sempre que necessário, garantindo disponibilidade para colaborar em funções operacionais.'
+        ],
+        technicalSkills: [
+          'Noções de atividade comercial e prospeção de clientes.',
+          'Conhecimento dos serviços e oferta da empresa.',
+          'Utilização de ferramentas de comunicação e registo de contactos.',
+          'Apoio à preparação de propostas comerciais.'
+        ],
+        behavioralSkills: [
+          'Boa capacidade de comunicação.',
+          'Proatividade na identificação de oportunidades.',
+          'Organização e acompanhamento de contactos.',
+          'Orientação para o cliente.',
+          'Postura profissional e boa apresentação',
+          'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
+        ]
+      },
+      {
+        title: 'Rececionista de 2ª',
+        mission: 'Garantir o atendimento inicial ao cliente e a correta gestão das reservas, contribuindo para uma receção organizada e para uma experiência positiva desde o primeiro contacto.',
+        responsibilities: [
+          'Realizar atendimento presencial e telefónico aos clientes.',
+          'Registar e gerir reservas de acordo com os procedimentos definidos.',
+          'Organizar a lista de reservas e comunicar informação relevante à sala.',
+          'Prestar informações sobre serviços, horários e funcionamento do restaurante.',
+          'Manter a área de receção organizada e alinhada com os padrões definidos.',
+          'Apoiar o fluxo de entrada e acolhimento de clientes.'
+        ],
+        technicalSkills: [
+          'Gestão de reservas e atendimento ao cliente.',
+          'Utilização de sistemas de reservas.',
+          'Organização de informação de clientes e horários.',
+          'Conhecimento do funcionamento da operação.'
+        ],
+        behavioralSkills: [
+          'Comunicação clara e cordial.',
+          'Capacidade de organização.',
+          'Gestão de situações de pressão.',
+          'Orientação para o cliente.',
+          'Postura profissional e boa apresentação',
+          'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
+        ]
+      },
+      {
+        title: 'Assistente de Vendas de 1ª',
+        mission: 'Desenvolver a atividade comercial da empresa através da captação e gestão de clientes, assegurando a concretização de eventos e contribuindo para o crescimento da atividade.',
+        responsibilities: [
+          'Identificar e desenvolver oportunidades comerciais.',
+          'Gerir e acompanhar processos comerciais desde o primeiro contacto até à confirmação do evento.',
+          'Elaborar propostas comerciais para eventos e serviços.',
+          'Negociar condições comerciais dentro dos limites definidos.',
+          'Acompanhar clientes desde o pedido inicial até à realização do evento.',
+          'Articular com as equipas operacionais para garantir a execução dos eventos.',
+          'Apoiar a operação sempre que necessário, garantindo disponibilidade para colaborar em funções operacionais.'
+        ],
+        technicalSkills: [
+          'Prospeção comercial e desenvolvimento de clientes.',
+          'Elaboração de propostas comerciais.',
+          'Negociação básica de condições comerciais.',
+          'Gestão de processos comerciais.',
+          'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
+        ],
+        behavioralSkills: [
+          'Capacidade de persuasão.',
+          'Orientação para resultados.',
+          'Organização e acompanhamento de processos.',
+          'Comunicação profissional e boa apresentação.',
+          'Proatividade comercial.'
+        ]
+      },
+      {
+        title: 'Rececionista de 1ª',
+        mission: 'Garantir a organização da receção e a gestão eficaz das reservas, assegurando um acolhimento consistente e contribuindo para a boa organização da sala.',
+        responsibilities: [
+          'Coordenar a gestão diária das reservas.',
+          'Organizar a distribuição de mesas de acordo com a operação.',
+          'Assegurar o acolhimento de clientes à chegada.',
+          'Gerir alterações ou situações imprevistas relacionadas com reservas.',
+          'Articular com a equipa das mesas para garantir fluxo equilibrado de clientes.',
+          'Apoiar rececionistas menos experientes na gestão do serviço.'
+        ],
+        technicalSkills: [
+          'Gestão avançada de reservas.',
+          'Organizar a distribuição de reservas garantindo equilíbrio no fluxo de clientes.',
+          'Utilização de sistemas de reservas.',
+          'Conhecimento da operação das mesas.',
+          'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
+        ],
+        behavioralSkills: [
+          'Capacidade de organização e antecipação.',
+          'Comunicação clara com equipa e clientes.',
+          'Gestão de situações de pressão.',
+          'Postura profissional e acolhedora.',
+          'Sentido de responsabilidade.',
+          'Boa apresentação.'
+        ]
+      },
+      {
+        title: 'Subgerente',
+        mission: 'Apoiar o Gerente na coordenação da equipa, assegurando desempenho comercial, qualidade do atendimento e alinhamento dos processos de receção e venda.',
+        responsibilities: [
+          'Coordenar equipa comercial e de receção',
+          'Garantir padrões elevados de atendimento ao cliente',
+          'Acompanhar desempenho individual e coletivo',
+          'Resolver situações comerciais e de atendimento complexas',
+          'Garantir alinhamento entre receção, comercial e operação na preparação e acompanhamento de eventos.',
+          'Apoiar desenvolvimento e formação da equipa'
+        ],
+        technicalSkills: [
+          'Gestão operacional comercial',
+          'Supervisão de atendimento e receção',
+          'Liderança de equipas',
+          'Análise de indicadores de desempenho',
+          'Conhecimento aprofundado de processos comerciais',
+          'Inglês fluente (obrigatório) / Francês fluente (valorizado)'
+        ],
+        behavioralSkills: [
+          'Liderança',
+          'Capacidade de decisão',
+          'Comunicação clara',
+          'Orientação para resultados',
+          'Sentido de responsabilidade',
+          'Boa apresentação'
+        ]
+      },
+      {
+        title: 'Gerente',
+        mission: 'Garantir a liderança e o desenvolvimento da área de receção e comercial, assegurando padrões consistentes de atendimento, crescimento da atividade comercial e uma experiência do cliente alinhada com os valores e posicionamento da empresa.',
+        responsibilities: [
+          'Liderar a equipa de receção e comercial garantindo organização e consistência no atendimento aos clientes.',
+          'Assegurar o correto funcionamento da receção, gestão de reservas e acompanhamento de clientes.',
+          'Orientar a atividade comercial promovendo captação de eventos e desenvolvimento de relações com clientes.',
+          'Garantir que a comunicação entre área comercial e operação assegura a correta preparação dos eventos.',
+          'Definir prioridades comerciais e orientar a equipa para o desenvolvimento da atividade comercial e fidelização de clientes.',
+          'Garantir que os padrões de atendimento, apresentação e comunicação são cumpridos na receção e na área comercial.',
+          'Contribuir para a melhoria contínua da experiência do cliente ao longo de todo o processo de contacto com a empresa.'
+        ],
+        technicalSkills: [
+          'Conhecimento da operação de receção e gestão de reservas.',
+          'Capacidade de organização e acompanhamento de processos comerciais.',
+          'Conhecimento dos serviços e oferta da empresa.',
+          'Capacidade de planeamento e acompanhamento de eventos.',
+          'Capacidade de análise da experiência do cliente e identificação de oportunidades de melhoria.'
+        ],
+        behavioralSkills: [
+          'Visão de negócio e liderança estratégica da equipa',
+          'Capacidade de influência',
+          'Capacidade de decisão, resolução de problemas e orientação para o cliente',
+          'Boa apresentação'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Copa',
+    roles: [
+      {
+        title: 'Copeiro Júnior (até 2 anos)',
+        mission: 'Assegurar a limpeza, higienização e organização dos utensílios, equipamentos e áreas de apoio da cozinha, contribuindo para o bom funcionamento da operação e cumprimento das normas de higiene e segurança alimentar.',
+        responsibilities: [
+          'Lavar e higienizar louça, utensílios e equipamentos',
+          'Manter a copa limpa e organizada',
+          'Apoiar a reposição de material limpo na cozinha',
+          'Cumprir normas de higiene, segurança e HACCP',
+          'Apoiar na recolha e separação de resíduos',
+          'Executar tarefas sob orientação da liderança'
+        ],
+        technicalSkills: [
+          'Noções básicas de higiene e segurança alimentar',
+          'Utilização correta de máquinas de lavagem',
+          'Organização básica do espaço de trabalho',
+          'Manuseamento seguro de produtos de limpeza'
+        ],
+        behavioralSkills: [
+          'Sentido de responsabilidade',
+          'Disciplina e pontualidade',
+          'Atenção ao detalhe',
+          'Espírito de equipa',
+          'Capacidade de seguir instruções'
+        ]
+      },
+      {
+        title: 'Copeiro Sénior (mais de 2 anos)',
+        mission: 'Garantir o funcionamento eficiente da copa, assegurando a higienização adequada dos materiais e apoiando a organização da cozinha, com maior autonomia e responsabilidade operacional.',
+        responsibilities: [
+          'Gerir o fluxo de lavagem e reposição de utensílios',
+          'Assegurar padrões elevados de limpeza e higiene',
+          'Identificar necessidades de reposição de material',
+          'Apoiar na organização de armazéns e áreas comuns',
+          'Orientar copeiros menos experientes',
+          'Garantir cumprimento rigoroso das normas de segurança'
+        ],
+        technicalSkills: [
+          'Domínio dos processos de lavagem e higienização',
+          'Conhecimento de normas HACCP',
+          'Organização e gestão de tempo',
+          'Identificação de falhas operacionais',
+          'Utilização correta de produtos e equipamentos'
+        ],
+        behavioralSkills: [
+          'Autonomia',
+          'Proatividade',
+          'Fiabilidade',
+          'Capacidade de trabalhar sob pressão',
+          'Comunicação eficaz'
+        ]
+      },
+      {
+        title: 'Chefe de Copa',
+        mission: 'Coordenar e supervisionar a equipa de copa, garantindo a eficiência operacional, o cumprimento das normas de higiene e a articulação eficaz com a cozinha.',
+        responsibilities: [
+          'Coordenar e distribuir tarefas da equipa de copa',
+          'Assegurar funcionamento contínuo da operação',
+          'Controlar stocks de material e produtos de limpeza',
+          'Garantir cumprimento de normas legais e HACCP',
+          'Formar e acompanhar novos elementos',
+          'Articular com o Chefe de Cozinha e Subchefe',
+          'Identificar oportunidades de melhoria operacional'
+        ],
+        technicalSkills: [
+          'Gestão operacional de copa',
+          'Planeamento e organização de turnos',
+          'Controlo de stocks e consumos',
+          'Conhecimento aprofundado de higiene e segurança alimentar',
+          'Capacidade de resolução de problemas'
+        ],
+        behavioralSkills: [
+          'Liderança',
+          'Sentido de organização',
+          'Capacidade de decisão',
+          'Comunicação clara',
+          'Responsabilidade e exemplo'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Direção Corporativa',
+    roles: [
+      {
+        title: 'Escriturário de 3ª',
+        mission: 'Executar tarefas administrativas de apoio, assegurando o correto tratamento documental e apoio básico às áreas administrativa/financeira e de recursos humanos.',
+        responsibilities: [
+          'Apoiar tarefas administrativas correntes',
+          'Organizar e arquivar documentação física e digital',
+          'Introduzir dados em sistemas administrativos',
+          'Apoiar processos simples de recursos humanos',
+          'Cumprir procedimentos internos definidos',
+          'Garantir confidencialidade da informação tratada'
+        ],
+        technicalSkills: [
+          'Noções básicas de serviços administrativos',
+          'Utilização de ferramentas informáticas',
+          'Organização documental',
+          'Registo e tratamento de informação'
+        ],
+        behavioralSkills: [
+          'Rigor e atenção ao detalhe',
+          'Capacidade de seguir procedimentos',
+          'Responsabilidade e fiabilidade',
+          'Disponibilidade para aprender',
+          'Discrição profissional'
+        ]
+      },
+      {
+        title: 'Escriturário de 2ª',
+        mission: 'Assegurar a execução autónoma de tarefas administrativas, garantindo apoio consistente às áreas financeira e de recursos humanos.',
+        responsibilities: [
+          'Executar tarefas administrativas com autonomia',
+          'Apoiar processos administrativos financeiros',
+          'Apoiar processos de recursos humanos (registos, controlo documental)',
+          'Atualizar bases de dados e sistemas internos',
+          'Garantir cumprimento de prazos administrativos',
+          'Assegurar confidencialidade da informação'
+        ],
+        technicalSkills: [
+          'Conhecimentos administrativos intermédios',
+          'Apoio a processos financeiros básicos',
+          'Apoio a processos administrativos de RH',
+          'Utilização eficaz de sistemas informáticos'
+        ],
+        behavioralSkills: [
+          'Autonomia na execução de tarefas',
+          'Organização e método',
+          'Sentido de responsabilidade',
+          'Comunicação clara e profissional',
+          'Fiabilidade no cumprimento de prazos',
+          'Discrição profissional'
+        ]
+      },
+      {
+        title: 'Escriturário de 1ª',
+        mission: 'Gerir processos administrativos com elevado grau de autonomia, assegurando suporte técnico às áreas administrativa-financeira e de recursos humanos, garantindo rigor, fiabilidade e cumprimento de prazos.',
+        responsibilities: [
+          'Gerir processos administrativos de forma autónoma',
+          'Apoiar a área financeira em tarefas de controlo e acompanhamento',
+          'Apoiar a gestão administrativa de recursos humanos',
+          'Validar e consolidar os registos de horários de trabalho',
+          'Preparar e verificar informação de suporte ao processamento salarial',
+          'Preparar informação administrativa para apoio à decisão',
+          'Apoiar tecnicamente escriturários de níveis mais juniores',
+          'Garantir confidencialidade e rigor da informação tratada'
+        ],
+        technicalSkills: [
+          'Administração avançada',
+          'Apoio a controlo financeiro',
+          'Processos administrativos de recursos humanos',
+          'Validação administrativa de horários e preparação de informação salarial',
+          'Utilização avançada de sistemas administrativos'
+        ],
+        behavioralSkills: [
+          'Elevado sentido de responsabilidade',
+          'Autonomia e fiabilidade',
+          'Organização e método',
+          'Capacidade de priorização',
+          'Discrição e ética profissional'
+        ]
+      },
+      {
+        title: 'Chefe de Secção',
+        mission: 'Coordenar a área administrativa, garantindo o correto funcionamento dos processos administrativo-financeiros e de gestão administrativa de recursos humanos.',
+        responsibilities: [
+          'Coordenar a equipa administrativa',
+          'Supervisionar processos administrativos e de recursos humanos',
+          'Assegurar cumprimento de procedimentos legais e internos',
+          'Articular com a Direção as necessidades administrativas e de recursos humanos',
+          'Garantir fiabilidade da informação produzida',
+          'Promover melhoria contínua dos processos administrativos',
+          'Assegurar a gestão administrativa da loja, incluindo controlo de encomendas, acompanhamento de stocks, atualização de preçário e organização da informação de produtos.'
+        ],
+        technicalSkills: [
+          'Coordenação de serviços administrativos',
+          'Conhecimentos de administração financeira',
+          'Processos administrativos de recursos humanos',
+          'Planeamento e organização administrativa',
+          'Ensino Secundário'
+        ],
+        behavioralSkills: [
+          'Liderança funcional',
+          'Capacidade de organização e planeamento',
+          'Comunicação clara e assertiva',
+          'Capacidade de decisão operacional',
+          'Sentido de responsabilidade institucional'
+        ]
+      },
+      {
+        title: 'Diretor de Serviços (Administrativos e Financeiros)',
+        mission: 'Definir e assegurar a estratégia administrativa e financeira da empresa, garantindo sustentabilidade, controlo financeiro, conformidade legal e fiabilidade da informação de gestão.',
+        responsibilities: [
+          'Definir a estratégia administrativa e financeira da empresa',
+          'Supervisionar a gestão financeira global',
+          'Assegurar conformidade legal, fiscal e administrativa',
+          'Analisar indicadores financeiros e administrativos',
+          'Assegurar a recolha, validação e análise das caixas diárias de faturação da operação',
+          'Avalia propostas e acordos com base na análise de indicadores financeiros, assegurando a sua viabilidade económica e apoiando a tomada de decisão estratégica.'
+        ],
+        technicalSkills: [
+          'Gestão financeira estratégica',
+          'Planeamento e controlo financeiro.',
+          'Conhecimento legal e fiscal',
+          'Controlo e validação de faturação diária e fluxos financeiros operacionais',
+          'Análise de indicadores de gestão',
+          'Licenciatura ou formação superior relevante na área de Gestão, Economia, Contabilidade, Finanças ou área equivalente'
+        ],
+        behavioralSkills: [
+          'Visão estratégica',
+          'Capacidade de decisão',
+          'Liderança institucional',
+          'Rigor e ética profissional',
+          'Comunicação institucional'
+        ]
+      },
+      {
+        title: 'Diretor de Serviços Técnicos (Recursos Humanos)',
+        mission: 'Definir e implementar a estratégia de recursos humanos, garantindo desenvolvimento, alinhamento cultural e sustentabilidade da organização.',
+        responsibilities: [
+          'Definir políticas e estratégias de recursos humanos',
+          'Garantir processos de recrutamento, desenvolvimento e avaliação',
+          'Assegurar conformidade legal laboral',
+          'Apoiar a liderança no desenvolvimento de equipas',
+          'Promover cultura organizacional e boas práticas',
+          'Analisa indicadores de custos de recursos humanos e apoia a liderança na tomada de decisões relacionadas com estrutura e eficiência da equipa.'
+        ],
+        technicalSkills: [
+          'Gestão estratégica de recursos humanos',
+          'Legislação laboral',
+          'Sistemas de avaliação e desenvolvimento',
+          'Planeamento de recursos humanos',
+          'Licenciatura ou formação superior relevante na área de Recursos Humanos, Gestão, Psicologia, ou área equivalente'
+        ],
+        behavioralSkills: [
+          'Liderança estratégica',
+          'Capacidade de influência',
+          'Comunicação institucional',
+          'Ética e confidencialidade',
+          'Visão de longo prazo'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Food',
+    roles: [
+      {
+        title: 'Estagiário / Ajudante de Cozinha',
+        mission: 'Apoiar a equipa de cozinha na preparação, organização e limpeza, garantindo o cumprimento das normas de higiene e segurança alimentar, enquanto desenvolve competências técnicas básicas.',
+        responsibilities: [
+          'Apoiar na preparação básica de alimentos (lavar, cortar)',
+          'Assegurar a limpeza e organização da cozinha',
+          'Auxiliar na receção e arrumação de mercadorias',
+          'Cumprir normas de higiene e segurança alimentar',
+          'Executar tarefas sob orientação direta',
+          'Apoiar diferentes secções conforme necessidade'
+        ],
+        technicalSkills: [
+          'Noções básicas de higiene e segurança alimentar',
+          'Conhecimento elementar de utensílios de cozinha',
+          'Capacidade de seguir instruções simples',
+          'Organização básica do posto de trabalho'
+        ],
+        behavioralSkills: [
+          'Vontade de aprender',
+          'Responsabilidade',
+          'Espírito de equipa',
+          'Pontualidade e disciplina',
+          'Atenção ao detalhe'
+        ]
+      },
+      {
+        title: 'Cozinheiro de 3ª',
+        mission: 'Executar tarefas culinárias simples com autonomia limitada, garantindo a qualidade e segurança alimentar dos produtos sob a supervisão da equipa mais sénior.',
+        responsibilities: [
+          'Preparar alimentos de baixa complexidade',
+          'Executar mise en place básica',
+          'Apoiar cozinheiros de níveis superiores',
+          'Cumprir fichas técnicas e orientações',
+          'Manter o posto de trabalho limpo e organizado',
+          'Respeitar normas de HACCP'
+        ],
+        technicalSkills: [
+          'Técnicas básicas de corte e confeção',
+          'Conhecimento de matérias-primas',
+          'Leitura simples de fichas técnicas',
+          'Normas de higiene e segurança alimentar'
+        ],
+        behavioralSkills: [
+          'Capacidade de execução',
+          'Atenção e rigor',
+          'Boa comunicação',
+          'Trabalho em equipa',
+          'Gestão básica do tempo'
+        ]
+      },
+      {
+        title: 'Cozinheiro de 2ª',
+        mission: 'Assegurar a confeção consistente de pratos, com autonomia operacional, contribuindo para a eficiência do serviço e a qualidade final dos produtos.',
+        responsibilities: [
+          'Preparar e confecionar pratos da ementa',
+          'Executar mise en place completa da sua secção',
+          'Cumprir fichas técnicas e padrões de qualidade',
+          'Apoiar o controlo de desperdício',
+          'Colaborar na formação de elementos',
+          'Garantir higiene e segurança no serviço'
+        ],
+        technicalSkills: [
+          'Técnicas intermédias de confeção',
+          'Conhecimento de tempos de serviço',
+          'Interpretação correta de fichas técnicas',
+          'Organização de secção',
+          'Noções de controlo de custos'
+        ],
+        behavioralSkills: [
+          'Autonomia',
+          'Sentido de responsabilidade',
+          'Proatividade',
+          'Capacidade de trabalhar sob pressão',
+          'Espírito colaborativo'
+        ]
+      },
+      {
+        title: 'Pizzaiolo',
+        mission: 'Preparar e confecionar pizzas de acordo com os padrões definidos, garantindo consistência, qualidade e eficiência durante o serviço.',
+        responsibilities: [
+          'Preparar massas e ingredientes',
+          'Executar pizzas conforme fichas técnicas',
+          'Controlar tempos de fermentação e cozedura',
+          'Garantir a qualidade visual e gustativa',
+          'Manter limpeza do posto e forno',
+          'Gerir stocks da secção de pizzas'
+        ],
+        technicalSkills: [
+          'Técnicas de preparação de massa',
+          'Manuseamento de forno',
+          'Conhecimento de fermentações',
+          'Organização de secção',
+          'Controlo de desperdício'
+        ],
+        behavioralSkills: [
+          'Precisão e consistência',
+          'Resistência ao stress',
+          'Foco na qualidade',
+          'Autonomia',
+          'Responsabilidade'
+        ]
+      },
+      {
+        title: 'Cozinheiro de 1ª',
+        mission: 'Garantir a excelência técnica na confeção dos pratos, assegurando a coordenação da sua secção e contribuindo para a melhoria contínua da operação.',
+        responsibilities: [
+          'Coordenar uma secção da cozinha',
+          'Garantir consistência e qualidade dos pratos',
+          'Apoiar o Subchefe na gestão diária',
+          'Formar e acompanhar cozinheiros de 3ª e 2ª',
+          'Controlar desperdícios e custos da secção',
+          'Assegurar a coordenação da cozinha na ausência do Subchefe ou do Chefe de Cozinha, garantindo continuidade do serviço',
+          'Garantir cumprimento de normas e procedimentos'
+        ],
+        technicalSkills: [
+          'Domínio técnico avançado',
+          'Gestão de secção',
+          'Controlo de qualidade',
+          'Leitura e otimização de fichas técnicas',
+          'Noções sólidas de custos e stocks'
+        ],
+        behavioralSkills: [
+          'Liderança informal',
+          'Capacidade de decisão',
+          'Comunicação eficaz',
+          'Organização e orientação para resultados'
+        ]
+      },
+      {
+        title: 'Subchefe de Cozinha',
+        mission: 'Apoiar o Chefe de Cozinha na gestão operacional e da equipa, assegurando o bom funcionamento diário da cozinha e a qualidade do serviço.',
+        responsibilities: [
+          'Coordenar a equipa em ausência do Chefe',
+          'Supervisionar a execução do serviço',
+          'Apoiar planeamento de produção',
+          'Controlar custos, stocks e desperdícios',
+          'Garantir cumprimento de normas legais',
+          'Contribuir ativamente para a formação da equipa'
+        ],
+        technicalSkills: [
+          'Gestão operacional de cozinha',
+          'Planeamento de produção',
+          'Controlo de custos e stocks',
+          'Conhecimento aprofundado de HACCP',
+          'Capacidade de resolução de problemas'
+        ],
+        behavioralSkills: [
+          'Liderança',
+          'Gestão de conflitos',
+          'Tomada de decisão',
+          'Comunicação clara',
+          'Resiliência'
+        ]
+      },
+      {
+        title: 'Chefe de Cozinha',
+        mission: 'Definir, liderar e assegurar a estratégia culinária e operacional da cozinha, garantindo qualidade, rentabilidade e desenvolvimento da equipa.',
+        responsibilities: [
+          'Garantir consistência técnica e qualidade dos pratos servidos de acordo com as fichas técnicas definidas.',
+          'Assegurar organização eficiente da cozinha garantindo cumprimento dos tempos de serviço.',
+          'Controlar custos e desperdício alimentar através de planeamento de produção e gestão de stocks.',
+          'Supervisionar a execução técnica da equipa garantindo cumprimento de normas de higiene e segurança alimentar.',
+          'Desenvolver e atualizar processos de produção que aumentem eficiência e consistência operacional.',
+          'Formar e desenvolver a equipa de cozinha garantindo evolução técnica e alinhamento com os padrões definidos.'
+        ],
+        technicalSkills: [
+          'Gestão global de cozinha',
+          'Planeamento financeiro e controlo de custos',
+          'Desenvolvimento de menus',
+          'Gestão de equipas',
+          'Conhecimento legal e de segurança alimentar'
+        ],
+        behavioralSkills: [
+          'Liderança estratégica',
+          'Visão de negócio',
+          'Capacidade de motivar equipas',
+          'Tomada de decisão',
+          'Elevado sentido de responsabilidade'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Operação da Frente',
+    roles: [
+      {
+        title: 'Supervisor de Operações',
+        mission: 'Garantir o bom funcionamento diário da operação da frente, acompanhando de perto a área do bar e mesas e assegurando que os padrões de serviço, organização e experiência do cliente são cumpridos de forma consistente.',
+        responsibilities: [
+          'Supervisionar o funcionamento das mesas e bar garantindo organização da operação.',
+          'Acompanhar o desempenho das equipas operacionais assegurando cumprimento de padrões de serviço.',
+          'Identificar falhas operacionais e implementar melhorias na organização do serviço.',
+          'Colaborar com o Chefe de Bar na criação de novas receitas, propostas de bebidas e seleção de marcas da carta.',
+          'Garantir que a experiência do cliente se mantém consistente durante todo o serviço.',
+          'Apoiar as lideranças operacionais na resolução de situações que possam afetar o serviço.'
+        ],
+        technicalSkills: [
+          'Conhecimento profundo da operação de sala e bar.',
+          'Capacidade de organização e supervisão operacional.',
+          'Capacidade de análise da experiência do cliente.',
+          'Conhecimento da oferta gastronómica e de bebidas.',
+          'Capacidade de desenvolvimento de propostas para a carta de bebidas.'
+        ],
+        behavioralSkills: [
+          'Liderança operacional e capacidade de decisão em contexto de serviço.',
+          'Comunicação clara com equipas.',
+          'Proatividade na identificação de melhorias.',
+          'Orientação para a experiência do cliente.'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Direção Operacional',
+    roles: [
+      {
+        title: 'Assistente de Direção',
+        mission: 'Apoiar a Direção na coordenação estratégica e operacional da unidade, assegurando a execução eficaz dos planos, o alinhamento das equipas e o controlo de resultados.',
+        responsibilities: [
+          'Apoiar a Direção na gestão global da operação',
+          'Coordenar e alinhar lideranças intermédias',
+          'Acompanhar resultados financeiros e operacionais',
+          'Assegurar cumprimento de políticas e procedimentos',
+          'Representar a Direção na sua ausência',
+          'Apoiar processos de planeamento e melhoria contínua',
+          'Contribuir para decisões estratégicas da unidade'
+        ],
+        technicalSkills: [
+          'Gestão global de unidades de restauração',
+          'Planeamento estratégico e operacional',
+          'Análise financeira e controlo de custos',
+          'Gestão de equipas de liderança',
+          'Conhecimento aprofundado de legislação, requisitos e procedimentos'
+        ],
+        behavioralSkills: [
+          'Liderança transversal',
+          'Visão estratégica',
+          'Capacidade analítica',
+          'Comunicação institucional',
+          'Elevado grau de maturidade profissional'
+        ]
+      },
+      {
+        title: 'Diretor de Restauração e Bebidas',
+        mission: 'Definir, liderar e garantir a estratégia global de restauração e bebidas, assegurando rentabilidade, excelência operacional, posicionamento de marca e desenvolvimento sustentável das equipas.',
+        responsibilities: [
+          'Definir estratégia global de restauração e bebidas',
+          'Garantir rentabilidade e controlo financeiro da área',
+          'Liderar gerentes e liderança de topo',
+          'Definir padrões de qualidade, serviço e produto',
+          'Analisar resultados e tomar decisões estratégicas',
+          'Representar a operação junto da administração',
+          'Promover inovação e melhoria contínua',
+          'Garantir conformidade legal e boa reputação'
+        ],
+        technicalSkills: [
+          'Gestão estratégica de restauração e bebidas',
+          'Planeamento financeiro e orçamental avançado',
+          'Análise de desempenho e indicadores estratégicos',
+          'Gestão de múltiplas unidades ou operações complexas',
+          'Conhecimento aprofundado de mercado e tendências'
+        ],
+        behavioralSkills: [
+          'Liderança estratégica e inspiradora',
+          'Visão de negócio de longo prazo',
+          'Capacidade de influência e negociação',
+          'Tomada de decisão em contextos complexos',
+          'Elevado sentido ético e de responsabilidade'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Housekeeping',
+    roles: [
+      {
+        title: 'Técnico de Limpeza',
+        mission: 'Assegurar a limpeza, higienização e conservação dos espaços, equipamentos e superfícies, garantindo ambientes seguros, organizados e em conformidade com as normas de higiene e segurança.',
+        responsibilities: [
+          'Executar a limpeza e higienização dos espaços atribuídos',
+          'Utilizar corretamente produtos e equipamentos de limpeza',
+          'Cumprir planos e rotinas de limpeza definidos',
+          'Assegurar a correta separação e encaminhamento de resíduos',
+          'Cumprir normas de higiene, segurança e utilização de EPI',
+          'Comunicar anomalias ou necessidades de reposição'
+        ],
+        technicalSkills: [
+          'Técnicas de limpeza e higienização',
+          'Utilização segura de produtos e equipamentos',
+          'Conhecimento básico de normas de higiene e segurança',
+          'Organização do posto de trabalho'
+        ],
+        behavioralSkills: [
+          'Rigor e atenção ao detalhe',
+          'Responsabilidade',
+          'Autonomia',
+          'Disciplina',
+          'Espírito de equipa'
+        ]
+      },
+      {
+        title: 'Encarregado de Limpeza',
+        mission: 'Coordenar e supervisionar a equipa de limpeza, assegurando o cumprimento dos planos de higienização, a qualidade do serviço e a articulação com as restantes áreas operacionais.',
+        responsibilities: [
+          'Coordenar e distribuir tarefas da equipa de limpeza',
+          'Assegurar cumprimento dos planos e horários de limpeza',
+          'Supervisionar a qualidade dos serviços prestados',
+          'Controlar stocks de materiais e produtos de limpeza',
+          'Garantir cumprimento de normas de higiene e segurança',
+          'Formar e acompanhar novos elementos',
+          'Articular com liderança das áreas operacionais'
+        ],
+        technicalSkills: [
+          'Gestão operacional de serviços de limpeza',
+          'Planeamento de rotinas e equipas',
+          'Controlo de stocks e consumos',
+          'Conhecimento aprofundado de normas de higiene',
+          'Capacidade de supervisão e controlo de qualidade'
+        ],
+        behavioralSkills: [
+          'Liderança',
+          'Organização',
+          'Capacidade de decisão',
+          'Comunicação clara',
+          'Sentido de responsabilidade'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Manutenção',
+    roles: [
+      {
+        title: 'Ajudante de Todas as Secções (Manutenção)',
+        mission: 'Apoiar as diferentes áreas de manutenção na execução de tarefas básicas, contribuindo para o bom funcionamento das instalações, equipamentos e infraestruturas.',
+        responsibilities: [
+          'Apoiar trabalhos básicos de manutenção geral',
+          'Auxiliar na movimentação e preparação de materiais',
+          'Executar tarefas simples sob orientação técnica',
+          'Cumprir normas de segurança e utilização de EPI',
+          'Apoiar diferentes especialidades conforme necessidade',
+          'Manter áreas de trabalho limpas e organizadas'
+        ],
+        technicalSkills: [
+          'Noções básicas de manutenção geral',
+          'Utilização elementar de ferramentas manuais',
+          'Conhecimento básico de segurança no trabalho',
+          'Capacidade de executar instruções técnicas simples'
+        ],
+        behavioralSkills: [
+          'Disponibilidade',
+          'Espírito de equipa',
+          'Responsabilidade',
+          'Vontade de aprender',
+          'Disciplina operacional'
+        ]
+      },
+      {
+        title: 'Carpinteiro em Geral de 2ª',
+        mission: 'Executar trabalhos de manutenção e carpintaria de média complexidade, assegurando a conservação das instalações e equipamentos com autonomia operacional.',
+        responsibilities: [
+          'Executar trabalhos de carpintaria e manutenção geral',
+          'Realizar reparações simples e substituições',
+          'Interpretar instruções técnicas básicas',
+          'Garantir uso correto de ferramentas e materiais',
+          'Cumprir normas de segurança e qualidade',
+          'Reportar necessidades ou anomalias técnicas'
+        ],
+        technicalSkills: [
+          'Técnicas intermédias de carpintaria',
+          'Manutenção geral de edifícios',
+          'Leitura básica de desenhos ou esquemas',
+          'Utilização segura de ferramentas elétricas',
+          'Noções de outros ofícios (canalização, serralharia, etc.)'
+        ],
+        behavioralSkills: [
+          'Autonomia',
+          'Sentido prático',
+          'Rigor na execução',
+          'Capacidade de resolução de problemas',
+          'Responsabilidade'
+        ]
+      },
+      {
+        title: 'Carpinteiro em Geral de 1ª',
+        mission: 'Executar trabalhos de carpintaria e manutenção de elevada complexidade, garantindo qualidade técnica, segurança e apoio à coordenação da equipa.',
+        responsibilities: [
+          'Executar trabalhos técnicos complexos de carpintaria',
+          'Diagnosticar avarias e propor soluções',
+          'Apoiar e orientar carpinteiros menos experientes',
+          'Garantir qualidade e acabamentos dos trabalhos',
+          'Cumprir e promover normas de segurança',
+          'Apoiar planeamento de intervenções técnicas'
+        ],
+        technicalSkills: [
+          'Domínio avançado de carpintaria',
+          'Leitura e interpretação de projetos',
+          'Diagnóstico e resolução técnica de problemas',
+          'Utilização avançada de ferramentas e equipamentos',
+          'Conhecimentos sólidos de manutenção geral'
+        ],
+        behavioralSkills: [
+          'Liderança técnica informal',
+          'Precisão e rigor',
+          'Capacidade de decisão',
+          'Organização',
+          'Responsabilidade técnica'
+        ]
+      },
+      {
+        title: 'Chefe de Manutenção',
+        mission: 'Coordenar a equipa de manutenção, assegurando a operacionalidade das instalações e equipamentos, bem como a execução eficiente dos planos de manutenção.',
+        responsibilities: [
+          'Planear e coordenar trabalhos de manutenção',
+          'Supervisionar a equipa técnica',
+          'Garantir cumprimento de planos preventivos',
+          'Controlar materiais, ferramentas e consumos',
+          'Assegurar cumprimento de normas de segurança',
+          'Articular com outras áreas operacionais'
+        ],
+        technicalSkills: [
+          'Gestão operacional de manutenção',
+          'Planeamento de manutenção preventiva e corretiva',
+          'Liderança de equipas técnicas',
+          'Conhecimento de instalações e infraestruturas',
+          'Capacidade de gestão de recursos'
+        ],
+        behavioralSkills: [
+          'Liderança',
+          'Organização',
+          'Tomada de decisão',
+          'Comunicação eficaz',
+          'Orientação para resultados'
+        ]
+      },
+      {
+        title: 'Chefe de Manutenção, Conservação e Serviços Técnicos',
+        mission: 'Definir, coordenar e supervisionar a estratégia global de manutenção e serviços técnicos, garantindo a fiabilidade das infraestruturas, segurança e otimização de recursos.',
+        responsibilities: [
+          'Garantir disponibilidade operacional das instalações e equipamentos através de manutenção preventiva eficaz.',
+          'Coordenar intervenções técnicas assegurando rapidez de resolução e minimização de impacto na operação.',
+          'Identificar riscos técnicos nas instalações e implementar ações preventivas.',
+          'Assegurar cumprimento das normas de segurança e requisitos legais aplicáveis.',
+          'Gerir recursos técnicos e materiais garantindo eficiência na utilização dos mesmos.'
+        ],
+        technicalSkills: [
+          'Gestão estratégica de manutenção',
+          'Conhecimento técnico multidisciplinar',
+          'Planeamento financeiro e controlo de custos',
+          'Gestão de contratos e fornecedores',
+          'Conhecimento de legislação e normas técnicas'
+        ],
+        behavioralSkills: [
+          'Liderança estratégica',
+          'Visão global',
+          'Capacidade analítica',
+          'Comunicação eficaz',
+          'Elevado sentido de responsabilidade'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Mesas',
+    roles: [
+      {
+        title: 'Estagiário / Ajudante de Todas as Secções (Sala)',
+        mission: 'Apoiar o funcionamento do serviço de sala através da preparação das áreas de trabalho, transporte de materiais e apoio à equipa, garantindo organização e condições adequadas para o serviço.',
+        responsibilities: [
+          'Apoiar a preparação das mesas e áreas de serviço antes do início do serviço.',
+          'Transportar louça e materiais necessários ao funcionamento do serviço.',
+          'Assegurar reposição de materiais necessários ao serviço (copos, pratos, guardanapos, etc.).',
+          'Apoiar a equipa das mesas na organização dos espaços durante o serviço.',
+          'Manter as áreas de trabalho organizadas e alinhadas com os padrões definidos.',
+          'Cumprir normas de higiene, segurança e apresentação.'
+        ],
+        technicalSkills: [
+          'Noções básicas de serviço de mesas.',
+          'Preparação e organização de mesas e áreas de serviço.',
+          'Transporte correto de materiais e louça.',
+          'Cumprimento de normas básicas de higiene e segurança alimentar.',
+          'Conhecimento básico da organização do serviço de restaurante',
+          'Inglês funcional (obrigatório)'
+        ],
+        behavioralSkills: [
+          'Disponibilidade para aprender e evoluir no serviço de mesas.',
+          'Espírito de equipa e colaboração com equipa.',
+          'Responsabilidade no cumprimento das tarefas atribuídas.',
+          'Boa apresentação e postura profissional.'
+        ]
+      },
+      {
+        title: 'Assistente de Sala de 2ª',
+        mission: 'Executar o serviço de mesas garantindo atendimento correto ao cliente, organização do serviço e cumprimento dos padrões definidos pela empresa.',
+        responsibilities: [
+          'Executar o serviço de mesas garantindo correto atendimento aos clientes.',
+          'Preparar a mise-en-place das mesas antes do início do serviço.',
+          'Conhecer a ementa e esclarecer dúvidas básicas dos clientes.',
+          'Registar pedidos e assegurar comunicação correta com cozinha e bar.',
+          'Garantir organização das mesas e áreas de serviço durante o turno.',
+          'Cumprir os procedimentos definidos para o serviço de restaurante.'
+        ],
+        technicalSkills: [
+          'Técnicas intermédias de serviço de mesas.',
+          'Conhecimento da ementa e produtos disponíveis.',
+          'Registo correto de pedidos.',
+          'Organização da mise-en-place e das mesas.',
+          'Cumprimento de normas de higiene e segurança alimentar.',
+          'Técnicas básicas de venda adicional',
+          'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
+        ],
+        behavioralSkills: [
+          'Orientação para o cliente e qualidade do atendimento.',
+          'Comunicação clara com clientes e equipa.',
+          'Capacidade de trabalhar sob pressão durante o serviço.',
+          'Responsabilidade na execução do serviço.',
+          'Boa apresentação e postura profissional.'
+        ]
+      },
+      {
+        title: 'Assistente de Sala de 1ª',
+        mission: 'Garantir excelência no serviço de sala, assumindo responsabilidades de coordenação operacional e sendo referência de qualidade e atendimento.',
+        responsibilities: [
+          'Coordenar serviço da sua área, garantindo organização das mesas e apoio à equipa',
+          'Garantir qualidade e consistência do atendimento',
+          'Apoiar tecnicamente assistentes de sala menos experientes garantindo cumprimento consistente dos padrões de serviço.',
+          'Apoiar o Subchefe de Sala',
+          'Formar e acompanhar Assistentes de sala',
+          'Resolver situações com clientes',
+          'Assegurar cumprimento dos procedimentos'
+        ],
+        technicalSkills: [
+          'Domínio avançado de serviço de sala',
+          'Gestão operacional de área',
+          'Resolução de reclamações',
+          'Técnicas de venda e fidelização',
+          'Conhecimento de vinhos e bebidas',
+          'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
+        ],
+        behavioralSkills: [
+          'Liderança informal',
+          'Capacidade de decisão',
+          'Empatia',
+          'Organização',
+          'Orientação para resultados',
+          'Boa apresentação'
+        ]
+      },
+      {
+        title: 'Subchefe de Sala',
+        mission: 'Apoiar o Gerente de Sala na coordenação da equipa de mesas e do serviço, assegurando padrões elevados de atendimento e eficiência operacional.',
+        responsibilities: [
+          'Coordenar equipa durante o serviço',
+          'Supervisionar qualidade do atendimento',
+          'Apoiar planeamento de escalas',
+          'Resolver situações operacionais e com clientes',
+          'Garantir cumprimento de procedimentos',
+          'Apoiar formação e desenvolvimento da equipa'
+        ],
+        technicalSkills: [
+          'Gestão operacional de sala (planeamento e organização)',
+          'Liderança de equipas',
+          'Gestão de conflitos',
+          'Conhecimento de indicadores de serviço',
+          'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
+        ],
+        behavioralSkills: [
+          'Liderança e sentido de responsabilidade',
+          'Comunicação clara',
+          'Capacidade de decisão',
+          'Resiliência',
+          'Boa apresentação'
+        ]
+      },
+      {
+        title: 'Chefe de Sala',
+        mission: 'Liderar e garantir o funcionamento diário da equipa das mesas, assegurando a qualidade do serviço, a organização da equipa e a consistência da experiência do cliente.\n\nIndicador-chave da função (KPI): Venda média por cliente / mesa.',
+        responsibilities: [
+          'Garantir organização e fluidez do serviço de mesa, assegurando atendimento eficiente mesmo em períodos de maior volume.',
+          'Acompanhar o desempenho da equipa garantindo cumprimento consistente dos padrões de atendimento.',
+          'Assegurar gestão equilibrada do fluxo de clientes e ocupação das mesas.',
+          'Resolver reclamações ou situações de insatisfação garantindo recuperação da experiência do cliente.',
+          'Promover a venda média através da orientação da equipa para sugestões de venda e conhecimento da carta.',
+          'Desenvolver a equipa das mesas garantindo alinhamento com os padrões de serviço e comportamento definidos.'
+        ],
+        technicalSkills: [
+          'Gestão operacional do setor das mesas em contexto de restauração.',
+          'Organização de equipas de serviço.',
+          'Conhecimento profundo de padrões de hospitalidade e atendimento.',
+          'Gestão de fluxos operacionais entre mesas, bar e cozinha.',
+          'Capacidade de acompanhamento e desenvolvimento da venda média.',
+          'Inglês e Francês fluente (obrigatório)'
+        ],
+        behavioralSkills: [
+          'Liderança de equipa de forma clara e assertiva.',
+          'Capacidade de decisão em contexto de pressão e de motivação de equipas.',
+          'Foco na experiência do cliente.',
+          'Sentido de responsabilidade, exemplo profissional e boa apresentação.'
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Controlo',
+    roles: [
+      {
+        title: 'Controlador-caixa',
+        mission: 'Assegurar o correto registo e controlo das operações de caixa, garantindo fiabilidade da faturação, organização da informação financeira diária e cumprimento dos procedimentos definidos.',
+        responsibilities: [
+          'Registar e controlar as operações de caixa garantindo correção dos valores faturados.',
+          'Conferir pagamentos recebidos em numerário, cartão ou outros meios de pagamento.',
+          'Garantir abertura e fecho de caixa de acordo com os procedimentos definidos.',
+          'Identificar e comunicar discrepâncias ou irregularidades nos movimentos de caixa.',
+          'Organizar e preparar documentação de suporte às caixas diárias.',
+          'Apoiar o controlo da faturação diária garantindo fiabilidade da informação registada.'
+        ],
+        technicalSkills: [
+          'Conhecimento de sistemas de faturação e registo de pagamentos.',
+          'Conferência de valores e movimentos de caixa.',
+          'Organização de documentação financeira.',
+          'Cumprimento de procedimentos administrativos e financeiros.',
+          'Atenção ao detalhe no tratamento de informação monetária.'
+        ],
+        behavioralSkills: [
+          'Rigor e precisão no tratamento de valores.',
+          'Sentido de responsabilidade e fiabilidade.',
+          'Organização e método de trabalho.',
+          'Comunicação clara com equipa e liderança.'
+        ]
+      },
+      {
+        title: 'Controlador',
+        mission: 'Acompanhar e controlar a informação operacional e financeira da operação, garantindo fiabilidade dos dados, suporte à gestão e cumprimento dos procedimentos definidos.',
+        responsibilities: [
+          'Controlar e validar informação relacionada com faturação e caixas diárias da operação.',
+          'Acompanhar indicadores operacionais garantindo fiabilidade dos dados registados.',
+          'Identificar inconsistências na informação operacional e comunicar à liderança.',
+          'Apoiar o Chefe de Controlo na monitorização das condições operacionais da equipa.',
+          'Organizar informação de suporte à análise de desempenho da operação.',
+          'Garantir cumprimento dos procedimentos definidos para controlo da operação.'
+        ],
+        technicalSkills: [
+          'Controlo e validação de informação operacional e financeira.',
+          'Utilização de sistemas de registo e análise de dados.',
+          'Organização e tratamento de informação administrativa.',
+          'Interpretação básica de indicadores operacionais.',
+          'Cumprimento de procedimentos de controlo interno.'
+        ],
+        behavioralSkills: [
+          'Capacidade analítica e atenção ao detalhe.',
+          'Sentido de responsabilidade na gestão da informação.',
+          'Organização e método no acompanhamento dos processos.',
+          'Comunicação clara com liderança e diferentes áreas da operação.'
+        ]
+      },
+      {
+        title: 'Chefe de Controlo',
+        mission: 'Garantir que a operação dispõe das condições necessárias para que as equipas trabalhem com eficiência e foco, assegurando organização, suporte técnico e coordenação de áreas de apoio que contribuem para a rentabilidade da equipa e para o bom funcionamento do serviço.',
+        responsibilities: [
+          'Garantir que as condições operacionais necessárias ao funcionamento da equipa estão asseguradas.',
+          'Elaborar horários equilibrados que assegurem cobertura eficiente da operação.',
+          'Assegurar funcionamento adequado de equipamentos e sistemas utilizados pela equipa.',
+          'Coordenar equipa de limpeza garantindo organização e fluidez das operações.',
+          'Identificar e resolver rapidamente problemas operacionais que possam afetar o serviço.',
+          'Substituir o Chefe de Sala na sua ausência, garantindo a continuidade da operação das mesas.',
+          'Acompanhar o cumprimento de procedimentos operacionais e apoiar a melhoria da organização interna.'
+        ],
+        technicalSkills: [
+          'Planeamento e gestão de horários de trabalho.',
+          'Organização e coordenação de operações de apoio.',
+          'Conhecimento elementar dos processos de armazém e controlo de recursos.',
+          'Noções do funcionamento de equipamentos e sistemas operacionais.',
+          'Conhecimento do funcionamento operacional do setor das mesas.',
+          'Capacidade de análise e resolução de problemas operacionais.'
+        ],
+        behavioralSkills: [
+          'Elevado sentido de responsabilidade.',
+          'Capacidade de organização e planeamento e autonomia na resolução de problemas.',
+          'Comunicação clara com diferentes equipas.',
+          'Capacidade de coordenação e acompanhamento de equipas.'
+        ]
+      }
+    ]
+  }
+];

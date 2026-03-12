@@ -62,7 +62,7 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-6",
     title: "Estrutura de Carreira por Setor",
     content: [
-      "Cozinha | PRODUÇÃO ALIMENTAR | Ajudante | Nível III | Chefe de Cozinha | Nível X | III → IV-IX → X",
+      "Food | PRODUÇÃO ALIMENTAR | Ajudante | Nível III | Chefe de Cozinha | Nível X | III → IV-IX → X",
       "Copa | APOIO & LIMPEZA | Copeiro Junior | Nível II | Chefe de Copa / Coz. 3ª | Nível V | II → III-IV → V",
       "Armazém | LOGÍSTICA | Ajudante | Nível III | Encarregado de Armazém | Nível VIII | III → IV-VII → VIII",
       "Manutenção | TÉCNICA | Ajudante | Nível III | Chefe de Manutenção, Conservação e Serviços Técnicos | Nível IX | III → IV-VIII → IX",
@@ -79,7 +79,7 @@ export const hardcodedSlides: Slide[] = [
   },
   {
     id: "slide-8",
-    title: "COZINHA",
+    title: "FOOD",
     content: [
       "Entrada típica (nível III): Ajudante de todas as secções | Estagiário de cozinheiro",
       "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
@@ -247,7 +247,7 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-19",
     title: "Mensagem Final",
     content: [
-      "Quando todos sabemos para onde ir e o que é esperado, tornamo-nos mais fortes.\nA partir daqui, o crescimento passa a depender do compromisso e empenho de cada um!"
+      "Quando todos sabemos para onde ir e o que é esperado, ficamos mais fortes.\n\nA partir daqui, o crescimento passa a depender do compromisso e empenho de cada um!"
     ],
     layout: "quote",
     notes: "O nosso sistema é justo: garante evolução a quem cumpre, e acelera a quem supera. O vosso crescimento está nas vossas mãos."
