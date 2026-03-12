@@ -397,10 +397,13 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                             if (!p) return null;
                             const isCheck = p.startsWith('✓');
                             const isGift = p.startsWith('🎁');
-                            const text = p.replace(/^[✓🎁]\s*/, '');
+                            const text = p.replace(/^(?:✓|🎁)\s*/, '');
+                            
+                            // Add extra top margin if this is the first gift after a checkmark
+                            const isFirstGift = isGift && idx > 0 && parts[idx + 1].startsWith('✓');
                             
                             return (
-                              <div key={idx} className="flex items-start gap-1.5 text-xs text-brand-stone">
+                              <div key={idx} className={`flex items-start gap-1.5 text-xs text-brand-stone ${isFirstGift ? 'mt-3' : ''}`}>
                                 {isCheck && <Check size={14} className="text-green-500 shrink-0 mt-0.5" />}
                                 {isGift && <Gift size={14} className="text-yellow-500 shrink-0 mt-0.5" />}
                                 {!isCheck && !isGift && <span className="w-3.5 shrink-0" />}
