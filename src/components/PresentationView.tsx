@@ -354,10 +354,10 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                           </>
                         )}
                         
-                        <div className="flex items-center gap-1.5 mb-0.5">
-                          <Gift size={14} className="text-yellow-500" />
+                        <div className="flex items-start gap-1.5 mb-2">
+                          <Gift size={16} className="text-yellow-500 shrink-0 mt-0.5" />
+                          <p className="text-xs leading-relaxed">{parts[4].replace('Benefício: ', '')}</p>
                         </div>
-                        <p className="text-xs mb-2 leading-relaxed">{parts[4].replace('Benefício: ', '')}</p>
                         
                         <div className="text-[10px] text-brand-gray border-t border-brand-gray/20 pt-1 mt-1">
                           {parts[5]}
@@ -391,14 +391,31 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       </div>
                       <div className="flex-1">
                         <h3 className="text-sm font-bold text-brand-dark">{parts[0]}</h3>
-                        <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-1">{parts[1]}</div>
-                        <p className="text-xs text-brand-stone leading-relaxed">{parts[2]}</p>
-                        {parts[3] && (
-                          <div className="mt-2 flex items-start gap-1.5 text-[10px] text-brand-dark font-medium">
-                            <Percent size={12} className="text-[#c49874] mt-0.5 shrink-0" />
-                            <span>{parts[3].replace('Prémio Variável:', '').trim()}</span>
-                          </div>
-                        )}
+                        <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-2">{parts[1]}</div>
+                        <div className="space-y-1.5">
+                          {parts.slice(2).map((p, idx) => {
+                            if (!p) return null;
+                            const isCheck = p.startsWith('✓');
+                            const isGift = p.startsWith('🎁');
+                            const text = p.replace(/^[✓🎁]\s*/, '');
+                            
+                            return (
+                              <div key={idx} className="flex items-start gap-1.5 text-xs text-brand-stone">
+                                {isCheck && <Check size={14} className="text-green-500 shrink-0 mt-0.5" />}
+                                {isGift && <Gift size={14} className="text-yellow-500 shrink-0 mt-0.5" />}
+                                {!isCheck && !isGift && <span className="w-3.5 shrink-0" />}
+                                <span className={isGift ? "font-medium text-brand-dark" : ""}>
+                                  {text.split('✓').map((segment, i) => (
+                                    <React.Fragment key={i}>
+                                      {i > 0 && <Check size={14} className="inline text-green-500 mx-1 align-text-bottom" />}
+                                      {segment}
+                                    </React.Fragment>
+                                  ))}
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </motion.div>
                   );

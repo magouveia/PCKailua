@@ -61,9 +61,9 @@ export const hardcodedSlides: Slide[] = [
     content: [
       "Atualização Estrutural | Base Estrutural para regra | Atualização salarial anual alinhada com a evolução do SMN. | Condicionada à sustentabilidade financeira da empresa. | Indexada à inflação anual na inexistência de atualização do SMN. | Aplicável a todos (exceto avaliação Incumpridor).",
       "Fim de Nível | MÉRITO & DESEMPENHO | Percentuais de aumento aplicados ao concluir o tempo de permanência no nível: | Cumpridor: +1% (Horizontal) | Bom: +4% (Vertical) | Excelente: +8% (Vertical)* | * É permitida a atualização salarial anual com base no desempenho em qualquer avaliação anual Excelente. No entanto, com exceção do fim de nivel, é necessária a validação da Liderança Superior.",
-      "Aceleração | PERFORMANCE EXCECIONAL | Mecanismo de 'Fast Track' para talentos de alto rendimento. | ✓ Avaliações 'Excelente' em todos os anos de um nível. | Benefício: Encurtamento do tempo mínimo no nível seguinte. | Exemplo: Redução de 24 para 12 meses.",
-      "Topo de Carreira | DIRETOR R&B | Teto salarial fixo definido para a função máxima. | Prémio Variável: 5% do EBITDA excedente (se avaliação Excelente).",
-      "Revisão do Sistema | MELHORIA CONTÍNUA | O modelo de progressão é avaliado periodicamente para garantir a sua sustentabilidade e adequação ao mercado."
+      "Aceleração | PERFORMANCE EXCECIONAL | Mecanismo de 'Fast Track' para talentos de alto rendimento. | ✓ Avaliação Excelente em todos os anos de um nível. | Benefício: Encurtamento do tempo mínimo no nível seguinte. | Exemplo: Redução de 24 para 12 meses.",
+      "Topo de Carreira | DIRETOR R&B | ✓ Se atingir o teto máximo do nível e ✓ Avaliação Excelente | 🎁 Atualização salarial alinhada com a evolução do SMN | 🎁 5% do excedente do montante do EBITDA definido.",
+      "Revisão do Sistema | MELHORIA CONTÍNUA | O modelo é revisto anualmente para garantir a sua sustentabilidade e adequação ao mercado."
     ],
     layout: "salary-progression",
     notes: "A evolução salarial assenta em três pilares: a atualização anual para todos (baseada no SMN/Inflação e EBITDA), os aumentos por mérito no fim de cada nível, e a via verde para talentos excecionais."
