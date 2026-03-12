@@ -82,13 +82,13 @@ export const hardcodedSlides: Slide[] = [
     title: "COZINHA",
     content: [
       "Entrada típica (nível III): Ajudante de todas as secções | Estagiário de cozinheiro",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano",
-      "Consolidação | Cozinheiro de 3ª | V | 1 ano | 1–2 anos",
-      "Profissionalização | Cozinheiro de 2ª / Pizzaiolo | VI | 2 anos | 2–4 anos",
-      "Especialização | Cozinheiro de 1ª | VIII | 3 anos | 4–7 anos",
-      "Coordenação | Subchefe de cozinha | IX | 3 anos | 7–10 anos",
-      "Liderança | Chefe de cozinha | X (… 3 anos…) | +10 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano | 926€ - 1026€",
+      "Consolidação | Cozinheiro de 3ª | V | 1 ano | 1–2 anos | 936€ - 1186€",
+      "Profissionalização | Cozinheiro de 2ª / Pizzaiolo | VI | 2 anos | 2–4 anos | 952€ - 1302€",
+      "Especialização | Cozinheiro de 1ª | VIII | 3 anos | 4–7 anos | 1028€ - 1628€",
+      "Coordenação | Subchefe de cozinha | IX | 3 anos | 7–10 anos | 1136€ - 1961€",
+      "Liderança | Chefe de Cozinha | X | (...) | +10 anos | 1364€ - 2489€"
     ],
     layout: "table",
     notes: "A progressão na cozinha é estruturada para garantir a aquisição progressiva de competências técnicas e de gestão."
@@ -98,11 +98,11 @@ export const hardcodedSlides: Slide[] = [
     title: "COPA",
     content: [
       "Entrada típica (nível II) Copeiro",
-      "Fase | Função | Nível | Tempo em cada nível | Progressão anual",
-      "Entrada | Copeiro (até dois anos) | II | 2 anos | 0–2 anos",
-      "Consolidação | Copeiro (mais de dois anos) | III | 2 anos | 2–4 anos",
-      "Coordenação | Chefe de copa | V | 2 anos | 4–6 anos",
-      "Evolução transversal | Cozinheiro de 3.ª | V | + formação | + formação"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Copeiro Júnior (até dois anos) | II | 2 anos | 0–2 anos | 923€ - 1023€",
+      "Consolidação | Copeiro Sénior (mais de dois anos) | III | 2 anos | 2–4 anos | 926€ - 1026€",
+      "Coordenação | Chefe de copa | V | 2 anos | 4–6 anos | 936€ - 1186€",
+      "Evolução transversal | Cozinheiro de 3.ª | V | + formação | + formação | 936€ - 1186€"
     ],
     layout: "table",
     notes: "A progressão na copa permite uma evolução sólida e até transversal para a cozinha."
@@ -112,11 +112,11 @@ export const hardcodedSlides: Slide[] = [
     title: "ARMAZÉM",
     content: [
       "Entrada típica (nível III) Ajudante de todas as secções",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Ajudante de todas as secções | III | 1 ano | 0–1 ano",
-      "Consolidação | Assistente de armazém | V | 2 anos | 1–3 anos",
-      "Profissionalização | Fiel de armazém | VI | 2 anos | 3–5 anos",
-      "Coordenação | Encarregado de armazém | VIII | 3 anos | 5-8 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Ajudante de todas as secções | III | 1 ano | 0–1 ano | 926€ - 1026€",
+      "Consolidação | Assistente de armazém | V | 2 anos | 1–3 anos | 936€ - 1186€",
+      "Profissionalização | Fiel de armazém | VI | 2 anos | 3–5 anos | 952€ - 1302€",
+      "Coordenação | Encarregado de armazém | VIII | 3 anos | 5-8 anos | 1028€ - 1628€"
     ],
     layout: "table",
     notes: "A carreira de armazém valoriza a responsabilidade e a gestão logística."
@@ -126,12 +126,12 @@ export const hardcodedSlides: Slide[] = [
     title: "MANUTENÇÃO",
     content: [
       "Entrada típica (nível III) Ajudante de todas as secções",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Ajudante de todas as secções | III | 1 ano | 0–1 ano",
-      "Consolidação | Carpinteiro em geral de 2ª | V | 1 ano | 1-2 anos",
-      "Profissionalização | Carpinteiro em geral de 1ª | VI | 3 anos | 2–5 anos",
-      "Coordenação | Chefe de manutenção | VIII | 3 anos | 5–8 anos",
-      "Liderança | Chefe de manutenção e serviços técnicos | IX (… 3 anos…) | +8 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Ajudante de todas as secções | III | 1 ano | 0–1 ano | 926€ - 1026€",
+      "Consolidação | Carpinteiro em geral de 2ª | V | 1 ano | 1-2 anos | 936€ - 1186€",
+      "Profissionalização | Carpinteiro em geral de 1ª | VI | 3 anos | 2–5 anos | 952€ - 1302€",
+      "Coordenação | Chefe de manutenção | VIII | 3 anos | 5–8 anos | 926€ - 1026€",
+      "Liderança | Chefe de manutenção, conservação e serviços técnicos | IX | (... 3 anos...) | +8 anos | 1136€ - 1961€"
     ],
     layout: "table",
     notes: "A manutenção exige conhecimentos técnicos especializados que evoluem com a experiência."
@@ -141,9 +141,9 @@ export const hardcodedSlides: Slide[] = [
     title: "HOUSEKEEPING",
     content: [
       "Entrada típica (nível III) Técnico de limpeza",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada e consolidação | Técnico de limpeza | III | 3 anos | 0–3 anos",
-      "Coordenação | Encarregado de limpeza | IV | 4 anos | 3–7 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada e consolidação | Técnico de limpeza | III | 3 anos | 0–3 anos | 926€ - 1026€",
+      "Coordenação | Encarregado de limpeza | IV | 4 anos | 3–7 anos | 931€ - 1106€"
     ],
     layout: "table",
     notes: "A progressão na limpeza foca-se na consolidação técnica e coordenação de equipas."
@@ -153,13 +153,12 @@ export const hardcodedSlides: Slide[] = [
     title: "MESAS",
     content: [
       "Entrada típica (nível III) Ajudante de todas as secções | Estagiário de restauração e bebidas",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano",
-      "Consolidação | Assistente de sala (até dois anos) | V | 1 ano | 1–2 anos",
-      "Profissionalização | Assistente de sala de 2ª | VI | 2 anos | 2–4 anos",
-      "Especialização | Assistente de sala de 1ª | VII | 2 anos | 4–6 anos",
-      "Coordenação | Subchefe de sala | VII | 2 anos | 6–8 anos",
-      "Liderança | Chefe de Sala | VIII | 2 anos | 8–10 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano | 926€ - 1026€",
+      "Profissionalização | Assistente de Sala de 2ª | VI | 2 anos | 1–3 anos | 952€ - 1302€",
+      "Especialização | Assistente de Sala de 1ª | VII | 2 anos | 3–5 anos | 974€ - 1424€",
+      "Coordenação | Subchefe de Sala | VII | 2 anos | 5–7 anos | 974€ - 1424€",
+      "Liderança | Chefe de Sala | VIII | 2 anos | 7–9 anos | 1028€ - 1628€"
     ],
     layout: "table",
     notes: "A carreira de mesas oferece um percurso longo e estruturado, desde o estágio até à gerência."
@@ -169,25 +168,35 @@ export const hardcodedSlides: Slide[] = [
     title: "DRINKS",
     content: [
       "Entrada típica (nível III) Ajudante de todas as secções | Estagiário barman/barmaid do 1º ano",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano",
-      "Base | Barman/barmaid de 2ª | VI | 2 anos | 1–3 anos",
-      "Profissionalização | Barman/barmaid de 1ª | VII | 3 anos | 3–6 anos",
-      "Liderança | Chefe de bar | VIII | 3 anos | 6–9 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano | 926€ - 1026€",
+      "Consolidação | Barman/barmaid de 2ª | VI | 2 anos | 1–3 anos | 952€ - 1302€",
+      "Profissionalização | Barman/barmaid de 1ª | VII | 3 anos | 3–6 anos | 974€ - 1424€",
+      "Liderança | Chefe de Bar | VIII | 3 anos | 6–9 anos | 1028€ - 1628€"
     ],
     layout: "table",
     notes: "A carreira de bar evolui da aprendizagem para a liderança técnica e gestão."
+  },
+  {
+    id: "slide-14-b",
+    title: "OPERAÇÃO DA FRENTE",
+    content: [
+      "Entrada típica (nível IX) Supervisor de Operações",
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Coordenação Transversal | Supervisor de Operações | IX | 5 anos | 1-5 anos | 1136€ - 1961€"
+    ],
+    layout: "table",
+    notes: "A progressão na operação da frente é focada na supervisão e gestão de equipas."
   },
   {
     id: "slide-15",
     title: "CONTROLO",
     content: [
       "Entrada típica (nível V) Controlador - Caixa",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Controlador - Caixa | V | 2 anos | 0-2 anos",
-      "Consolidação | Controlador de 2ª | VI | 3 anos | 2-5 anos",
-      "Profissionalização | Controlador de 1ª | VII | 3 anos | 5-8 anos",
-      "Liderança | Chefe de Controlo | VIII | ... | +8 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada e Consolidação | Controlador-caixa | V | 2 anos | 0-2 anos | 936€ - 1186€",
+      "Profissionalização | Controlador | VII | 2 anos | 2-4 anos | 974€ - 1424€",
+      "Liderança | Chefe de Controlo | VIII | ... | +4 anos | 1028€ - 1628€"
     ],
     layout: "table",
     notes: "A carreira de controlo foca-se no suporte e auditoria das operações."
@@ -197,12 +206,12 @@ export const hardcodedSlides: Slide[] = [
     title: "FELICIDADE",
     content: [
       "Entrada típica (nível III) Ajudante de todas as secções | Estagiário de restauração e bebidas",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano",
-      "Consolidação | Assistente de vendas de 2ª | VI | 2 anos | 1-3 anos",
-      "Profissionalização | Assistente de vendas de 1ª | VII | 3 anos | 3–6 anos",
-      "Coordenação | Subgerente (Comercial) | VII | 2 anos | 6–8 anos",
-      "Liderança | Gerente | VIII | 2 anos | 8-10 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano | 926€ - 1026€",
+      "Consolidação | Assistente de vendas de 2ª / Rececionista de 2ª | VI | 2 anos | 1-3 anos | 952€ - 1302€",
+      "Profissionalização | Assistente de vendas de 1ª / Rececionista de 1ª | VII | 2 anos | 3–5 anos | 974€ - 1424€",
+      "Coordenação | Subgerente (Comercial) | VII | 2 anos | 5–7 anos | 974€ - 1424€",
+      "Liderança | Gerente (Comercial) | VIII | 2 anos | 7-9 anos | 1028€ - 1628€"
     ],
     layout: "table",
     notes: "A carreira de felicidade combina competências de vendas, acolhimento e gestão, com um percurso claro até à gerência."
@@ -212,9 +221,9 @@ export const hardcodedSlides: Slide[] = [
     title: "DIREÇÃO OPERACIONAL",
     content: [
       "Entrada típica (nível X) Assistente de Direção",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Subdireção | Assistente de Direção | X | 5 anos | 1-5 anos",
-      "Direção | Diretor de R&B | XI | … | +5 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Subdireção | Assistente de Direção | X | 5 anos | 1-5 anos | 1364€ - 2489€",
+      "Direção | Diretor de Restauração e Bebidas | XI | … | +5 anos | 1431€ - 3006€"
     ],
     layout: "table",
     notes: "A direção operacional representa o topo da carreira, com foco estratégico e de liderança."
@@ -224,12 +233,12 @@ export const hardcodedSlides: Slide[] = [
     title: "DIREÇÃO CORPORATIVA",
     content: [
       "Entrada típica (nível V) Escriturário de 3ª",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Entrada | Escriturário de 3ª | V | 2 anos | 0-2 anos",
-      "Consolidação | Escriturário de 2ª | VI | 3 anos | 2-5 anos",
-      "Profissionalização | Escriturário de 1ª | VII | 3 anos | 5-8 anos",
-      "Coordenação | Chefe de Secção | IX | 3 anos | 8-11 anos",
-      "Direção | Diretor de Serviços | X | ... | +11 anos"
+      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
+      "Entrada | Escriturário de 3ª | V | 2 anos | 0-2 anos | 936€ - 1186€",
+      "Consolidação | Escriturário de 2ª | VI | 2 anos | 2-4 anos | 952€ - 1302€",
+      "Especialização | Escriturário de 1ª | VII | 2 anos | 4-6 anos | 974€ - 1424€",
+      "Coordenação | Chefe de Secção | VIII | 2 anos | 6-8 anos | 1028€ - 1628€",
+      "Direção | Diretor de Serviços (Administrativos e Financeiros) / Diretor de Serviços Técnicos (Recursos Humanos) | X | ... | +8 anos | 1364€ - 2489€"
     ],
     layout: "table",
     notes: "A direção corporativa foca-se na gestão financeira, administrativa e de recursos humanos."

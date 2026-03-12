@@ -713,17 +713,36 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
             <div className="flex-1 overflow-hidden bg-white rounded-xl shadow-lg border border-gray-100 flex flex-col">
               {/* Header */}
               <div className="bg-brand-dark text-white grid grid-cols-12 gap-4 p-4 text-xs font-bold uppercase tracking-wider">
-                {currentSlide.content[1]?.split('|').map((header, i) => (
-                  <div key={i} className={`${i === 0 ? 'col-span-2' : i === 1 ? 'col-span-4' : 'col-span-2'} ${i >= 2 ? 'text-center' : ''}`}>
-                    {header.trim()}
-                  </div>
-                ))}
+                {currentSlide.content[1]?.split('|').map((header, i) => {
+                  const numCols = currentSlide.content[1].split('|').length;
+                  let span = 'col-span-2';
+                  if (numCols === 6) {
+                    if (i === 0) span = 'col-span-2';
+                    else if (i === 1) span = 'col-span-3';
+                    else if (i === 2) span = 'col-span-1 text-center';
+                    else if (i === 3) span = 'col-span-2 text-center';
+                    else if (i === 4) span = 'col-span-2 text-center';
+                    else if (i === 5) span = 'col-span-2 text-center';
+                  } else {
+                    if (i === 0) span = 'col-span-2';
+                    else if (i === 1) span = 'col-span-4';
+                    else if (i === 2) span = 'col-span-2 text-center';
+                    else if (i === 3) span = 'col-span-2 text-center';
+                    else if (i === 4) span = 'col-span-2 text-center';
+                  }
+                  return (
+                    <div key={i} className={span}>
+                      {header.trim()}
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Rows */}
               <div className="overflow-y-auto flex-1">
                 {currentSlide.content.slice(2).map((row, rowIndex) => {
                   const cells = row.split('|').map(c => c.trim());
+                  const numCols = cells.length;
                   return (
                     <motion.div 
                       key={rowIndex}
@@ -732,15 +751,32 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       transition={{ delay: 0.1 * rowIndex }}
                       className={`grid grid-cols-12 gap-4 p-4 border-b border-gray-50 text-sm items-center hover:bg-brand-cream/10 transition-colors ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
                     >
-                      <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
-                      <div className="col-span-4 font-medium text-brand-dark">{cells[1]}</div>
-                      <div className="col-span-2 text-center">
-                        <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-xs font-bold border border-brand-dark/10">
-                          {cells[2]}
-                        </span>
-                      </div>
-                      <div className="col-span-2 text-center text-brand-stone text-xs">{cells[3]}</div>
-                      <div className="col-span-2 text-center font-mono text-xs text-brand-gray">{cells[4]}</div>
+                      {numCols === 6 ? (
+                        <>
+                          <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
+                          <div className="col-span-3 font-medium text-brand-dark">{cells[1]}</div>
+                          <div className="col-span-1 text-center">
+                            <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-[10px] font-bold border border-brand-dark/10">
+                              {cells[2]}
+                            </span>
+                          </div>
+                          <div className="col-span-2 text-center text-brand-stone text-xs">{cells[3]}</div>
+                          <div className="col-span-2 text-center font-mono text-xs text-brand-gray">{cells[4]}</div>
+                          <div className="col-span-2 text-center font-mono text-xs font-bold text-brand-dark">{cells[5]}</div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
+                          <div className="col-span-4 font-medium text-brand-dark">{cells[1]}</div>
+                          <div className="col-span-2 text-center">
+                            <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-xs font-bold border border-brand-dark/10">
+                              {cells[2]}
+                            </span>
+                          </div>
+                          <div className="col-span-2 text-center text-brand-stone text-xs">{cells[3]}</div>
+                          <div className="col-span-2 text-center font-mono text-xs text-brand-gray">{cells[4]}</div>
+                        </>
+                      )}
                     </motion.div>
                   );
                 })}
