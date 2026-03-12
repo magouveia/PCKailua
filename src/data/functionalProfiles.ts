@@ -97,7 +97,7 @@ export const functionalProfilesData: Sector[] = [
         mission: 'Coordenar a operação do armazém, assegurando a eficiência logística, o controlo de stocks e a liderança da equipa, alinhado com as necessidades da operação.',
         responsibilities: [
           'Garantir o abastecimento contínuo da operação através de planeamento eficaz de stocks, encomendas e compras.',
-          'Assegurar a gestão e reposição da caixa de primeiros socorros e do material necessário aos nadadores-salvadores, garantindo a sua disponibilidade e organização.',
+          'Assegurar a gestão e reposição da caixa de primeiros socorros e do material necessário aos nadadores-salvadores, garantindo a tua disponibilidade e organização.',
           'Certificar a fiabilidade da informação de stock através de controlo rigoroso de entradas, saídas e inventários.',
           'Negociar as condições de fornecimento com fornecedores garantindo equilíbrio entre custo, qualidade e prazos de entrega.',
           'Coordenar a equipa de armazém garantindo organização, segurança e eficiência logística.',
@@ -726,7 +726,7 @@ export const functionalProfilesData: Sector[] = [
         mission: 'Assegurar a confeção consistente de pratos, com autonomia operacional, contribuindo para a eficiência do serviço e a qualidade final dos produtos.',
         responsibilities: [
           'Preparar e confecionar pratos da ementa',
-          'Executar mise en place completa da sua secção',
+          'Executar mise en place completa da tua secção',
           'Cumprir fichas técnicas e padrões de qualidade',
           'Apoiar o controlo de desperdício',
           'Colaborar na formação de elementos',
@@ -775,7 +775,7 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Cozinheiro de 1ª',
-        mission: 'Garantir a excelência técnica na confeção dos pratos, assegurando a coordenação da sua secção e contribuindo para a melhoria contínua da operação.',
+        mission: 'Garantir a excelência técnica na confeção dos pratos, assegurando a coordenação da tua secção e contribuindo para a melhoria contínua da operação.',
         responsibilities: [
           'Coordenar uma secção da cozinha',
           'Garantir consistência e qualidade dos pratos',
@@ -1194,7 +1194,7 @@ export const functionalProfilesData: Sector[] = [
         title: 'Assistente de Sala de 1ª',
         mission: 'Garantir excelência no serviço de sala, assumindo responsabilidades de coordenação operacional e sendo referência de qualidade e atendimento.',
         responsibilities: [
-          'Coordenar serviço da sua área, garantindo organização das mesas e apoio à equipa',
+          'Coordenar serviço da tua área, garantindo organização das mesas e apoio à equipa',
           'Garantir qualidade e consistência do atendimento',
           'Apoiar tecnicamente assistentes de sala menos experientes garantindo cumprimento consistente dos padrões de serviço.',
           'Apoiar o Subchefe de Sala',

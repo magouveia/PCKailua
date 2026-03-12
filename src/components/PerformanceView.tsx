@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ChevronRight, Utensils, Coffee, Package, Wrench, Sparkles, ConciergeBell, Wine, ClipboardCheck, HeartHandshake, Briefcase, Building, Layers, Goal, CheckCircle2, Send } from 'lucide-react';
+import { ArrowLeft, ChevronRight, Utensils, Coffee, Package, Wrench, Sparkles, ConciergeBell, Wine, ClipboardCheck, HeartHandshake, Briefcase, Building, Layers, Goal, CheckCircle2, Send, Users } from 'lucide-react';
 import { functionalProfilesData, Sector, FunctionalProfile } from '../data/functionalProfiles';
 import { performanceIntro, performanceCriteriaData } from '../data/performanceCriteria';
 
@@ -142,7 +142,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                 <h1 className="text-3xl md:text-4xl font-serif font-bold text-brand-cream mb-4">
                   Avaliação de Desempenho
                 </h1>
-                <p className="text-brand-stone text-lg max-w-2xl mx-auto font-light whitespace-pre-line mb-8">
+                <p className="text-brand-stone text-lg max-w-4xl mx-auto font-light whitespace-pre-line mb-8">
                   {performanceIntro.objective}
                 </p>
               </div>

@@ -25,7 +25,7 @@ function App() {
     return (
       <div className="min-h-screen bg-brand-cream flex flex-col items-center justify-center text-brand-dark">
         <Loader2 size={48} className="animate-spin text-brand-tan mb-4" />
-        <h2 className="text-2xl font-serif font-bold">A preparar a sua apresentação...</h2>
+        <h2 className="text-2xl font-serif font-bold">A preparar a tua apresentação...</h2>
         <p className="text-brand-stone mt-2">A estruturar o plano de carreira.</p>
       </div>
     );

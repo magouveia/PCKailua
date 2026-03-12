@@ -6,7 +6,7 @@ export interface PerformanceCriteria {
 }
 
 export const performanceIntro = {
-  objective: "A avaliação de desempenho tem como objetivo acompanhar o desenvolvimento dos colaboradores, garantir padrões consistentes de trabalho e apoiar decisões de progressão e atualização salarial.\n\nA avaliação é realizada trimestralmente e a decisão anual resulta da análise conjunta das quatro avaliações do ano.",
+  objective: "A avaliação de desempenho tem como objetivo acompanhar o desenvolvimento dos colaboradores, garantir padrões consistentes de trabalho e apoiar decisões de progressão e atualização salarial.\n\nA avaliação é realizada trimestralmente, sendo o resultado anual obtido pela análise conjunta das 4 avaliações do ano.",
   scale: [
     { level: 1, name: "Incumpridor", description: "Não cumpre os requisitos" },
     { level: 2, name: "Cumpridor", description: "Cumpre os requisitos mínimos" },
@@ -15,7 +15,7 @@ export const performanceIntro = {
   ],
   criteriaTypes: [
     { type: "Organizacionais", weight: "20%", description: "Avaliam o alinhamento com os valores, cultura e padrões da empresa." },
-    { type: "Técnicos", weight: "50%", description: "Avaliam a capacidade para executar corretamente as tarefas da sua função." },
+    { type: "Técnicos", weight: "50%", description: "Avaliam a capacidade para executar corretamente as tarefas da tua função." },
     { type: "Comportamentais", weight: "30%", description: "Avaliam a forma como trabalha com colegas, clientes e liderança." }
   ],
   calculation: "A nota final resulta da média de cada grupo de critérios, aplicada ao respetivo peso."

@@ -43,7 +43,7 @@ export const hardcodedSlides: Slide[] = [
       "Acesso à Liderança/Direção | RECRUTAMENTO ESPECÍFICO | O acesso a estas funções depende de:\n✓ Avaliação de desempenho\n✓ Aprovação em Processo Interno de recrutamento especifico"
     ],
     layout: "rules",
-    notes: "Estas são as regras de ouro. Destaco a dependência de vagas e a possibilidade de mobilidade entre empresas do grupo, o que aumenta as vossas oportunidades."
+    notes: "Estas são as regras de ouro. Destaco a dependência de vagas e a possibilidade de mobilidade entre empresas do grupo, o que aumenta as tuas oportunidades."
   },
   {
     id: "slide-5",
@@ -250,6 +250,6 @@ export const hardcodedSlides: Slide[] = [
       "Quando todos sabemos para onde ir e o que é esperado, ficamos mais fortes.\n\nA partir daqui, o crescimento passa a depender do compromisso e empenho de cada um!"
     ],
     layout: "quote",
-    notes: "O nosso sistema é justo: garante evolução a quem cumpre, e acelera a quem supera. O vosso crescimento está nas vossas mãos."
+    notes: "O nosso sistema é justo: garante evolução a quem cumpre, e acelera a quem supera. O teu crescimento está nas tuas mãos."
   }
 ];
