@@ -62,18 +62,20 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-6",
     title: "Estrutura de Carreira por Setor",
     content: [
-      "Cozinha | PRODUÇÃO ALIMENTAR | Estagiário / Ajudante | Nível III | Chefe de Cozinha | Nível X | III → IV-IX → X",
-      "Copa | APOIO & LIMPEZA | Copeiro | Nível II | Chefe de Copa / Coz. 3ª | Nível V | II → III-IV → V",
-      "Armazém | LOGÍSTICA | Ajudante | Nível III | Encarregado | Nível VIII | III → IV-VII → VIII",
-      "Manutenção | TÉCNICA | Ajudante | Nível III | Chefe de Manutenção | Nível IX | III → IV-VIII → IX",
-      "HouseKeeping | TÉCNICO | Técnico | Nível III | Encarregado | Nível IV | III → IV",
-      "Mesas | SERVIÇO DE SALA | Estagiário | Nível III | Gerente de Sala | Nível VIII | III → IV-VII → VIII",
-      "Drinks | BEBIDAS & MIXOLOGIA | Estagiário | Nível III | Chefe de Bar | Nível VIII | III → IV-VII → VIII",
-      "Controlo | AUDITORIA & QUALIDADE | Assistente | Nível III | Controller | Nível VIII | III → IV-VII → VIII",
-      "Felicidade | ACOLHIMENTO & VENDAS | Estagiário | Nível III | Gerente Comercial | Nível VIII | III → IV-VII → VIII"
+      "Cozinha | PRODUÇÃO ALIMENTAR | Ajudante | Nível III | Chefe de Cozinha | Nível X | III → IV-IX → X",
+      "Copa | APOIO & LIMPEZA | Copeiro Junior | Nível II | Chefe de Copa / Coz. 3ª | Nível V | II → III-IV → V",
+      "Armazém | LOGÍSTICA | Ajudante | Nível III | Encarregado de Armazém | Nível VIII | III → IV-VII → VIII",
+      "Manutenção | TÉCNICA | Ajudante | Nível III | Chefe de Manutenção, Conservação e Serviços Técnicos | Nível IX | III → IV-VIII → IX",
+      "HouseKeeping | HIGIENE E LIMPEZA | Técnico de Limpeza | Nível III | Encarregado de Limpeza | Nível IV | III → IV",
+      "Mesas | ATENDIMENTO AO CLIENTE | Ajudante | Nível III | Chefe de Sala | Nível VIII | III → IV-VII → VIII",
+      "Drinks | BEBIDAS & MIXOLOGIA | Ajudante | Nível III | Chefe de Bar | Nível VIII | III → IV-VII → VIII",
+      "Controlo | SUPORTE | Controlador - Caixa | Nível V | Chefe de Controlo | Nível VIII | V → VI-VII → VIII",
+      "Felicidade | ACOLHIMENTO & VENDAS | Ajudante | Nível III | Gerente | Nível VIII | III → IV-VII → VIII",
+      "Direção Operacional | GESTÃO ESTRATÉGICA | Assistente de Direção | Nível X | Diretor de R&B | Nível XI | X → XI",
+      "Direção Corporativa | CORPORATIVO | Escriturário de 3ª | Nível V | Diretor de Serviços (Financeiros e Administrativos)\nDiretor de Serviços Técnicos (RH) | Nível X | V → VI-IX → X"
     ],
     layout: "career-structure",
-    notes: "Apresentamos aqui a estrutura detalhada das carreiras operacionais, definindo claramente os pontos de entrada, o topo da carreira e os níveis de evolução para cada setor."
+    notes: "Apresentamos aqui a estrutura detalhada das carreiras operacionais e de direção, definindo claramente os pontos de entrada, o topo da carreira e os níveis de evolução para cada setor."
   },
   {
     id: "slide-8",
@@ -136,7 +138,7 @@ export const hardcodedSlides: Slide[] = [
   },
   {
     id: "slide-12",
-    title: "LIMPEZA",
+    title: "HOUSEKEEPING",
     content: [
       "Entrada típica (nível III) Técnico de limpeza",
       "Fase | Função | Nível | Tempo nível | Progressão",
@@ -157,14 +159,14 @@ export const hardcodedSlides: Slide[] = [
       "Profissionalização | Assistente de sala de 2ª | VI | 2 anos | 2–4 anos",
       "Especialização | Assistente de sala de 1ª | VII | 2 anos | 4–6 anos",
       "Coordenação | Subchefe de sala | VII | 2 anos | 6–8 anos",
-      "Liderança | Gerente (Sala) | VIII | 2 anos | 8–10 anos"
+      "Liderança | Chefe de Sala | VIII | 2 anos | 8–10 anos"
     ],
     layout: "table",
     notes: "A carreira de mesas oferece um percurso longo e estruturado, desde o estágio até à gerência."
   },
   {
     id: "slide-14",
-    title: "BAR",
+    title: "DRINKS",
     content: [
       "Entrada típica (nível III) Ajudante de todas as secções | Estagiário barman/barmaid do 1º ano",
       "Fase | Função | Nível | Tempo nível | Progressão",
@@ -178,7 +180,21 @@ export const hardcodedSlides: Slide[] = [
   },
   {
     id: "slide-15",
-    title: "RECEÇÃO",
+    title: "CONTROLO",
+    content: [
+      "Entrada típica (nível V) Controlador - Caixa",
+      "Fase | Função | Nível | Tempo nível | Progressão",
+      "Entrada | Controlador - Caixa | V | 2 anos | 0-2 anos",
+      "Consolidação | Controlador de 2ª | VI | 3 anos | 2-5 anos",
+      "Profissionalização | Controlador de 1ª | VII | 3 anos | 5-8 anos",
+      "Liderança | Chefe de Controlo | VIII | ... | +8 anos"
+    ],
+    layout: "table",
+    notes: "A carreira de controlo foca-se no suporte e auditoria das operações."
+  },
+  {
+    id: "slide-16",
+    title: "FELICIDADE",
     content: [
       "Entrada típica (nível III) Ajudante de todas as secções | Estagiário de restauração e bebidas",
       "Fase | Função | Nível | Tempo nível | Progressão",
@@ -186,36 +202,40 @@ export const hardcodedSlides: Slide[] = [
       "Consolidação | Assistente de vendas de 2ª | VI | 2 anos | 1-3 anos",
       "Profissionalização | Assistente de vendas de 1ª | VII | 3 anos | 3–6 anos",
       "Coordenação | Subgerente (Comercial) | VII | 2 anos | 6–8 anos",
-      "Liderança | Gerente (Comercial) | VIII | 2 anos | 8-10 anos"
+      "Liderança | Gerente | VIII | 2 anos | 8-10 anos"
     ],
     layout: "table",
-    notes: "A carreira de receção combina competências de vendas e gestão, com um percurso claro até à gerência."
-  },
-  {
-    id: "slide-16",
-    title: "OPERAÇÃO DA FRENTE",
-    content: [
-      "Entrada típica (nível IX) Supervisor de Operações",
-      "Fase | Função | Nível | Tempo nível | Progressão",
-      "Coordenação Transversal | Supervisor de Operações | IX | 5 anos | 1-5 anos"
-    ],
-    layout: "table",
-    notes: "A progressão na operação da frente é focada na supervisão e gestão de equipas."
+    notes: "A carreira de felicidade combina competências de vendas, acolhimento e gestão, com um percurso claro até à gerência."
   },
   {
     id: "slide-17",
-    title: "DIREÇÃO",
+    title: "DIREÇÃO OPERACIONAL",
     content: [
       "Entrada típica (nível X) Assistente de Direção",
       "Fase | Função | Nível | Tempo nível | Progressão",
       "Subdireção | Assistente de Direção | X | 5 anos | 1-5 anos",
-      "Direção | Diretor de restauração e bebidas | XI | … | +5 anos"
+      "Direção | Diretor de R&B | XI | … | +5 anos"
     ],
     layout: "table",
-    notes: "A direção representa o topo da carreira, com foco estratégico e de liderança."
+    notes: "A direção operacional representa o topo da carreira, com foco estratégico e de liderança."
   },
   {
     id: "slide-18",
+    title: "DIREÇÃO CORPORATIVA",
+    content: [
+      "Entrada típica (nível V) Escriturário de 3ª",
+      "Fase | Função | Nível | Tempo nível | Progressão",
+      "Entrada | Escriturário de 3ª | V | 2 anos | 0-2 anos",
+      "Consolidação | Escriturário de 2ª | VI | 3 anos | 2-5 anos",
+      "Profissionalização | Escriturário de 1ª | VII | 3 anos | 5-8 anos",
+      "Coordenação | Chefe de Secção | IX | 3 anos | 8-11 anos",
+      "Direção | Diretor de Serviços | X | ... | +11 anos"
+    ],
+    layout: "table",
+    notes: "A direção corporativa foca-se na gestão financeira, administrativa e de recursos humanos."
+  },
+  {
+    id: "slide-19",
     title: "Mensagem Final",
     content: [
       "\"Todos progridem com o tempo. Os melhores progridem mais depressa.\""

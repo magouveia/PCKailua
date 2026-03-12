@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Slide } from '../services/ai';
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles, ArrowLeft, Handshake, ArrowUp, Wine, ClipboardCheck, HeartHandshake, ConciergeBell } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles, ArrowLeft, Handshake, ArrowUp, Wine, ClipboardCheck, HeartHandshake, ConciergeBell, Briefcase, Building } from 'lucide-react';
 
 // ... (existing code)
 
@@ -145,25 +145,25 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
         );
       case 'index':
         return (
-          <div className="flex flex-col h-full p-12 md:p-24 relative z-10 overflow-y-auto">
+          <div className="flex flex-col justify-center h-full p-12 md:p-24 relative z-10 overflow-y-auto">
             <motion.h2 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-12 text-center shrink-0"
+              className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-24 text-center shrink-0"
             >
               Índice
             </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 max-w-5xl mx-auto w-full">
+            <div className="flex flex-col gap-8 max-w-2xl mx-auto w-full">
               {currentSlide.content.map((item, i) => (
                 <motion.div 
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 * i }}
-                  className="flex items-baseline gap-3 border-b border-brand-stone/20 pb-2"
+                  className="flex items-baseline gap-4 border-b border-brand-stone/20 pb-4"
                 >
-                  <span className="text-brand-tan font-mono text-lg font-bold">{(i + 3).toString().padStart(2, '0')}</span>
-                  <span className="text-lg md:text-xl text-brand-dark font-serif italic">{item}</span>
+                  <span className="text-brand-tan font-mono text-xl font-bold">{(i + 3).toString().padStart(2, '0')}</span>
+                  <span className="text-xl md:text-2xl text-brand-dark font-serif italic">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -552,9 +552,6 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               >
                 {currentSlide.title}
               </motion.h2>
-              <span className="text-brand-stone uppercase tracking-widest text-sm">Áreas Operacionais</span>
-              <div className="flex-1"></div>
-              <div className="bg-brand-dark text-brand-cream px-3 py-1 rounded text-xs uppercase tracking-widest font-bold">Operacional</div>
             </div>
 
             <div className="bg-brand-dark text-brand-cream rounded-t-lg p-3 grid grid-cols-12 gap-4 text-xs font-bold uppercase tracking-wider items-center">
@@ -586,6 +583,8 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                   if (sect.includes('Drinks') || sect.includes('Bar')) return <Wine size={20} />;
                   if (sect.includes('Controlo')) return <ClipboardCheck size={20} />;
                   if (sect.includes('Felicidade')) return <HeartHandshake size={20} />;
+                  if (sect.includes('Direção Operacional')) return <Briefcase size={20} />;
+                  if (sect.includes('Direção Corporativa')) return <Building size={20} />;
                   return <Layers size={20} />;
                 };
 
@@ -618,7 +617,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
 
                     {/* End */}
                     <div className="col-span-3">
-                      <div className="text-brand-tan font-bold text-sm mb-1">{endRole}</div>
+                      <div className={`text-brand-tan font-bold mb-1 leading-tight ${endRole.length > 40 ? 'text-[11px] tracking-tight' : 'text-sm'} ${sector.includes('Manutenção') ? 'whitespace-nowrap' : 'whitespace-pre-line'}`}>{endRole}</div>
                       <span className="bg-brand-tan text-white text-[10px] font-bold px-2 py-1 rounded">
                         {endLevel}
                       </span>
