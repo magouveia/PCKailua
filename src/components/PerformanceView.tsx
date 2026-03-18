@@ -109,6 +109,10 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
           text: data.message,
           url: data.previewUrl 
         });
+        
+        setTimeout(() => {
+          onBack();
+        }, 3500);
       } else {
         setSubmitMessage({ type: 'error', text: data.error || 'Erro ao enviar avaliação.' });
       }
@@ -345,7 +349,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                         <Building size={20} />
                       </div>
                       <h2 className="text-2xl font-serif font-bold text-brand-dark">Critério Organizacional</h2>
-                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">20%</span>
+                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">10%</span>
                     </div>
                     <div className="bg-white p-4 rounded-xl border border-brand-stone/10">
                       <p className="text-brand-stone leading-relaxed text-lg mb-4">
@@ -362,7 +366,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                         <Wrench size={20} />
                       </div>
                       <h2 className="text-2xl font-serif font-bold text-brand-dark">Critérios Técnicos</h2>
-                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">50%</span>
+                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">60%</span>
                     </div>
                     <div className="space-y-4">
                       {currentCriteria.technical.map((item, index) => (
