@@ -1,9 +1,23 @@
-import AdmZip from 'adm-zip';
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
+import archiver from 'archiver';
 
-const zip = new AdmZip();
 const outputFile = path.join(process.cwd(), 'public', 'project.zip');
+const output = fs.createWriteStream(outputFile);
+const archive = archiver('zip', {
+  zlib: { level: 9 } // Sets the compression level.
+});
+
+output.on('close', function() {
+  console.log(archive.pointer() + ' total bytes');
+  console.log('archiver has been finalized and the output file descriptor has closed.');
+});
+
+archive.on('error', function(err) {
+  throw err;
+});
+
+archive.pipe(output);
 
 // Add files and directories
 const files = fs.readdirSync(process.cwd());
@@ -17,9 +31,9 @@ files.forEach(file => {
   const stats = fs.statSync(filePath);
 
   if (stats.isDirectory()) {
-    zip.addLocalFolder(filePath, file);
+    archive.directory(filePath, file);
   } else {
-    zip.addLocalFile(filePath);
+    archive.file(filePath, { name: file });
   }
 });
 
@@ -32,12 +46,11 @@ if (fs.existsSync(publicPath)) {
     const filePath = path.join(publicPath, file);
     const stats = fs.statSync(filePath);
     if (stats.isDirectory()) {
-      zip.addLocalFolder(filePath, path.join('public', file));
+      archive.directory(filePath, path.join('public', file));
     } else {
-      zip.addLocalFile(filePath, 'public');
+      archive.file(filePath, { name: path.join('public', file) });
     }
   });
 }
 
-zip.writeZip(outputFile);
-console.log(`Created ${outputFile}`);
+archive.finalize();

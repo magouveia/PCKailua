@@ -92,14 +92,12 @@ async function startServer() {
             border-radius: 50%; 
             background-color: ${isRated ? '#d97706' : '#78716c'}; 
             color: ${isRated ? '#1a1a1a' : '#ffffff'}; 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
+            display: inline-block; 
+            text-align: center; 
+            line-height: 24px; 
             font-weight: bold; 
             font-size: 12px;
-            text-align: center;
-            line-height: 24px;
-            flex-shrink: 0;
+            vertical-align: middle;
           ">${scoreStr}</div>
         `;
       };
