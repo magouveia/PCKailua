@@ -5,35 +5,22 @@ import nodemailer from "nodemailer";
 import * as xlsx from "xlsx";
 import PDFDocument from "pdfkit";
 
-// Global transporter for Ethereal to avoid rate limits
+// Global transporter
 let cachedTransporter: nodemailer.Transporter | null = null;
 
 async function getTransporter() {
-  if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
-    return nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-  }
-
   if (cachedTransporter) {
     return cachedTransporter;
   }
 
-  console.log("Creating new Ethereal test account...");
-  const testAccount = await nodemailer.createTestAccount();
+  console.log("Configuring Resend SMTP...");
   cachedTransporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: "smtp.resend.com",
     port: 587,
-    secure: false,
+    secure: false, // TLS is used automatically on port 587
     auth: {
-      user: testAccount.user,
-      pass: testAccount.pass,
+      user: "resend",
+      pass: "re_jiD78FDe_Biy5csyMJgvaesz4VE6yNqcr",
     },
   });
   
@@ -204,13 +191,16 @@ async function startServer() {
       `;
 
       // 3. Send Email
-      // For development, we use Ethereal (fake SMTP service)
-      // In production, you would use your own SMTP credentials
       const transporter = await getTransporter();
 
       const info = await transporter.sendMail({
-        from: '"Kailua RH" <rh@kailua.pt>',
-        to: "daniela.gouveia@kailua.pt", // Default recipient, or could be dynamic
+        // Como não tens acesso ao DNS da empresa (kailua.pt), 
+        // vamos enviar o email a partir do teu domínio (migasapp.net)
+        // que tu controlas e podes verificar no Resend.
+        from: '"Kailua RH (Sistema)" <rh@migasapp.net>',
+        // Mas quando a Daniela responder ao email, a resposta vai para o email oficial
+        replyTo: 'rh@kailua.pt',
+        to: "daniela.gouveia@kailua.pt", 
         subject: `Avaliação de Desempenho - ${employeeName}`,
         text: `Segue em anexo a avaliação de desempenho de ${employeeName} para a função de ${roleTitle}.`,
         html: htmlEmail,
