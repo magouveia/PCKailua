@@ -4,6 +4,7 @@ import path from "path";
 import nodemailer from "nodemailer";
 import * as xlsx from "xlsx";
 import PDFDocument from "pdfkit";
+import { performanceIntro } from "./src/data/performanceCriteria";
 
 // Global transporter
 let cachedTransporter: nodemailer.Transporter | null = null;
@@ -20,7 +21,7 @@ async function getTransporter() {
     secure: false, // TLS is used automatically on port 587
     auth: {
       user: "resend",
-      pass: process.env.RESEND_API_KEY || "re_jiD78FDe_Biy5csyMJgvaesz4VE6yNqcr", // Fallback for local dev if not set
+      pass: "re_jiD78FDe_Biy5csyMJgvaesz4VE6yNqcr",
     },
   });
   
@@ -57,18 +58,18 @@ async function startServer() {
         { Categoria: "Informação", Critério: "Função", Nota: roleTitle },
         { Categoria: "Informação", Critério: "Setor", Nota: sectorName },
         { Categoria: "", Critério: "", Nota: "" },
-        { Categoria: "Organizacional (10%)", Critério: criteria.organizational, Nota: scores['org-0'] || 'N/A' },
+        { Categoria: `Organizacional (${performanceIntro.criteriaTypes[0].weight})`, Critério: criteria.organizational, Nota: scores['org-0'] || 'N/A' },
         { Categoria: "", Critério: "", Nota: "" },
       ];
 
       criteria.technical.forEach((item: string, index: number) => {
-        excelData.push({ Categoria: "Técnico (60%)", Critério: item, Nota: scores[`tech-${index}`] || 'N/A' });
+        excelData.push({ Categoria: `Técnico (${performanceIntro.criteriaTypes[1].weight})`, Critério: item, Nota: scores[`tech-${index}`] || 'N/A' });
       });
       
       excelData.push({ Categoria: "", Critério: "", Nota: "" });
 
       criteria.behavioral.forEach((item: string, index: number) => {
-        excelData.push({ Categoria: "Comportamental (30%)", Critério: item, Nota: scores[`comp-${index}`] || 'N/A' });
+        excelData.push({ Categoria: `Comportamental (${performanceIntro.criteriaTypes[2].weight})`, Critério: item, Nota: scores[`comp-${index}`] || 'N/A' });
       });
 
       const wb = xlsx.utils.book_new();
@@ -165,15 +166,15 @@ async function startServer() {
             </div>
 
             <!-- Sections -->
-            ${renderSection('Critério Organizacional (10%)', [
+            ${renderSection(`Critério Organizacional (${performanceIntro.criteriaTypes[0].weight})`, [
               { text: criteria.organizational, score: scores['org-0'] || 'N/A' }
             ])}
 
-            ${renderSection('Critérios Técnicos (60%)', criteria.technical.map((t: string, i: number) => ({
+            ${renderSection(`Critérios Técnicos (${performanceIntro.criteriaTypes[1].weight})`, criteria.technical.map((t: string, i: number) => ({
               text: t, score: scores[`tech-${i}`] || 'N/A'
             })))}
 
-            ${renderSection('Critérios Comportamentais (30%)', criteria.behavioral.map((b: string, i: number) => ({
+            ${renderSection(`Critérios Comportamentais (${performanceIntro.criteriaTypes[2].weight})`, criteria.behavioral.map((b: string, i: number) => ({
               text: b, score: scores[`comp-${i}`] || 'N/A'
             })))}
 
