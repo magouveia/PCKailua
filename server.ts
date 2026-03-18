@@ -20,7 +20,7 @@ async function getTransporter() {
     secure: false, // TLS is used automatically on port 587
     auth: {
       user: "resend",
-      pass: "re_jiD78FDe_Biy5csyMJgvaesz4VE6yNqcr",
+      pass: process.env.RESEND_API_KEY || "re_jiD78FDe_Biy5csyMJgvaesz4VE6yNqcr", // Fallback for local dev if not set
     },
   });
   

@@ -349,7 +349,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                         <Building size={20} />
                       </div>
                       <h2 className="text-2xl font-serif font-bold text-brand-dark">Critério Organizacional</h2>
-                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">10%</span>
+                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">{performanceIntro.criteriaTypes[0].weight}</span>
                     </div>
                     <div className="bg-white p-4 rounded-xl border border-brand-stone/10">
                       <p className="text-brand-stone leading-relaxed text-lg mb-4">
@@ -366,7 +366,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                         <Wrench size={20} />
                       </div>
                       <h2 className="text-2xl font-serif font-bold text-brand-dark">Critérios Técnicos</h2>
-                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">60%</span>
+                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">{performanceIntro.criteriaTypes[1].weight}</span>
                     </div>
                     <div className="space-y-4">
                       {currentCriteria.technical.map((item, index) => (
@@ -388,7 +388,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                         <Users size={20} />
                       </div>
                       <h2 className="text-2xl font-serif font-bold text-brand-dark">Critérios Comportamentais</h2>
-                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">30%</span>
+                      <span className="ml-auto bg-brand-tan/10 text-brand-tan px-3 py-1 rounded-full text-sm font-bold">{performanceIntro.criteriaTypes[2].weight}</span>
                     </div>
                     <div className="space-y-4">
                       {currentCriteria.behavioral.map((item, index) => (
