@@ -31,6 +31,8 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
   const [employeeName, setEmployeeName] = useState('');
   const [evaluatorName, setEvaluatorName] = useState('');
   const [scores, setScores] = useState<Record<string, number>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string, url?: string } | null>(null);
 
   const handleBack = () => {
     if (selectedRole) {
@@ -38,6 +40,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
       setScores({});
       setEmployeeName('');
       setEvaluatorName('');
+      setSubmitMessage(null);
     } else if (selectedSector) {
       setSelectedSector(null);
     } else if (showSectorSelection) {
@@ -56,36 +59,65 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!currentCriteria) return;
 
-    let emailBody = `Avaliação de Desempenho: ${selectedRole?.title}\n`;
-    emailBody += `Colaborador: ${employeeName}\n`;
-    emailBody += `Avaliador: ${evaluatorName}\n\n`;
+    if (!employeeName.trim() || !evaluatorName.trim()) {
+      setSubmitMessage({ 
+        type: 'error', 
+        text: 'Por favor, preenche o nome do colaborador e do avaliador.' 
+      });
+      return;
+    }
 
-    emailBody += `--- CRITÉRIO ORGANIZACIONAL (10%) ---\n`;
-    emailBody += `${currentCriteria.organizational}\n`;
-    emailBody += `Nota: ${scores['org-0'] || 'Não avaliado'}\n\n`;
+    const totalQuestions = 1 + currentCriteria.technical.length + currentCriteria.behavioral.length;
+    const answeredQuestions = Object.keys(scores).length;
 
-    emailBody += `--- CRITÉRIOS TÉCNICOS (60%) ---\n`;
-    currentCriteria.technical.forEach((item, index) => {
-      emailBody += `- ${item}\n`;
-      emailBody += `  Nota: ${scores[`tech-${index}`] || 'Não avaliado'}\n`;
-    });
-    emailBody += '\n';
+    if (answeredQuestions < totalQuestions) {
+      setSubmitMessage({ 
+        type: 'error', 
+        text: `Por favor, avalia todos os critérios. Faltam ${totalQuestions - answeredQuestions} critérios por avaliar.` 
+      });
+      return;
+    }
 
-    emailBody += `--- CRITÉRIOS COMPORTAMENTAIS (30%) ---\n`;
-    currentCriteria.behavioral.forEach((item, index) => {
-      emailBody += `- ${item}\n`;
-      emailBody += `  Nota: ${scores[`comp-${index}`] || 'Não avaliado'}\n`;
-    });
+    setIsSubmitting(true);
+    setSubmitMessage(null);
 
-    const subject = encodeURIComponent(`Avaliação de Desempenho - ${employeeName} - ${selectedRole?.title}`);
-    const body = encodeURIComponent(emailBody);
-    
-    // Replace with the specific email address if known, or leave empty for the user to fill
-    window.location.href = `mailto:daniela.gouveia@kailua.pt?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch('/api/evaluate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          employeeName,
+          evaluatorName,
+          roleTitle: selectedRole?.title,
+          sectorName: selectedSector?.name,
+          scores,
+          criteria: currentCriteria
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage({ 
+          type: 'success', 
+          text: data.message,
+          url: data.previewUrl 
+        });
+      } else {
+        setSubmitMessage({ type: 'error', text: data.error || 'Erro ao enviar avaliação.' });
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      setSubmitMessage({ type: 'error', text: 'Erro de ligação ao servidor.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderScoreButtons = (category: string, index: number) => (
@@ -367,13 +399,36 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                     </div>
                   </div>
 
-                  <div className="flex justify-center pt-8">
+                  <div className="flex flex-col items-center justify-center pt-8 gap-4">
+                    {submitMessage && (
+                      <div className={`p-4 rounded-xl w-full max-w-md text-center ${submitMessage.type === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'}`}>
+                        <p className="font-bold mb-1">{submitMessage.text}</p>
+                        {submitMessage.url && (
+                          <a href={submitMessage.url} target="_blank" rel="noreferrer" className="text-sm underline text-green-900 hover:text-green-700">
+                            Ver o email enviado (Modo Teste)
+                          </a>
+                        )}
+                      </div>
+                    )}
+                    
                     <button
                       type="submit"
-                      className="bg-brand-tan text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand-dark hover:text-brand-tan border border-transparent hover:border-brand-tan transition-all duration-300 shadow-lg hover:shadow-brand-tan/20 flex items-center gap-3"
+                      disabled={isSubmitting}
+                      className={`bg-brand-tan text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest border border-transparent transition-all duration-300 shadow-lg flex items-center gap-3
+                        ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-brand-dark hover:text-brand-tan hover:border-brand-tan hover:shadow-brand-tan/20'}
+                      `}
                     >
-                      <Send size={20} />
-                      Enviar Avaliação
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          A enviar...
+                        </>
+                      ) : (
+                        <>
+                          <Send size={20} />
+                          Enviar Avaliação
+                        </>
+                      )}
                     </button>
                   </div>
                 </form>
