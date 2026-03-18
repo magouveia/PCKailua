@@ -36,9 +36,9 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-4",
     title: "Condições e Regras de Aplicação",
     content: [
-      "Condição de Vaga | DISPONIBILIDADE | A progressão não é automática, depende de vaga.\n\nNa ausência de vaga, mantém o nível e função e fica sinalizado para futura progressão. | Contrapartida: Se atingir o teto máximo do nível, por cada fim de nível, beneficiará da atualização salarial alinhada com a evolução do SMN + 1 dia de férias.",
-      "Regra de Coerência | DESEMPENHO CONSISTENTE | A progressão não ocorre pela inexistência de interesse em progredir. | Contrapartida: Se atingir o teto máximo do nível, por cada fim de nível, beneficiará da atualização salarial alinhada com a evolução do SMN + 0,5 dia de férias.",
-      "Regra de Consistência | BLOQUEIO | A progressão exige consistência, não apenas um pico de desempenho no final de nível. | Penalização: Com 1 avaliação Incumpridor e/ou 2 Cumpridor dentro de um nível, bloqueia a progressão mais 1 ano no nível.",
+      "Condição de Vaga | DISPONIBILIDADE | A progressão não é automática, depende de vaga.\n\nNa ausência de vaga, mantém o nível e função e fica sinalizado para futura progressão. | Contrapartida: Se atingir o teto máximo do nível, por cada fim de nível, beneficiará da atualização salarial alinhada com a evolução do SMN + 2 dias de férias + GB (se avaliação Excelente).",
+      "Regra de Coerência | DESEMPENHO CONSISTENTE | A progressão não ocorre pela inexistência de interesse em progredir. | Contrapartida: Se atingir o teto máximo do nível, por cada fim de nível, beneficiará da atualização salarial alinhada com a evolução do SMN + 1 dia de férias + 1% atualização (se avaliação Excelente).",
+      "Regra de Consistência | BLOQUEIO | A progressão exige consistência, não apenas um pico de desempenho no final de nível. | Penalização: Com avaliação Incumpridor ou Cumpridor dentro de um nível, bloqueia a progressão mais 1 ano no nível.",
       "Mobilidade | FLEXIBILIDADE | A mobilidade entre empresas do grupo é possível e incentivada, conforme a necessidade operacional e perfil do colaborador.",
       "Acesso à Liderança/Direção | RECRUTAMENTO ESPECÍFICO | O acesso a estas funções depende de:\n✓ Avaliação de desempenho\n✓ Aprovação em Processo Interno de recrutamento especifico"
     ],

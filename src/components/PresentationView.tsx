@@ -137,10 +137,19 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="border border-brand-stone/30 px-8 py-3 text-xs md:text-sm text-brand-stone uppercase tracking-widest"
+              className="border border-brand-stone/30 px-8 py-3 text-xs md:text-sm text-brand-stone uppercase tracking-widest mb-8"
             >
               DOCUMENTO OFICIAL 2026
             </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="text-brand-stone text-sm md:text-base max-w-3xl text-center italic leading-relaxed"
+            >
+              2026 será dedicado à implementação e fase de testes, permitindo ajustes e melhorias contínuas, garantindo que em 2027 o modelo entra em pleno vigor de forma sólida e validada.
+            </motion.p>
           </div>
         );
       case 'index':
@@ -203,7 +212,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * i }}
-                    className="bg-white rounded-xl shadow-lg p-4 flex flex-col border-t-4 border-transparent relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+                    className="bg-white rounded-xl shadow-lg p-6 flex flex-col min-h-[320px] border-t-4 border-transparent relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
                     style={{ borderTopColor: i === 0 ? '#ef4444' : i === 1 ? '#eab308' : i === 2 ? '#22c55e' : i === 3 ? '#3b82f6' : '#d97706' }}
                   >
                     <div className={`w-10 h-10 rounded-full ${getCardColor(i)} flex items-center justify-center mb-3 shadow-md`}>
@@ -213,7 +222,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                     <h3 className="text-lg font-bold text-brand-dark mb-1">{title}</h3>
                     <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-3">{subtitle}</div>
                     
-                    <p className="text-brand-stone text-xs flex-grow whitespace-pre-line">{description}</p>
+                    <p className="text-brand-stone text-sm flex-grow whitespace-pre-line leading-relaxed">{description}</p>
                   </motion.div>
                 );
               })}
@@ -252,21 +261,21 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       <Calendar size={16} />
                     </div>
                     <h3 className="text-base font-bold text-brand-dark mb-1">{parts[0]}</h3>
-                    <div className="text-[9px] font-bold text-brand-tan uppercase tracking-wider mb-4">{parts[1]}</div>
-                    <p className="text-brand-stone text-xs mb-4 leading-relaxed mt-1">{parts[2]}</p>
+                    <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-4">{parts[1]}</div>
+                    <p className="text-brand-stone text-sm mb-4 leading-relaxed mt-1">{parts[2]}</p>
                     
                     <ul className="space-y-3 mb-4">
-                      <li className="flex items-start gap-1.5 text-[11px] text-brand-dark">
+                      <li className="flex items-start gap-1.5 text-xs text-brand-dark">
                         <Check size={12} className="mt-0.5 text-brand-stone" />
                         <span>{parts[3]}</span>
                       </li>
-                      <li className="flex items-start gap-1.5 text-[11px] text-brand-dark">
+                      <li className="flex items-start gap-1.5 text-xs text-brand-dark">
                         <Check size={12} className="mt-0.5 text-brand-stone" />
                         <span>{parts[4]}</span>
                       </li>
                     </ul>
 
-                    <div className="mt-auto pt-2 border-t border-gray-100 text-[9px] text-brand-stone italic flex items-center gap-1.5">
+                    <div className="mt-auto pt-2 border-t border-gray-100 text-[10px] text-brand-stone italic flex items-center gap-1.5">
                        <div className="w-3 h-3 rounded-full bg-brand-stone/20 flex items-center justify-center text-[8px] not-italic font-bold">i</div>
                        {parts[5]}
                     </div>
@@ -294,26 +303,26 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       <TrendingUp size={16} />
                     </div>
                     <h3 className="text-base font-bold text-brand-dark mb-1">{parts[0]}</h3>
-                    <div className="text-[9px] font-bold text-brand-tan uppercase tracking-wider mb-2">{parts[1]}</div>
-                    <p className="text-brand-stone text-xs mb-3 leading-relaxed">{parts[2]}</p>
+                    <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-2">{parts[1]}</div>
+                    <p className="text-brand-stone text-sm mb-3 leading-relaxed">{parts[2]}</p>
                     
                     <div className="space-y-2">
-                      <div className="bg-green-50 p-1.5 rounded-lg flex justify-between items-center border-l-4 border-green-500">
-                        <span className="font-bold text-brand-dark text-[11px]">{bar1[0]}</span>
-                        <span className="bg-green-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">{bar1[1]}</span>
-                      </div>
                       <div className="bg-blue-50 p-1.5 rounded-lg flex justify-between items-center border-l-4 border-blue-500">
-                        <span className="font-bold text-brand-dark text-[11px]">{bar2[0]}</span>
-                        <span className="bg-blue-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">{bar2[1]}</span>
+                        <span className="font-bold text-brand-dark text-xs">{bar1[0]}</span>
+                        <span className="bg-blue-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">{bar1[1]}</span>
+                      </div>
+                      <div className="bg-green-50 p-1.5 rounded-lg flex justify-between items-center border-l-4 border-green-500">
+                        <span className="font-bold text-brand-dark text-xs">{bar2[0]}</span>
+                        <span className="bg-green-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">{bar2[1]}</span>
                       </div>
                       <div className="bg-amber-50 p-1.5 rounded-lg flex justify-between items-center border-l-4 border-brand-tan">
-                        <span className="font-bold text-brand-dark text-[11px]">{bar3[0]}</span>
-                        <span className="bg-brand-tan text-white text-[9px] font-bold px-1.5 py-0.5 rounded">{bar3[1]}</span>
+                        <span className="font-bold text-brand-dark text-xs">{bar3[0]}</span>
+                        <span className="bg-brand-tan text-white text-[10px] font-bold px-1.5 py-0.5 rounded">{bar3[1]}</span>
                       </div>
                     </div>
 
                     {parts[6] && (
-                      <div className="mt-auto pt-2 border-t border-gray-100 text-[9px] text-brand-stone italic flex items-start gap-1">
+                      <div className="mt-auto pt-2 border-t border-gray-100 text-[10px] text-brand-stone italic flex items-start gap-1">
                         <span>{parts[6]}</span>
                       </div>
                     )}
@@ -336,8 +345,8 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       <Rocket size={16} />
                     </div>
                     <h3 className="text-base font-bold text-brand-dark mb-1">{parts[0]}</h3>
-                    <div className="text-[9px] font-bold text-brand-tan uppercase tracking-wider mb-2">{parts[1]}</div>
-                    <p className="text-brand-stone text-xs mb-3 leading-relaxed">{parts[2]}</p>
+                    <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-2">{parts[1]}</div>
+                    <p className="text-brand-stone text-sm mb-3 leading-relaxed">{parts[2]}</p>
                     
                     <div className="bg-brand-dark text-brand-cream p-3 rounded-xl relative overflow-hidden">
                       <Star className="absolute -top-2 -right-2 text-brand-tan opacity-20" size={32} />
@@ -345,29 +354,29 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                         {parts[3].startsWith('✓') ? (
                           <div className="flex items-start gap-1.5 mb-3">
                             <Check size={14} className="text-green-500 shrink-0 mt-0.5" />
-                            <p className="text-[11px] leading-relaxed">{parts[3].replace('✓', '').trim()}</p>
+                            <p className="text-xs leading-relaxed">{parts[3].replace('✓', '').trim()}</p>
                           </div>
                         ) : (
                           <>
-                            <div className="text-brand-tan font-bold text-[10px] mb-0.5">Critério:</div>
-                            <p className="text-[11px] mb-3 leading-relaxed">{parts[3].replace('Critério: ', '')}</p>
+                            <div className="text-brand-tan font-bold text-[11px] mb-0.5">Critério:</div>
+                            <p className="text-xs mb-3 leading-relaxed">{parts[3].replace('Critério: ', '')}</p>
                           </>
                         )}
                         
                         <div className="flex items-start gap-1.5 mb-1.5">
                           <Gift size={14} className="text-yellow-500 shrink-0 mt-0.5" />
-                          <p className="text-[11px] leading-relaxed">{parts[4].replace('Benefício: ', '')}</p>
+                          <p className="text-xs leading-relaxed">{parts[4].replace('Benefício: ', '')}</p>
                         </div>
                         
-                        <div className="text-[9px] text-brand-gray border-t border-brand-gray/20 pt-1 mt-1">
+                        <div className="text-[10px] text-brand-gray border-t border-brand-gray/20 pt-1 mt-1">
                           {parts[5]}
                         </div>
                       </div>
                     </div>
                     
-                    <div className="mt-auto pt-2 text-[10px] text-brand-stone/80 font-medium italic flex items-start gap-1.5">
+                    <div className="mt-auto pt-2 text-[11px] text-brand-stone/80 font-medium italic flex items-start gap-1.5">
                        <div className="w-3 h-3 flex items-center justify-center mt-0.5">⚡</div>
-                       <span>Todos progridem com o tempo. Os melhores progridem mais depressa.</span>
+                       <span>Todos podem progredir com o tempo. Os melhores progridem mais depressa.</span>
                     </div>
                   </motion.div>
                 );
@@ -390,8 +399,8 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                         <Trophy size={16} />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xs font-bold text-brand-dark">{parts[0]}</h3>
-                        <div className="text-[9px] font-bold text-brand-tan uppercase tracking-wider mb-1.5">{parts[1]}</div>
+                        <h3 className="text-sm font-bold text-brand-dark">{parts[0]}</h3>
+                        <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-1.5">{parts[1]}</div>
                         <div className="space-y-1">
                           {parts.slice(2).map((p, idx) => {
                             if (!p) return null;
@@ -403,7 +412,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                             const isFirstGift = isGift && idx > 0 && parts[idx + 1].startsWith('✓');
                             
                             return (
-                              <div key={idx} className={`flex items-start gap-1 text-[10px] text-brand-stone ${isFirstGift ? 'mt-2' : ''}`}>
+                              <div key={idx} className={`flex items-start gap-1 text-[11px] text-brand-stone ${isFirstGift ? 'mt-2' : ''}`}>
                                 {isCheck && <Check size={12} className="text-green-500 shrink-0 mt-0.5" />}
                                 {isGift && <Gift size={12} className="text-yellow-500 shrink-0 mt-0.5" />}
                                 {!isCheck && !isGift && <span className="w-3 shrink-0" />}
@@ -437,9 +446,9 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                         <Sparkles size={16} />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xs font-bold text-brand-dark">{parts[0]}</h3>
-                        <div className="text-[9px] font-bold text-brand-tan uppercase tracking-wider mb-1">{parts[1]}</div>
-                        <p className="text-[10px] text-brand-stone leading-relaxed">{parts[2]}</p>
+                        <h3 className="text-sm font-bold text-brand-dark">{parts[0]}</h3>
+                        <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-1">{parts[1]}</div>
+                        <p className="text-[11px] text-brand-stone leading-relaxed">{parts[2]}</p>
                       </div>
                     </motion.div>
                   );
@@ -499,7 +508,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                     <h3 className="text-base font-bold text-brand-dark mb-1 leading-tight">{title}</h3>
                     <div className="text-[9px] font-bold text-brand-stone/60 uppercase tracking-wider mb-3">{subtitle}</div>
                     
-                    <div className="text-brand-stone text-[11px] leading-relaxed mb-3 flex-grow">
+                    <div className="text-brand-stone text-sm leading-relaxed mb-3 flex-grow">
                       {text.split('\n').map((line, lineIndex) => (
                         <React.Fragment key={lineIndex}>
                           {line.trim().startsWith('✓') ? (
@@ -521,7 +530,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                           {footer.includes('Contrapartida') && <Handshake size={12} className="text-yellow-600 mt-0.5 shrink-0" />}
                           {footer.includes('Penalização') && <Ban size={12} className="text-red-500 mt-0.5 shrink-0" />}
                           {footer.includes('Prémio') && <Percent size={12} className="text-[#c49874] mt-0.5 shrink-0" />}
-                          <p className="text-[9px] text-brand-gray leading-tight">
+                          <p className="text-xs text-brand-gray leading-tight">
                             <span className="font-bold text-brand-dark">{footer.split(':')[0]}:</span>
                             {footer.split(':').slice(1).join(':')}
                           </p>
@@ -695,10 +704,10 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-4 bg-brand-cream/50 p-3 rounded-lg border border-brand-tan/20"
               >
-                <div className="text-[10px] font-bold text-brand-tan uppercase tracking-wider mb-1">
+                <div className="text-xs font-bold text-brand-tan uppercase tracking-wider mb-1">
                   {currentSlide.content[0].split(':')[0]}
                 </div>
-                <div className="text-brand-dark text-sm font-medium flex gap-4">
+                <div className="text-brand-dark text-base font-medium flex gap-4">
                   {currentSlide.content[0].split(':')[1]?.split('|').map((part, i) => (
                     <div key={i} className="flex items-center gap-2">
                       {i > 0 && <div className="w-1 h-1 rounded-full bg-brand-tan"></div>}
@@ -712,7 +721,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
             {/* Table */}
             <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-gray-100 flex flex-col min-h-0">
               {/* Header */}
-              <div className="bg-brand-dark text-white grid grid-cols-12 gap-3 px-4 py-2 text-[11px] font-bold uppercase tracking-wider shrink-0">
+              <div className="bg-brand-dark text-white grid grid-cols-12 gap-3 px-4 py-2 text-xs font-bold uppercase tracking-wider shrink-0">
                 {currentSlide.content[1]?.split('|').map((header, i) => {
                   const numCols = currentSlide.content[1].split('|').length;
                   let span = 'col-span-2';
@@ -749,32 +758,32 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 * rowIndex }}
-                      className={`grid grid-cols-12 gap-3 px-4 py-2 border-b border-gray-50 text-xs items-center hover:bg-brand-cream/10 transition-colors ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
+                      className={`grid grid-cols-12 gap-3 px-4 py-2 border-b border-gray-50 text-sm items-center hover:bg-brand-cream/10 transition-colors ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
                     >
                       {numCols === 6 ? (
                         <>
                           <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
                           <div className="col-span-3 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
                           <div className="col-span-1 text-center">
-                            <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-[10px] font-bold border border-brand-dark/10">
+                            <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-xs font-bold border border-brand-dark/10">
                               {cells[2]}
                             </span>
                           </div>
-                          <div className="col-span-2 text-center text-brand-stone text-xs">{cells[3]}</div>
-                          <div className="col-span-2 text-center font-mono text-xs text-brand-gray">{cells[4]}</div>
-                          <div className="col-span-2 text-center font-mono text-xs font-bold text-brand-dark">{cells[5]}</div>
+                          <div className="col-span-2 text-center text-brand-stone text-sm">{cells[3]}</div>
+                          <div className="col-span-2 text-center font-mono text-sm text-brand-gray">{cells[4]}</div>
+                          <div className="col-span-2 text-center font-mono text-sm font-bold text-brand-dark">{cells[5]}</div>
                         </>
                       ) : (
                         <>
                           <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
                           <div className="col-span-4 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
                           <div className="col-span-2 text-center">
-                            <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-xs font-bold border border-brand-dark/10">
+                            <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-sm font-bold border border-brand-dark/10">
                               {cells[2]}
                             </span>
                           </div>
-                          <div className="col-span-2 text-center text-brand-stone text-xs">{cells[3]}</div>
-                          <div className="col-span-2 text-center font-mono text-xs text-brand-gray">{cells[4]}</div>
+                          <div className="col-span-2 text-center text-brand-stone text-sm">{cells[3]}</div>
+                          <div className="col-span-2 text-center font-mono text-sm text-brand-gray">{cells[4]}</div>
                         </>
                       )}
                     </motion.div>
