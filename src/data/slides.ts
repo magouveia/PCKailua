@@ -21,6 +21,16 @@ export const hardcodedSlides: Slide[] = [
     notes: "Nesta apresentação, vamos abordar os pilares fundamentais do nosso modelo de carreira, desde a avaliação de desempenho até aos caminhos específicos de cada departamento."
   },
   {
+    id: "slide-2b",
+    title: "Avaliação de Desempenho",
+    content: [
+      "Organizacionais | 10% | Avaliação do alinhamento com a cultura, valores e objetivos gerais da empresa.",
+      "Técnicos | 60% | Avaliação das competências e conhecimentos técnicos específicos exigidos para a função."
+    ],
+    layout: "cards",
+    notes: "A avaliação de desempenho é composta por diferentes tipos de critérios com pesos específicos."
+  },
+  {
     id: "slide-3",
     title: "Critérios de Avaliação",
     content: [
@@ -60,14 +70,22 @@ export const hardcodedSlides: Slide[] = [
   },
   {
     id: "slide-6",
-    title: "Estrutura de Carreira por Setor",
+    title: "Estrutura de Carreira por Setor (1/2)",
     content: [
       "Food | PRODUÇÃO ALIMENTAR | Ajudante | Nível III | Chefe de Cozinha | Nível X | III → IV-IX → X",
       "Copa | APOIO & LIMPEZA | Copeiro Junior | Nível II | Chefe de Copa / Coz. 3ª | Nível V | II → III-IV → V",
       "Armazém | LOGÍSTICA | Ajudante | Nível III | Encarregado de Armazém | Nível VIII | III → IV-VII → VIII",
       "Manutenção | TÉCNICA | Ajudante | Nível III | Chefe de Manutenção, Conservação e Serviços Técnicos | Nível IX | III → IV-VIII → IX",
       "HouseKeeping | HIGIENE E LIMPEZA | Técnico de Limpeza | Nível III | Encarregado de Limpeza | Nível IV | III → IV",
-      "Mesas | ATENDIMENTO AO CLIENTE | Ajudante | Nível III | Chefe de Sala | Nível VIII | III → IV-VII → VIII",
+      "Mesas | ATENDIMENTO AO CLIENTE | Ajudante | Nível III | Chefe de Sala | Nível VIII | III → IV-VII → VIII"
+    ],
+    layout: "career-structure",
+    notes: "Apresentamos aqui a estrutura detalhada das carreiras operacionais (parte 1)."
+  },
+  {
+    id: "slide-6b",
+    title: "Estrutura de Carreira por Setor (2/2)",
+    content: [
       "Drinks | BEBIDAS & MIXOLOGIA | Ajudante | Nível III | Chefe de Bar | Nível VIII | III → IV-VII → VIII",
       "Controlo | SUPORTE | Controlador - Caixa | Nível V | Chefe de Controlo | Nível VIII | V → VI-VII → VIII",
       "Felicidade | ACOLHIMENTO & VENDAS | Ajudante | Nível III | Gerente | Nível VIII | III → IV-VII → VIII",
@@ -75,7 +93,7 @@ export const hardcodedSlides: Slide[] = [
       "Direção Corporativa | CORPORATIVO | Escriturário de 3ª | Nível V | Diretor de Serviços (Financeiros e Administrativos)\nDiretor de Serviços Técnicos (RH) | Nível X | V → VI-IX → X"
     ],
     layout: "career-structure",
-    notes: "Apresentamos aqui a estrutura detalhada das carreiras operacionais e de direção, definindo claramente os pontos de entrada, o topo da carreira e os níveis de evolução para cada setor."
+    notes: "Apresentamos aqui a estrutura detalhada das carreiras de suporte e direção (parte 2)."
   },
   {
     id: "slide-8",

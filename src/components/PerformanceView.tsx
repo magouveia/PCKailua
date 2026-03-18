@@ -23,6 +23,7 @@ interface PerformanceViewProps {
 }
 
 export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
+  const [showSectorSelection, setShowSectorSelection] = useState(false);
   const [selectedSector, setSelectedSector] = useState<Sector | null>(null);
   const [selectedRole, setSelectedRole] = useState<FunctionalProfile | null>(null);
 
@@ -39,6 +40,8 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
       setEvaluatorName('');
     } else if (selectedSector) {
       setSelectedSector(null);
+    } else if (showSectorSelection) {
+      setShowSectorSelection(false);
     } else {
       onBack();
     }
@@ -61,11 +64,11 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
     emailBody += `Colaborador: ${employeeName}\n`;
     emailBody += `Avaliador: ${evaluatorName}\n\n`;
 
-    emailBody += `--- CRITÉRIO ORGANIZACIONAL (20%) ---\n`;
+    emailBody += `--- CRITÉRIO ORGANIZACIONAL (10%) ---\n`;
     emailBody += `${currentCriteria.organizational}\n`;
     emailBody += `Nota: ${scores['org-0'] || 'Não avaliado'}\n\n`;
 
-    emailBody += `--- CRITÉRIOS TÉCNICOS (50%) ---\n`;
+    emailBody += `--- CRITÉRIOS TÉCNICOS (60%) ---\n`;
     currentCriteria.technical.forEach((item, index) => {
       emailBody += `- ${item}\n`;
       emailBody += `  Nota: ${scores[`tech-${index}`] || 'Não avaliado'}\n`;
@@ -130,7 +133,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
       <div className="flex-1 overflow-y-auto p-4 md:p-8 z-10 relative">
         <div className="max-w-4xl mx-auto">
           
-          {!selectedSector && !selectedRole && (
+          {!showSectorSelection && !selectedSector && !selectedRole && (
             <>
               <div className="mb-8 text-center">
                 <img 
@@ -185,6 +188,19 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                 </div>
               </div>
 
+              <div className="flex justify-center">
+                <button
+                  onClick={() => setShowSectorSelection(true)}
+                  className="bg-brand-tan text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-brand-tan/90 hover:-translate-y-1 transition-all flex items-center gap-2"
+                >
+                  Continuar para Seleção de Setor <ChevronRight size={20} />
+                </button>
+              </div>
+            </>
+          )}
+
+          {showSectorSelection && !selectedSector && !selectedRole && (
+            <>
               <h2 className="text-2xl font-serif font-bold text-brand-cream mb-2 text-center">
                 Seleciona um setor
               </h2>

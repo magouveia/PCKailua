@@ -14,8 +14,8 @@ export const performanceIntro = {
     { level: 4, name: "Excelente", description: "Excede consistentemente os requisitos" }
   ],
   criteriaTypes: [
-    { type: "Organizacionais", weight: "20%", description: "Avaliam o alinhamento com os valores, cultura e padrões da empresa." },
-    { type: "Técnicos", weight: "50%", description: "Avaliam a capacidade para executar corretamente as tarefas da tua função." },
+    { type: "Organizacionais", weight: "10%", description: "Avaliam o alinhamento com os valores, cultura e padrões da empresa." },
+    { type: "Técnicos", weight: "60%", description: "Avaliam a capacidade para executar corretamente as tarefas da tua função." },
     { type: "Comportamentais", weight: "30%", description: "Avaliam a forma como trabalha com colegas, clientes e liderança." }
   ],
   calculation: "A nota final resulta da média de cada grupo de critérios, aplicada ao respetivo peso."
