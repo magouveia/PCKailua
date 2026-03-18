@@ -70,13 +70,6 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
 
   // Helper for card icons
   const getCardIcon = (index: number) => {
-    if (currentSlide.title === 'Avaliação de Desempenho') {
-      switch (index) {
-        case 0: return <Building className="text-white" size={24} />;
-        case 1: return <Wrench className="text-white" size={24} />;
-        default: return <CheckCircle className="text-white" size={24} />;
-      }
-    }
     switch (index) {
       case 0: return <ThumbsDown className="text-white" size={24} />;
       case 1: return <AlertTriangle className="text-white" size={24} />;
@@ -89,13 +82,6 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
 
   // Helper for card colors
   const getCardColor = (index: number) => {
-    if (currentSlide.title === 'Avaliação de Desempenho') {
-      switch (index) {
-        case 0: return 'bg-blue-500';
-        case 1: return 'bg-amber-600';
-        default: return 'bg-gray-500';
-      }
-    }
     switch (index) {
       case 0: return 'bg-red-500';
       case 1: return 'bg-yellow-500';
@@ -203,20 +189,16 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
               >
                 {currentSlide.title}
               </motion.h2>
-              <span className="text-brand-stone uppercase tracking-widest text-xs">
-                {currentSlide.title === 'Critérios de Avaliação' ? 'ESCALA DE DESEMPENHO' : 'TIPOS E CRITÉRIOS AVALIADOS'}
-              </span>
+              <span className="text-brand-stone uppercase tracking-widest text-xs">ESCALA DE DESEMPENHO</span>
             </div>
 
             <div className="mb-6">
               <p className="text-brand-stone text-sm md:text-base leading-relaxed">
-                {currentSlide.title === 'Critérios de Avaliação' 
-                  ? 'A progressão de carreira está diretamente ligada ao resultado da avaliação de desempenho, de forma consistente, utilizando a seguinte escala interna:'
-                  : 'A avaliação de desempenho baseia-se na ponderação de diferentes tipos de critérios, garantindo uma análise justa e abrangente:'}
+                A progressão de carreira está diretamente ligada ao resultado da avaliação de desempenho, de forma consistente, utilizando a seguinte escala interna:
               </p>
             </div>
 
-            <div className={`grid grid-cols-1 ${currentSlide.content.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : currentSlide.content.length === 4 ? 'md:grid-cols-4' : 'md:grid-cols-5'} gap-3 mb-6`}>
+            <div className={`grid grid-cols-1 ${currentSlide.content.length === 4 ? 'md:grid-cols-4' : 'md:grid-cols-5'} gap-3 mb-6`}>
               {currentSlide.content.map((item, i) => {
                 // Parse content: "Title | Subtitle | Description | Consequence"
                 const parts = item.split('|').map(s => s.trim());
@@ -231,7 +213,7 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * i }}
                     className="bg-white rounded-xl shadow-lg p-6 flex flex-col min-h-[320px] border-t-4 border-transparent relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
-                    style={{ borderTopColor: currentSlide.title === 'Avaliação de Desempenho' ? (i === 0 ? '#3b82f6' : '#d97706') : (i === 0 ? '#ef4444' : i === 1 ? '#eab308' : i === 2 ? '#22c55e' : i === 3 ? '#3b82f6' : '#d97706') }}
+                    style={{ borderTopColor: i === 0 ? '#ef4444' : i === 1 ? '#eab308' : i === 2 ? '#22c55e' : i === 3 ? '#3b82f6' : '#d97706' }}
                   >
                     <div className={`w-10 h-10 rounded-full ${getCardColor(i)} flex items-center justify-center mb-3 shadow-md`}>
                       {getCardIcon(i)}

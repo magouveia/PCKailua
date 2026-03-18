@@ -21,16 +21,6 @@ export const hardcodedSlides: Slide[] = [
     notes: "Nesta apresentação, vamos abordar os pilares fundamentais do nosso modelo de carreira, desde a avaliação de desempenho até aos caminhos específicos de cada departamento."
   },
   {
-    id: "slide-2b",
-    title: "Avaliação de Desempenho",
-    content: [
-      "Organizacionais | 10% | Avaliação do alinhamento com a cultura, valores e objetivos gerais da empresa.",
-      "Técnicos | 60% | Avaliação das competências e conhecimentos técnicos específicos exigidos para a função."
-    ],
-    layout: "cards",
-    notes: "A avaliação de desempenho é composta por diferentes tipos de critérios com pesos específicos."
-  },
-  {
     id: "slide-3",
     title: "Critérios de Avaliação",
     content: [
