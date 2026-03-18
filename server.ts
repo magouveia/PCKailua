@@ -5,9 +5,52 @@ import nodemailer from "nodemailer";
 import * as xlsx from "xlsx";
 import PDFDocument from "pdfkit";
 
+// Global transporter for Ethereal to avoid rate limits
+let cachedTransporter: nodemailer.Transporter | null = null;
+
+async function getTransporter() {
+  if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
+    return nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: process.env.SMTP_SECURE === 'true',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+  }
+
+  if (cachedTransporter) {
+    return cachedTransporter;
+  }
+
+  console.log("Creating new Ethereal test account...");
+  const testAccount = await nodemailer.createTestAccount();
+  cachedTransporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false,
+    auth: {
+      user: testAccount.user,
+      pass: testAccount.pass,
+    },
+  });
+  
+  return cachedTransporter;
+}
+
 async function startServer() {
   const app = express();
   const PORT = 3000;
+
+  // Pre-initialize the email transporter
+  try {
+    await getTransporter();
+    console.log("Email transporter initialized.");
+  } catch (error) {
+    console.error("Failed to initialize email transporter:", error);
+  }
 
   app.use(express.json());
 
@@ -163,30 +206,7 @@ async function startServer() {
       // 3. Send Email
       // For development, we use Ethereal (fake SMTP service)
       // In production, you would use your own SMTP credentials
-      let transporter;
-      if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
-        transporter = nodemailer.createTransport({
-          host: process.env.SMTP_HOST,
-          port: Number(process.env.SMTP_PORT) || 587,
-          secure: process.env.SMTP_SECURE === 'true',
-          auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS,
-          },
-        });
-      } else {
-        // Fallback to test account
-        const testAccount = await nodemailer.createTestAccount();
-        transporter = nodemailer.createTransport({
-          host: "smtp.ethereal.email",
-          port: 587,
-          secure: false,
-          auth: {
-            user: testAccount.user,
-            pass: testAccount.pass,
-          },
-        });
-      }
+      const transporter = await getTransporter();
 
       const info = await transporter.sendMail({
         from: '"Kailua RH" <rh@kailua.pt>',
