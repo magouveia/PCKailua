@@ -200,15 +200,15 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Chefe de Bar',
-        mission: 'Coordenar e liderar a operação do bar, garantindo qualidade do serviço, rentabilidade da área e desenvolvimento da equipa.',
+        mission: 'Coordenar e liderar a operação do bar, garantindo consistência das confeções, qualidade do serviço, rentabilidade da área e desenvolvimento da equipa.',
         responsibilities: [
           'Garantir consistência técnica e apresentação das bebidas, assegurando cumprimento das receitas e padrões definidos.',
           'Assegurar rentabilidade do setor de bar através do controlo de consumos, desperdício e níveis de stock.',
           'Coordenar a equipa de bar garantindo rapidez, organização e fluidez no serviço.',
           'Desenvolver novas propostas de bebidas em conjunto com a liderança, contribuindo para a atratividade e atualização da carta.',
-          'Assegurar correta conservação e rotação de produtos, evitando perdas e ruturas.',
+          'Garantir a correta conservação e rotação de produtos, evitando perdas e ruturas.',
           'Promover boas práticas de higiene, segurança e organização no bar.',
-          'Desenvolver competências da equipa garantindo consistência na execução do serviço.'
+          'Assegurar a formação da equipa de bar em técnicas de serviço e preparação de bebidas, garantindo qualidade, consistência e cumprimento dos padrões definidos.'
         ],
         technicalSkills: [
           'Domínio técnico de preparação de bebidas e cocktails.',
@@ -1311,6 +1311,7 @@ export const functionalProfilesData: Sector[] = [
           'Acompanhar o desempenho da equipa garantindo cumprimento consistente dos padrões de atendimento.',
           'Assegurar gestão equilibrada do fluxo de clientes e ocupação das mesas.',
           'Resolver reclamações ou situações de insatisfação garantindo recuperação da experiência do cliente.',
+          'Assegurar a formação da equipa em serviço e técnicas de venda, garantindo consistência, qualidade e evolução do desempenho em vendas.',
           'Promover a venda média através da orientação da equipa para sugestões de venda e conhecimento da carta.',
           'Desenvolver a equipa das mesas garantindo alinhamento com os padrões de serviço e comportamento definidos.'
         ],
@@ -1354,9 +1355,7 @@ export const functionalProfilesData: Sector[] = [
         ],
         behavioralSkills: [
           'Rigor e precisão no tratamento de valores.',
-          'Sentido de responsabilidade e fiabilidade.',
-          'Organização e método de trabalho.',
-          'Comunicação clara com equipa e liderança.'
+          'Sentido de responsabilidade e fiabilidade.'
         ]
       },
       {
@@ -1394,7 +1393,7 @@ export const functionalProfilesData: Sector[] = [
           'Garantir a operacionalidade do setor de take-away, assegurando a reposição, organização e arrumação de todos os materiais e produtos necessários, para que o serviço esteja totalmente preparado e a funcionar em pleno.',
           'Assegurar o funcionamento dos equipamentos e sistemas, acionando as intervenções técnicas necessárias e garantindo a resolução dos problemas.',
           'Identificar e resolver rapidamente problemas operacionais que possam afetar o serviço.',
-          'Atuar sempre que necessário como suporte direto ao Encarregado de Armazém, nas operações e no cumprimento dos procedimentos.',
+          'Colaborar com o setor de armazém sempre que necessário, apoiando as operações e o cumprimento dos procedimentos.',
           'Garantir a continuidade da operação, assegurando os recursos humanos necessários e assumindo diretamente qualquer função em caso de falha na equipa.'
         ],
         technicalSkills: [

@@ -783,7 +783,16 @@ export const PresentationView: React.FC<PresentationViewProps> = ({
                     >
                       {numCols === 6 ? (
                         <>
-                          <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
+                          <div className="col-span-2 font-bold text-brand-tan leading-tight">
+                            {cells[0].includes('(') ? (
+                              <>
+                                <div>{cells[0].split('(')[0].trim()}</div>
+                                <div className="text-[10px] font-normal opacity-80 mt-1">({cells[0].split('(')[1]}</div>
+                              </>
+                            ) : (
+                              cells[0]
+                            )}
+                          </div>
                           <div className="col-span-3 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
                           <div className="col-span-1 text-center">
                             <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-xs font-bold border border-brand-dark/10">
@@ -796,7 +805,16 @@ export const PresentationView: React.FC<PresentationViewProps> = ({
                         </>
                       ) : (
                         <>
-                          <div className="col-span-2 font-bold text-brand-tan">{cells[0]}</div>
+                          <div className="col-span-2 font-bold text-brand-tan leading-tight">
+                            {cells[0].includes('(') ? (
+                              <>
+                                <div>{cells[0].split('(')[0].trim()}</div>
+                                <div className="text-[10px] font-normal opacity-80 mt-1">({cells[0].split('(')[1]}</div>
+                              </>
+                            ) : (
+                              cells[0]
+                            )}
+                          </div>
                           <div className="col-span-4 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
                           <div className="col-span-2 text-center">
                             <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-sm font-bold border border-brand-dark/10">

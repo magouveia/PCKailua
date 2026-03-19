@@ -167,7 +167,7 @@ export const hardcodedSlides: Slide[] = [
       "Especialização | Assistente de Sala de 1ª | VII | 2 anos | 3–5 anos | 974€ - 1424€",
       "Coordenação | Subchefe de Sala | VII | 2 anos | 5–7 anos | 974€ - 1424€",
       "Liderança | Chefe de Sala | VIII | 2 anos | 7–9 anos | 1028€ - 1628€",
-      "Liderança transversal (Operação da frente) | Supervisor de Operações | IX | 5 anos | 9-14 anos | 1136€ - 1961€"
+      "Liderança Transversal (Operação da Frente) | Supervisor de Operações | IX | 5 anos | 9-14 anos | 1136€ - 1961€"
     ],
     layout: "table",
     notes: "A carreira de mesas oferece um percurso longo e estruturado, desde o estágio até à gerência."
@@ -182,21 +182,10 @@ export const hardcodedSlides: Slide[] = [
       "Consolidação | Barman/barmaid de 2ª | VI | 2 anos | 1–3 anos | 952€ - 1302€",
       "Profissionalização | Barman/barmaid de 1ª | VII | 3 anos | 3–6 anos | 974€ - 1424€",
       "Liderança | Chefe de Bar | VIII | 3 anos | 6–9 anos | 1028€ - 1628€",
-      "Liderança transversal (Operação da frente) | Supervisor de Operações | IX | 5 anos | 9-14 anos | 1136€ - 1961€"
+      "Liderança Transversal (Operação da Frente) | Supervisor de Operações | IX | 5 anos | 9-14 anos | 1136€ - 1961€"
     ],
     layout: "table",
     notes: "A carreira de bar evolui da aprendizagem para a liderança técnica e gestão."
-  },
-  {
-    id: "slide-14-b",
-    title: "OPERAÇÃO DA FRENTE",
-    content: [
-      "Entrada típica (nível IX) Supervisor de Operações",
-      "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
-      "Liderança transversal (Operação da frente) | Supervisor de Operações | IX | 5 anos | 9-14 anos | 1136€ - 1961€"
-    ],
-    layout: "table",
-    notes: "A progressão na operação da frente é focada na supervisão e gestão de equipas."
   },
   {
     id: "slide-15",

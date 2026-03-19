@@ -474,35 +474,35 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Chefe de Sala",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Organiza o funcionamento do setor das mesas garantindo qualidade e fluidez do serviço.",
-      "Acompanha o desempenho da equipa assegurando cumprimento dos padrões de atendimento.",
-      "Garante uma gestão eficiente do fluxo de clientes e organização das mesas.",
-      "Resolve situações operacionais e reclamações garantindo a satisfação do cliente.",
-      "Promove o aumento da venda média através da organização do serviço, orientação da equipa e aplicação consistente de técnicas de sugestão de venda."
+      "Garantir organização e fluidez do serviço de mesa, assegurando atendimento eficiente mesmo em períodos de maior volume.",
+      "Acompanha o desempenho da equipa garantindo cumprimento consistente dos padrões de atendimento.",
+      "Assegurar gestão equilibrada do fluxo de clientes e ocupação das mesas.",
+      "Resolver reclamações ou situações de insatisfação garantindo recuperação da experiência do cliente.",
+      "Assegurar a formação da equipa em serviço e técnicas de venda, garantindo consistência, qualidade e evolução do desempenho em vendas.",
+      "Promover a venda média através da orientação da equipa para sugestões de venda e conhecimento da carta.",
+      "Desenvolver a equipa das mesas garantindo alinhamento com os padrões de serviço e comportamento definidos."
     ],
     "behavioral": [
-      "Lidera a equipa das mesas com clareza e consistência durante o serviço.",
-      "Intervém e resolve situações de insatisfação ou conflito com clientes.",
-      "Demonstra capacidade de decisão em momentos de pressão operacional.",
-      "Desenvolve a equipa incentivando sugestões e melhoria da venda média.",
-      "Mantém uma apresentação pessoal adequada ao padrão da empresa, postura profissional e exemplo de comportamento para a equipa."
+      "Liderança de equipa de forma clara e assertiva.",
+      "Capacidade de decisão em contexto de pressão e de motivação de equipas.",
+      "Foco na experiência do cliente.",
+      "Sentido de responsabilidade, exemplo profissional e boa apresentação."
     ]
   },
   {
     "title": "Controlador-caixa",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Regista corretamente as operações de caixa garantindo fiabilidade dos valores faturados.",
-      "Executa abertura e fecho de caixa de acordo com os procedimentos definidos.",
-      "Confere pagamentos e meios de pagamento garantindo correspondência com a faturação.",
-      "Organiza e prepara a documentação de suporte às caixas diárias.",
-      "Identifica e comunica discrepâncias ou irregularidades nos movimentos de caixa."
+      "Registar e controlar as operações de caixa garantindo correção dos valores faturados.",
+      "Conferir pagamentos recebidos em numerário, cartão ou outros meios de pagamento.",
+      "Garantir abertura e fecho de caixa de acordo com os procedimentos definidos.",
+      "Identificar e comunicar discrepâncias ou irregularidades nos movimentos de caixa.",
+      "Organizar e preparar documentação de suporte às caixas diárias.",
+      "Apoiar o controlo da faturação diária garantindo fiabilidade da informação registada."
     ],
     "behavioral": [
-      "Demonstra rigor e atenção ao detalhe na gestão de valores.",
-      "Cumpre procedimentos definidos garantindo fiabilidade da informação.",
-      "Comunica de forma clara com liderança e equipa sobre movimentos de caixa.",
-      "Mantém organização e método no trabalho administrativo."
+      "Rigor e precisão no tratamento de valores.",
+      "Sentido de responsabilidade e fiabilidade."
     ]
   },
   {
@@ -598,18 +598,20 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
     "title": "Chefe de Bar",
     "organizational": "Representa os pontos de cultura na forma como trabalha e interage com a equipa e clientes, garantindo cuidado com imagem, higiene, comunicação e atenção ao detalhe na experiência do cliente.",
     "technical": [
-      "Coordena a operação do bar garantindo consistência na preparação das bebidas.",
-      "Organiza o funcionamento do bar assegurando eficiência durante o serviço.",
-      "Controla stocks e garante correta conservação dos produtos do bar.",
-      "Forma e orienta a equipa de bar garantindo cumprimento dos padrões definidos.",
-      "Garante controlo consistente do beverage cost, assegurando utilização eficiente das bebidas, cumprimento das margens definidas e redução de desperdícios."
+      "Garantir consistência técnica e apresentação das bebidas, assegurando cumprimento das receitas e padrões definidos.",
+      "Assegurar rentabilidade do setor de bar através do controlo de consumos, desperdício e níveis de stock.",
+      "Coordenar a equipa de bar garantindo rapidez, organização e fluidez no serviço.",
+      "Desenvolver novas propostas de bebidas em conjunto com a liderança, contribuindo para a atratividade e atualização da carta.",
+      "Garantir a correta conservação e rotação de produtos, evitando perdas e ruturas.",
+      "Promover boas práticas de higiene, segurança e organização no bar.",
+      "Assegurar a formação da equipa de bar em técnicas de serviço e preparação de bebidas, garantindo qualidade, consistência e cumprimento dos padrões definidos."
     ],
     "behavioral": [
-      "Coordena a equipa de bar garantindo organização e ritmo durante o serviço.",
-      "Comunica orientações de forma clara à equipa.",
-      "Mantém uma postura profissional e foco durante períodos de maior pressão.",
-      "Acompanha o trabalho da equipa e corrige falhas quando necessário.",
-      "Demonstra iniciativa na melhoria contínua do funcionamento do bar."
+      "Liderança operacional da equipa.",
+      "Organização e capacidade de trabalhar sob pressão.",
+      "Criatividade e iniciativa.",
+      "Comunicação clara com equipa e sala.",
+      "Atenção ao detalhe e consistência na execução."
     ]
   },
   {
