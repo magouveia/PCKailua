@@ -1,26 +1,22 @@
-FROM node:22-alpine
-
-# Definir o diretório de trabalho dentro do contentor
+# Stage 1: Build the React app
+FROM node:20-slim AS builder
 WORKDIR /app
-
-# Copiar os ficheiros de dependências
 COPY package*.json ./
-
-# Instalar todas as dependências (incluindo as de desenvolvimento para o build e tsx)
 RUN npm install
-
-# Copiar o resto do código da aplicação
 COPY . .
-
-# Fazer o build da interface React (Vite)
 RUN npm run build
 
-# Expor a porta que o servidor Express usa
-EXPOSE 3000
-
-# Definir variáveis de ambiente padrão
+# Stage 2: Run the server
+FROM node:20-slim
+WORKDIR /app
 ENV NODE_ENV=production
-ENV PORT=3000
+COPY package*.json ./
+RUN npm install --production
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/server.ts ./
+COPY --from=builder /app/src/data/performanceCriteria.ts ./src/data/
+# Install tsx to run the server.ts directly if needed, or compile it
+RUN npm install -g tsx
 
-# Iniciar o servidor
-CMD ["npx", "tsx", "server.ts"]
+EXPOSE 3000
+CMD ["tsx", "server.ts"]

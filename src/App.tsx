@@ -14,12 +14,20 @@ function App() {
   const [slides, setSlides] = useState<Slide[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentView, setCurrentView] = useState<ViewState>('home');
+  const [selectedSectorName, setSelectedSectorName] = useState<string | null>(null);
+  const [lastSlideIndex, setLastSlideIndex] = useState(0);
 
   useEffect(() => {
     // Load slides immediately without artificial delay
     setSlides(hardcodedSlides);
     setIsLoading(false);
   }, []);
+
+  const handleNavigateToSector = (sectorName: string, slideIndex: number) => {
+    setSelectedSectorName(sectorName);
+    setLastSlideIndex(slideIndex);
+    setCurrentView('job-descriptions');
+  };
 
   if (isLoading) {
     return (
@@ -33,11 +41,35 @@ function App() {
 
   switch (currentView) {
     case 'career':
-      return <PresentationView slides={slides} onClose={() => setCurrentView('home')} />;
+      return (
+        <PresentationView 
+          slides={slides} 
+          initialSlideIndex={lastSlideIndex}
+          onClose={() => {
+            setCurrentView('home');
+            setLastSlideIndex(0);
+          }} 
+          onNavigateToSector={handleNavigateToSector}
+          onSlideChange={setLastSlideIndex}
+        />
+      );
     case 'organogram':
       return <OrganogramView onBack={() => setCurrentView('home')} />;
     case 'job-descriptions':
-      return <JobDescriptionsView onBack={() => setCurrentView('home')} />;
+      return (
+        <JobDescriptionsView 
+          onBack={() => {
+            if (selectedSectorName) {
+              setCurrentView('career');
+              // Keep lastSlideIndex as is
+            } else {
+              setCurrentView('home');
+            }
+            setSelectedSectorName(null);
+          }} 
+          initialSectorName={selectedSectorName || undefined}
+        />
+      );
     case 'performance':
       return <PerformanceView onBack={() => setCurrentView('home')} />;
     default:

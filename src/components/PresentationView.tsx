@@ -9,23 +9,36 @@ import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown,
 interface PresentationViewProps {
   slides: Slide[];
   onClose: () => void;
+  onNavigateToSector?: (sectorName: string, slideIndex: number) => void;
+  initialSlideIndex?: number;
+  onSlideChange?: (index: number) => void;
 }
 
-export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onClose }) => {
-  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+export const PresentationView: React.FC<PresentationViewProps> = ({ 
+  slides, 
+  onClose, 
+  onNavigateToSector,
+  initialSlideIndex = 0,
+  onSlideChange
+}) => {
+  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(initialSlideIndex);
   const [isFullscreen, setIsFullscreen] = React.useState(false);
 
   const currentSlide = slides[currentSlideIndex];
 
   const nextSlide = () => {
     if (currentSlideIndex < slides.length - 1) {
-      setCurrentSlideIndex(prev => prev + 1);
+      const nextIndex = currentSlideIndex + 1;
+      setCurrentSlideIndex(nextIndex);
+      onSlideChange?.(nextIndex);
     }
   };
 
   const prevSlide = () => {
     if (currentSlideIndex > 0) {
-      setCurrentSlideIndex(prev => prev - 1);
+      const prevIndex = currentSlideIndex - 1;
+      setCurrentSlideIndex(prevIndex);
+      onSlideChange?.(prevIndex);
     }
   };
 
@@ -606,12 +619,20 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
                     className="bg-white rounded-lg shadow-sm p-3 grid grid-cols-12 gap-4 items-center border-l-4 border-brand-tan hover:shadow-md transition-shadow"
                   >
                     {/* Sector */}
-                    <div className="col-span-3 flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-brand-cream flex items-center justify-center text-brand-tan shrink-0">
+                    <div 
+                      className={`col-span-3 flex items-center gap-3 ${onNavigateToSector ? 'cursor-pointer group' : ''}`}
+                      onClick={() => onNavigateToSector && onNavigateToSector(sector, currentSlideIndex)}
+                    >
+                      <div className={`w-10 h-10 rounded-full bg-brand-cream flex items-center justify-center text-brand-tan shrink-0 ${onNavigateToSector ? 'group-hover:bg-brand-tan group-hover:text-white transition-colors' : ''}`}>
                         {getIcon(sector)}
                       </div>
                       <div>
-                        <div className="font-bold text-brand-dark text-lg leading-tight">{sector}</div>
+                        <div className={`font-bold text-brand-dark text-lg leading-tight ${onNavigateToSector ? 'group-hover:text-brand-tan transition-colors flex items-center gap-1' : ''}`}>
+                          {sector}
+                          {onNavigateToSector && (
+                            <ArrowUp size={14} className="rotate-45 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          )}
+                        </div>
                         <div className="text-[10px] text-brand-stone uppercase tracking-wider">{subtitle}</div>
                       </div>
                     </div>
@@ -843,18 +864,28 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
 
   return (
     <div className="fixed inset-0 z-50 bg-brand-dark flex flex-col">
-      {/* Top Left Back Button */}
-      <div className="absolute top-4 left-4 z-50">
+      {/* Top Header */}
+      <div className="h-16 flex items-center px-6 border-b border-white/10 shrink-0 z-50">
         <button 
           onClick={onClose} 
-          className="flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full hover:bg-white/20 transition-colors backdrop-blur-sm border border-white/10"
+          className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
         >
-          <ArrowLeft size={18} />
-          <span className="font-medium text-sm tracking-wide">Voltar ao Início</span>
+          <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+          <span className="font-serif font-bold text-sm tracking-wide">Sair da Apresentação</span>
         </button>
-      </div>
+        
+        <div className="flex-1 text-center hidden md:block">
+          <span className="text-brand-cream/40 text-[10px] uppercase tracking-[0.4em] font-sans">
+            Kailua Journey • Plano de Carreira 2026
+          </span>
+        </div>
 
-      {/* Controls removed as per user request */}
+        <div className="flex items-center gap-4 w-[180px] justify-end">
+           <div className="text-brand-cream/60 text-xs font-mono">
+             {currentSlideIndex + 1} / {slides.length}
+           </div>
+        </div>
+      </div>
 
       {/* Slide Area */}
       <div className="flex-1 relative overflow-hidden flex items-center justify-center bg-brand-dark p-4 md:p-8">
@@ -869,9 +900,6 @@ export const PresentationView: React.FC<PresentationViewProps> = ({ slides, onCl
           >
             <BackgroundElements />
             {renderContent()}
-            
-            {/* Footer / Page Number - Removed as per request */}
-
           </motion.div>
         </AnimatePresence>
       </div>

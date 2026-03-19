@@ -19,18 +19,32 @@ const getSectorIcon = (sect: string, size = 24) => {
 
 interface JobDescriptionsViewProps {
   onBack: () => void;
+  initialSectorName?: string;
 }
 
-export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack }) => {
-  const [showIntro, setShowIntro] = useState(true);
-  const [selectedSector, setSelectedSector] = useState<Sector | null>(null);
+export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack, initialSectorName }) => {
+  const [showIntro, setShowIntro] = useState(!initialSectorName);
+  const [selectedSector, setSelectedSector] = useState<Sector | null>(() => {
+    if (initialSectorName) {
+      return functionalProfilesData.find(s => 
+        s.name.toLowerCase() === initialSectorName.toLowerCase() ||
+        s.name.includes(initialSectorName) ||
+        initialSectorName.includes(s.name)
+      ) || null;
+    }
+    return null;
+  });
   const [selectedRole, setSelectedRole] = useState<FunctionalProfile | null>(null);
 
   const handleBack = () => {
     if (selectedRole) {
       setSelectedRole(null);
     } else if (selectedSector) {
-      setSelectedSector(null);
+      if (initialSectorName) {
+        onBack();
+      } else {
+        setSelectedSector(null);
+      }
     } else if (!showIntro) {
       setShowIntro(true);
     } else {
@@ -45,18 +59,30 @@ export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-brand-dark via-transparent to-brand-dark pointer-events-none" />
 
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-brand-stone/20 bg-white shadow-sm z-20 relative">
+      <div className="h-16 flex items-center px-6 border-b border-white/10 shrink-0 z-50 bg-brand-dark/80 backdrop-blur-md relative">
         <div className="flex items-center gap-4">
           <button 
             onClick={handleBack}
-            className="p-2 hover:bg-brand-stone/10 rounded-full transition-colors text-brand-stone hover:text-brand-dark"
+            className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
             title="Voltar"
           >
-            <ArrowLeft size={24} />
+            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+            <span className="font-serif font-bold text-sm tracking-wide">
+              {selectedRole ? 'Voltar aos Cargos' : selectedSector ? (initialSectorName ? 'Voltar à Apresentação' : 'Voltar aos Setores') : 'Voltar'}
+            </span>
           </button>
-          <h2 className="text-xl font-bold text-brand-dark">
+          
+          <div className="h-6 w-px bg-white/10 mx-2" />
+          
+          <h2 className="text-lg font-serif font-bold text-brand-cream tracking-tight">
             {selectedRole ? selectedRole.title : selectedSector ? selectedSector.name : 'Perfis Funcionais'}
           </h2>
+        </div>
+
+        <div className="flex-1 text-center hidden md:block">
+          <span className="text-brand-cream/40 text-[10px] uppercase tracking-[0.4em] font-sans">
+            Kailua Journey • Perfis Funcionais
+          </span>
         </div>
       </div>
 

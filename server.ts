@@ -1,5 +1,4 @@
 import express from "express";
-import { createServer as createViteServer } from "vite";
 import path from "path";
 import nodemailer from "nodemailer";
 import * as xlsx from "xlsx";
@@ -45,6 +44,26 @@ async function startServer() {
   // API routes FIRST
   app.get("/api/health", (req, res) => {
     res.json({ status: "ok" });
+  });
+
+  app.get("/api/download-zip", async (req, res) => {
+    try {
+      const archiver = (await import("archiver")).default;
+      const archive = archiver("zip", { zlib: { level: 9 } });
+
+      res.attachment("project.zip");
+      archive.pipe(res);
+
+      archive.glob("**/*", {
+        cwd: process.cwd(),
+        ignore: ["node_modules/**", ".git/**", "dist/**", "project.zip"],
+      });
+
+      await archive.finalize();
+    } catch (error) {
+      console.error("Error generating ZIP:", error);
+      res.status(500).send("Error generating ZIP");
+    }
   });
 
   app.post("/api/evaluate", async (req, res) => {
@@ -232,6 +251,7 @@ async function startServer() {
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",

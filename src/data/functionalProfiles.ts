@@ -287,7 +287,7 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Rececionista de 2ª',
-        mission: 'Garantir o atendimento inicial ao cliente e a correta gestão das reservas, contribuindo para uma receção organizada e para uma experiência positiva desde o primeiro contacto.',
+        mission: 'Garantir um atendimento inicial acolhedor ao cliente e a correta gestão das reservas, contribuindo ativamente para uma experiência positiva, através de uma comunicação eficaz, empatia e capacidade de antecipar necessidades, promovendo a satisfação e fidelização dos clientes.',
         responsibilities: [
           'Realizar atendimento presencial e telefónico aos clientes.',
           'Registar e gerir reservas de acordo com os procedimentos definidos.',
@@ -697,54 +697,111 @@ export const functionalProfilesData: Sector[] = [
         ]
       },
       {
-        title: 'Cozinheiro de 3ª',
-        mission: 'Executar tarefas culinárias simples com autonomia limitada, garantindo a qualidade e segurança alimentar dos produtos sob a supervisão da equipa mais sénior.',
+        title: 'Cozinheiro de 3ª - Operação',
+        mission: 'Executar o serviço de cozinha, assegurando apoio à operação e cumprimento dos padrões definidos.',
         responsibilities: [
-          'Preparar alimentos de baixa complexidade',
-          'Executar mise en place básica',
-          'Apoiar cozinheiros de níveis superiores',
-          'Cumprir fichas técnicas e orientações',
-          'Manter o posto de trabalho limpo e organizado',
-          'Respeitar normas de HACCP'
+          'Executar pratos de acordo com fichas técnicas e orientações',
+          'Corresponder ao ritmo do serviço durante os períodos de maior afluência',
+          'Assegurar o correto empratamento e apresentação',
+          'Garantir reposição de ingredientes e materiais durante o serviço',
+          'Articular com a equipa de preparação sempre que necessário',
+          'Cumprir normas de higiene e segurança alimentar',
+          'Manter a organização e limpeza do posto de trabalho'
         ],
         technicalSkills: [
-          'Técnicas básicas de corte e confeção',
-          'Conhecimento de matérias-primas',
-          'Leitura simples de fichas técnicas',
-          'Normas de higiene e segurança alimentar'
+          'Execução de tarefas de cozinha conforme orientações',
+          'Capacidade de acompanhar o ritmo do serviço',
+          'Conhecimento de procedimentos e segurança alimentar',
+          'Capacidade de reposição e organização durante o serviço',
+          'Cumprimento de padrões de qualidade definidos',
+          'Controlo eficiente de quantidades, contribuindo para a redução de desperdício'
         ],
         behavioralSkills: [
-          'Capacidade de execução',
-          'Atenção e rigor',
-          'Boa comunicação',
-          'Trabalho em equipa',
-          'Gestão básica do tempo'
+          'Sentido de responsabilidade',
+          'Espírito de equipa',
+          'Vontade para aprender',
+          'Resistência ao stress',
+          'Organização'
         ]
       },
       {
-        title: 'Cozinheiro de 2ª',
-        mission: 'Assegurar a confeção consistente de pratos, com autonomia operacional, contribuindo para a eficiência do serviço e a qualidade final dos produtos.',
+        title: 'Cozinheiro de 3ª - Preparação',
+        mission: 'Executar as atividades de preparação, garantindo disponibilidade de produtos para o serviço.',
         responsibilities: [
-          'Preparar e confecionar pratos da ementa',
-          'Executar mise en place completa da tua secção',
-          'Cumprir fichas técnicas e padrões de qualidade',
-          'Apoiar o controlo de desperdício',
-          'Colaborar na formação de elementos',
-          'Garantir higiene e segurança no serviço'
+          'Executar tarefas de preparação de acordo com orientações',
+          'Apoiar na organização das atividades de preparação',
+          'Garantir disponibilidade de produtos para o serviço',
+          'Assegurar a correta conservação e armazenamento',
+          'Cumprir fichas técnicas e padrões definidos',
+          'Manter a organização e limpeza da área'
         ],
         technicalSkills: [
-          'Técnicas intermédias de confeção',
-          'Conhecimento de tempos de serviço',
-          'Interpretação correta de fichas técnicas',
-          'Organização de secção',
-          'Noções de controlo de custos'
+          'Execução de tarefas de preparação',
+          'Cumprimento de orientações e fichas técnicas',
+          'Conhecimento elementar de métodos de conservação e armazenamento de alimentos',
+          'Capacidade de organização do posto de trabalho',
+          'Apoio na reposição e preparação de produtos'
         ],
         behavioralSkills: [
-          'Autonomia',
+          'Sentido de responsabilidade',
+          'Espírito de equipa',
+          'Disponibilidade para aprender',
+          'Organização',
+          'Atenção ao detalhe'
+        ]
+      },
+      {
+        title: 'Cozinheiro de 2ª - Operação',
+        mission: 'Executar o serviço de cozinha com autonomia, garantindo consistência, ritmo e qualidade durante a operação.',
+        responsibilities: [
+          'Executar pratos de acordo com fichas técnicas e padrões definidos',
+          'Garantir fluidez e ritmo do serviço nos períodos de maior afluência',
+          'Assegurar o correto empratamento e apresentação',
+          'Antecipar necessidades durante o serviço, evitando ruturas',
+          'Articular com a equipa de preparação garantindo disponibilidade de produtos',
+          'Cumprir normas de higiene e segurança alimentar',
+          'Manter organização e limpeza do posto de trabalho'
+        ],
+        technicalSkills: [
+          'Execução consistente de pratos conforme fichas técnicas',
+          'Capacidade de manter ritmo e organização durante o serviço',
+          'Conhecimento dos procedimentos de cozinha e segurança alimentar',
+          'Capacidade de antecipação de necessidades operacionais',
+          'Controlo de qualidade no empratamento e apresentação'
+        ],
+        behavioralSkills: [
+          'Sentido de responsabilidade',
+          'Resistência ao stress',
+          'Espírito de equipa',
+          'Proatividade',
+          'Organização'
+        ]
+      },
+      {
+        title: 'Cozinheiro de 2ª - Preparação',
+        mission: 'Assegurar a preparação organizada e atempada dos produtos, garantindo suporte eficiente à cozinha da operação.',
+        responsibilities: [
+          'Executar preparações de acordo com necessidades da operação',
+          'Organizar e planear as tarefas de preparação ao longo do dia',
+          'Garantir que a cozinha da operação dispõe dos produtos necessários em tempo útil',
+          'Controlar quantidades evitando ruturas ou desperdício',
+          'Assegurar a correta conservação e rotatividade de produtos',
+          'Cumprir as fichas técnicas e padrões definidos',
+          'Manter a organização e limpeza da área'
+        ],
+        technicalSkills: [
+          'Execução de preparações conforme fichas técnicas',
+          'Capacidade de organização e planeamento das tarefas',
+          'Controlo de quantidades e gestão de desperdício',
+          'Conhecimento de métodos de conservação e armazenamento de alimentos',
+          'Garantia de disponibilidade de produtos para o serviço'
+        ],
+        behavioralSkills: [
+          'Organização',
           'Sentido de responsabilidade',
           'Proatividade',
-          'Capacidade de trabalhar sob pressão',
-          'Espírito colaborativo'
+          'Atenção ao detalhe',
+          'Espírito de equipa'
         ]
       },
       {
@@ -865,7 +922,8 @@ export const functionalProfilesData: Sector[] = [
           'Identificar falhas operacionais e implementar melhorias na organização do serviço.',
           'Colaborar com o Chefe de Bar na criação de novas receitas, propostas de bebidas e seleção de marcas da carta.',
           'Garantir que a experiência do cliente se mantém consistente durante todo o serviço.',
-          'Apoiar as lideranças operacionais na resolução de situações que possam afetar o serviço.'
+          'Apoiar as lideranças operacionais na resolução de situações que possam afetar o serviço.',
+          'Substituir o Chefe de Sala e/ou Chefe de Bar na sua ausência, garantindo a continuidade da operação do setor.'
         ],
         technicalSkills: [
           'Conhecimento profundo da operação de sala e bar.',
@@ -1328,22 +1386,22 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Chefe de Controlo',
-        mission: 'Garantir que a operação dispõe das condições necessárias para que as equipas trabalhem com eficiência e foco, assegurando organização, suporte técnico e coordenação de áreas de apoio que contribuem para a rentabilidade da equipa e para o bom funcionamento do serviço.',
+        mission: 'Garantir que a operação dispõe das condições necessárias para que as equipas trabalhem com eficiência e foco, assegurando organização e melhoria contínua, suporte técnico e coordenação de áreas de apoio que contribuem para a rentabilidade da equipa e para o bom funcionamento do serviço.',
         responsibilities: [
-          'Garantir que as condições operacionais necessárias ao funcionamento da equipa estão asseguradas.',
           'Elaborar horários equilibrados que assegurem cobertura eficiente da operação.',
-          'Assegurar funcionamento adequado de equipamentos e sistemas utilizados pela equipa.',
-          'Coordenar equipa de limpeza garantindo organização e fluidez das operações.',
+          'Coordenar a equipa de limpeza garantindo organização e fluidez das operações.',
+          'Certificar que estão asseguradas todas as condições operacionais necessárias ao funcionamento da equipa.',
+          'Garantir a operacionalidade do setor de take-away, assegurando a reposição, organização e arrumação de todos os materiais e produtos necessários, para que o serviço esteja totalmente preparado e a funcionar em pleno.',
+          'Assegurar o funcionamento dos equipamentos e sistemas, acionando as intervenções técnicas necessárias e garantindo a resolução dos problemas.',
           'Identificar e resolver rapidamente problemas operacionais que possam afetar o serviço.',
-          'Substituir o Chefe de Sala na sua ausência, garantindo a continuidade da operação das mesas.',
-          'Acompanhar o cumprimento de procedimentos operacionais e apoiar a melhoria da organização interna.'
+          'Atuar sempre que necessário como suporte direto ao Encarregado de Armazém, nas operações e no cumprimento dos procedimentos.',
+          'Garantir a continuidade da operação, assegurando os recursos humanos necessários e assumindo diretamente qualquer função em caso de falha na equipa.'
         ],
         technicalSkills: [
           'Planeamento e gestão de horários de trabalho.',
           'Organização e coordenação de operações de apoio.',
           'Conhecimento elementar dos processos de armazém e controlo de recursos.',
           'Noções do funcionamento de equipamentos e sistemas operacionais.',
-          'Conhecimento do funcionamento operacional do setor das mesas.',
           'Capacidade de análise e resolução de problemas operacionais.'
         ],
         behavioralSkills: [
