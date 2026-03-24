@@ -915,7 +915,7 @@ export const functionalProfilesData: Sector[] = [
     roles: [
       {
         title: 'Supervisor de Operações',
-        mission: 'Garantir o bom funcionamento diário da operação da frente, acompanhando de perto a área do bar e mesas e assegurando que os padrões de serviço, organização e experiência do cliente são cumpridos de forma consistente.',
+        mission: 'Garantir o bom funcionamento diário da Operação da Frente, acompanhando de perto a área do bar e mesas e assegurando que os padrões de serviço, organização e experiência do cliente são cumpridos de forma consistente.',
         responsibilities: [
           'Supervisionar o funcionamento das mesas e bar garantindo organização da operação.',
           'Acompanhar o desempenho das equipas operacionais assegurando cumprimento de padrões de serviço.',
@@ -964,7 +964,7 @@ export const functionalProfilesData: Sector[] = [
           'Conhecimento aprofundado de legislação, requisitos e procedimentos'
         ],
         behavioralSkills: [
-          'Liderança transversal',
+          'Liderança Transversal',
           'Visão estratégica',
           'Capacidade analítica',
           'Comunicação institucional',

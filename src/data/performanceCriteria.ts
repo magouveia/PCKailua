@@ -658,7 +658,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Atualiza a lista de reservas garantindo informação clara para o setor das mesas.",
       "Presta informações corretas sobre funcionamento e serviços do restaurante.",
       "Mantém organização da área de receção.",
-      "Comunica à operação da frente alterações ou informações relevantes sobre reservas."
+      "Comunica à Operação da Frente alterações ou informações relevantes sobre reservas."
     ],
     "behavioral": [
       "Recebe os clientes de forma cordial e profissional.",
@@ -693,7 +693,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Coordena a gestão diária das reservas garantindo organização dos espaços e equilíbrio no fluxo de clientes.",
       "Distribui reservas de forma equilibrada de acordo com a capacidade do restaurante.",
       "Gere alterações ou imprevistos relacionados com reservas.",
-      "Garante uma comunicação eficaz com a operação da frente sobre o fluxo de clientes.",
+      "Garante uma comunicação eficaz com a Operação da Frente sobre o fluxo de clientes.",
       "Apoia rececionistas menos experientes na gestão da receção."
     ],
     "behavioral": [
@@ -769,7 +769,7 @@ export const performanceCriteriaData: PerformanceCriteria[] = [
       "Representa o Diretor de R&B na sua ausência em decisões operacionais."
     ],
     "behavioral": [
-      "Demonstra capacidade de liderança transversal.",
+      "Demonstra capacidade de Liderança Transversal.",
       "Comunica de forma clara e profissional with equipas e lideranças.",
       "Atua com discrição e confidencialidade na gestão de informação.",
       "Mantém controlo emocional em contextos de pressão.",
