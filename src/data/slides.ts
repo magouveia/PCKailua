@@ -67,7 +67,7 @@ export const hardcodedSlides: Slide[] = [
       "Armazém | LOGÍSTICA | Ajudante | Nível III | Encarregado de Armazém | Nível VIII | III → IV-VII → VIII",
       "Manutenção | TÉCNICA | Ajudante | Nível III | Chefe de Manutenção, Conservação e Serviços Técnicos | Nível IX | III → IV-VIII → IX",
       "HouseKeeping | HIGIENE E LIMPEZA | Técnico de Limpeza | Nível III | Encarregado de Limpeza | Nível IV | III → IV",
-      "Mesas | ATENDIMENTO AO CLIENTE | Ajudante | Nível III | Chefe de Sala | Nível VIII | III → IV-VII → VIII"
+      "Mesas | ATENDIMENTO AO CLIENTE | Ajudante | Nível III | Supervisor de Operações | Nível IX | III → IV-VIII → IX"
     ],
     layout: "career-structure",
     notes: "Apresentamos aqui a estrutura detalhada das carreiras operacionais (parte 1)."
@@ -76,7 +76,7 @@ export const hardcodedSlides: Slide[] = [
     id: "slide-6b",
     title: "Estrutura de Carreira por Setor (2/2)",
     content: [
-      "Drinks | BEBIDAS & MIXOLOGIA | Ajudante | Nível III | Chefe de Bar | Nível VIII | III → IV-VII → VIII",
+      "Drinks | BEBIDAS & MIXOLOGIA | Ajudante | Nível III | Supervisor de Operações | Nível IX | III → IV-VIII → IX",
       "Controlo | SUPORTE | Controlador - Caixa | Nível V | Chefe de Controlo | Nível VIII | V → VI-VII → VIII",
       "Felicidade | ACOLHIMENTO & VENDAS | Ajudante | Nível III | Gerente | Nível VIII | III → IV-VII → VIII",
       "Direção Operacional | GESTÃO ESTRATÉGICA | Assistente de Direção | Nível X | Diretor de R&B | Nível XI | X → XI",

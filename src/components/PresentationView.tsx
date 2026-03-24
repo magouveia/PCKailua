@@ -932,11 +932,15 @@ export const PresentationView: React.FC<PresentationViewProps> = ({
           <ChevronLeft size={16} /> Anterior
         </button>
         
-        <div className="flex gap-1">
+        <div className="flex gap-2">
           {slides.map((_, idx) => (
-            <div 
+            <button 
               key={idx}
-              className={`h-1 w-8 transition-colors ${idx === currentSlideIndex ? 'bg-brand-tan' : 'bg-white/20'}`}
+              onClick={() => {
+                setCurrentSlideIndex(idx);
+                onSlideChange?.(idx);
+              }}
+              className={`h-3 w-3 rounded-full transition-colors ${idx === currentSlideIndex ? 'bg-brand-tan' : 'bg-white/20 hover:bg-white/40'}`}
             />
           ))}
         </div>
