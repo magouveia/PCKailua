@@ -566,7 +566,6 @@ export const functionalProfilesData: Sector[] = [
           'Apoiar a área financeira em tarefas de controlo e acompanhamento',
           'Apoiar a gestão administrativa de recursos humanos',
           'Validar e consolidar os registos de horários de trabalho',
-          'Preparar e verificar informação de suporte ao processamento salarial',
           'Preparar informação administrativa para apoio à decisão',
           'Apoiar tecnicamente escriturários de níveis mais juniores',
           'Garantir confidencialidade e rigor da informação tratada'
@@ -595,6 +594,7 @@ export const functionalProfilesData: Sector[] = [
           'Assegurar cumprimento de procedimentos legais e internos',
           'Articular com a Direção as necessidades administrativas e de recursos humanos',
           'Garantir fiabilidade da informação produzida',
+          'Preparar e verificar informação de suporte ao processamento salarial',
           'Promover melhoria contínua dos processos administrativos',
           'Assegurar a gestão administrativa da loja, incluindo controlo de encomendas, acompanhamento de stocks, atualização de preçário e organização da informação de produtos.'
         ],
@@ -615,21 +615,25 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Diretor de Serviços (Administrativos e Financeiros)',
-        mission: 'Definir e assegurar a estratégia administrativa e financeira da empresa, garantindo sustentabilidade, controlo financeiro, conformidade legal e fiabilidade da informação de gestão.',
+        mission: 'Definir e assegurar a estratégia administrativa e financeira, garantindo sustentabilidade, controlo financeiro, conformidade legal e fiabilidade da informação de gestão.',
         responsibilities: [
           'Definir a estratégia administrativa e financeira da empresa',
           'Supervisionar a gestão financeira global',
           'Assegurar conformidade legal, fiscal e administrativa',
           'Analisar indicadores financeiros e administrativos',
           'Assegurar a recolha, validação e análise das caixas diárias de faturação da operação',
-          'Avalia propostas e acordos com base na análise de indicadores financeiros, assegurando a sua viabilidade económica e apoiando a tomada de decisão estratégica.'
+          'Avaliar propostas e acordos com base na análise de indicadores financeiros, assegurando a sua viabilidade económica e apoiando a tomada de decisão estratégica',
+          'Assegurar, em articulação com o Encarregado de Armazém, o controlo rigoroso de custos operacionais, garantindo o alinhamento entre compras, consumos e registos',
+          'Garantir a existência, atualização e fiabilidade das fichas técnicas, assegurando a correta definição de custos e o cumprimento dos objetivos de food cost',
+          'Acompanhar e validar os inventários realizados em parceria com o armazém, garantindo consistência de stocks e identificação de desvios relevantes',
+          'Monitorizar desvios entre custos teóricos e reais (nomeadamente food cost e custos fixos), assegurando análise crítica e implementação de medidas corretivas'
         ],
         technicalSkills: [
           'Gestão financeira estratégica',
-          'Planeamento e controlo financeiro.',
+          'Planeamento e controlo financeiro',
           'Conhecimento legal e fiscal',
           'Controlo e validação de faturação diária e fluxos financeiros operacionais',
-          'Análise de indicadores de gestão',
+          'Análise de indicadores de gestão (incluindo food cost e rentabilidade)',
           'Licenciatura ou formação superior relevante na área de Gestão, Economia, Contabilidade, Finanças ou área equivalente'
         ],
         behavioralSkills: [
