@@ -6,7 +6,7 @@ import { HomeView } from './components/HomeView';
 import { OrganogramView } from './components/OrganogramView';
 import { JobDescriptionsView } from './components/JobDescriptionsView';
 import { PerformanceView } from './components/PerformanceView';
-import OrgChart from './components/OrgChart';
+import OrganogramaInterativo from './components/OrganogramaInterativo';
 import { Loader2 } from 'lucide-react';
 
 type ViewState = 'home' | 'career' | 'organogram' | 'job-descriptions' | 'performance' | 'org-chart';
@@ -74,7 +74,7 @@ function App() {
     case 'performance':
       return <PerformanceView onBack={() => setCurrentView('home')} />;
     case 'org-chart':
-      return <OrgChart onBack={() => setCurrentView('home')} />;
+      return <OrganogramaInterativo onBack={() => setCurrentView('home')} />;
     default:
       return <HomeView onNavigate={(view) => setCurrentView(view as ViewState)} />;
   }

@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactFlow, { Background, Controls, MarkerType } from 'reactflow';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import ReactFlow, { Background, Controls, NodeMouseHandler, useNodesState, useEdgesState } from 'reactflow';
 import 'reactflow/dist/style.css';
 import './OrgChart.css';
-import { initialNodes, initialEdges } from './organigramaData';
+import { createNodesAndEdges } from './organigramaData';
 import { ArrowLeft } from 'lucide-react';
 
 interface OrgChartProps {
@@ -10,6 +10,34 @@ interface OrgChartProps {
 }
 
 export default function OrgChart({ onBack }: OrgChartProps) {
+  // Initial state: only show top level
+  const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set(['direcao-executiva']));
+  
+  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+
+  // Update nodes and edges whenever expandedNodes changes
+  useEffect(() => {
+    const { nodes: layoutedNodes, edges: layoutedEdges } = createNodesAndEdges(expandedNodes);
+    setNodes(layoutedNodes);
+    setEdges(layoutedEdges);
+  }, [expandedNodes, setNodes, setEdges]);
+
+  const onNodeClick: NodeMouseHandler = useCallback((event, node) => {
+    const rawId = node.data.rawId;
+    if (!rawId) return;
+
+    setExpandedNodes((prev) => {
+      const next = new Set(prev);
+      if (next.has(rawId)) {
+        next.delete(rawId);
+      } else {
+        next.add(rawId);
+      }
+      return next;
+    });
+  }, []);
+
   return (
     <div style={{ width: '100vw', height: '100vh', background: '#1a1a1a', position: 'relative' }}>
       {/* Navigation Header */}
@@ -25,10 +53,15 @@ export default function OrgChart({ onBack }: OrgChartProps) {
       </div>
 
       <ReactFlow
-        nodes={initialNodes}
-        edges={initialEdges}
-        defaultEdgeOptions={{ type: 'smoothstep', markerEnd: { type: MarkerType.ArrowClosed } }}
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onNodeClick={onNodeClick}
         fitView
+        minZoom={0.1}
+        maxZoom={1.5}
+        nodesDraggable={false} // Disable dragging to keep layout clean
       >
         <Background color="#333" gap={20} />
         <Controls />
