@@ -18,10 +18,10 @@ export default function OrgChart({ onBack }: OrgChartProps) {
 
   // Update nodes and edges whenever expandedNodes changes
   useEffect(() => {
-    const { nodes: layoutedNodes, edges: layoutedEdges } = createNodesAndEdges(expandedNodes);
+    const { nodes: layoutedNodes, edges: layoutedEdges } = createNodesAndEdges();
     setNodes(layoutedNodes);
     setEdges(layoutedEdges);
-  }, [expandedNodes, setNodes, setEdges]);
+  }, [setNodes, setEdges]);
 
   const onNodeClick: NodeMouseHandler = useCallback((event, node) => {
     const rawId = node.data.rawId;

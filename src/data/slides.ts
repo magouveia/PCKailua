@@ -206,9 +206,9 @@ export const hardcodedSlides: Slide[] = [
       "Entrada típica (nível III) Ajudante de todas as secções | Estagiário de restauração e bebidas",
       "Fase | Função | Nível | Tempo nível | Progressão | VB Ref",
       "Entrada | Estagiário / Ajudante | III | 1 ano | 0–1 ano | 926€ - 1026€",
-      "Consolidação | Assistente de vendas de 2ª\nRececionista de 2ª | VI | 2 anos | 1-3 anos | 952€ - 1302€",
-      "Profissionalização | Assistente de vendas de 1ª\nRececionista de 1ª | VII | 2 anos | 3–5 anos | 974€ - 1424€",
-      "Coordenação | Subgerente | VII | 2 anos | 5–7 anos | 974€ - 1424€",
+      "Consolidação | Assistente de vendas de 2ª\nRecepcionista de 2ª | VI | 2 anos | 1-3 anos | 952€ - 1302€",
+      "Profissionalização | Assistente de vendas de 1ª\nRecepcionista de 1ª | VII | 2 anos | 3–5 anos | 974€ - 1424€",
+      "Coordenação | Subgerente de vendas\nSubgerente de receção | VII | 2 anos | 5–7 anos | 974€ - 1424€",
       "Liderança | Gerente | VIII | 2 anos | 7-9 anos | 1028€ - 1628€"
     ],
     layout: "table",

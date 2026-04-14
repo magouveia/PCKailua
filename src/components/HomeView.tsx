@@ -128,11 +128,11 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-cream opacity-100 transition-opacity duration-500 group-hover:opacity-90" />
           <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-tan/30 rounded-2xl transition-colors duration-500" />
           
-          {/* Stamp "IN PROGRESS" */}
+          {/* Stamp "A DECORRER" */}
           <div className="absolute top-6 right-6 rotate-12 z-20 pointer-events-none opacity-70 mix-blend-multiply">
-            <div className="border-2 border-red-600/80 px-2 py-0.5 rounded-sm transform scale-90">
-              <span className="text-red-600/90 font-stamp text-sm md:text-base font-bold tracking-widest uppercase whitespace-nowrap">
-                In Progress
+            <div className="border-2 border-yellow-600/80 px-2 py-0.5 rounded-sm transform scale-90">
+              <span className="text-yellow-600/90 font-stamp text-sm md:text-base font-bold tracking-widest uppercase whitespace-nowrap">
+                A decorrer
               </span>
             </div>
           </div>
@@ -151,43 +151,6 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
 
           <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:gap-4 transition-all duration-300">
             Aceder <ArrowRight size={14} />
-          </div>
-        </motion.button>
-
-        {/* Org Chart Card (Block 5) */}
-        <motion.button
-          onClick={() => onNavigate('org-chart')}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="group relative aspect-square bg-brand-cream rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-2xl hover:shadow-brand-tan/20 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-white to-brand-cream opacity-100 transition-opacity duration-500 group-hover:opacity-90" />
-          <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-tan/30 rounded-2xl transition-colors duration-500" />
-          
-          {/* Stamp "IN PROGRESS" */}
-          <div className="absolute top-6 right-6 rotate-12 z-20 pointer-events-none opacity-70 mix-blend-multiply">
-            <div className="border-2 border-red-600/80 px-2 py-0.5 rounded-sm transform scale-90">
-              <span className="text-red-600/90 font-stamp text-sm md:text-base font-bold tracking-widest uppercase whitespace-nowrap">
-                In Progress
-              </span>
-            </div>
-          </div>
-
-          <div className="relative z-10 mb-4 w-16 h-16 shrink-0 rounded-full bg-brand-tan/10 flex items-center justify-center group-hover:bg-brand-tan group-hover:text-white transition-colors duration-500 text-brand-tan">
-            <Users size={32} />
-          </div>
-          
-          <h2 className="relative z-10 text-xl md:text-2xl font-serif font-bold text-brand-dark mb-2 group-hover:text-brand-tan transition-colors duration-300">
-            Organograma Interativo
-          </h2>
-          
-          <p className="relative z-10 text-brand-stone text-xs md:text-sm mb-6 max-w-[200px] opacity-80 group-hover:opacity-100 transition-opacity">
-            Estrutura organizacional visual.
-          </p>
-
-          <div className="relative z-10 flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:gap-4 transition-all duration-300">
-            Visualizar <ArrowRight size={14} />
           </div>
         </motion.button>
       </div>

@@ -257,6 +257,18 @@ export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack
                   </p>
                 </section>
 
+                {selectedRole.kpi && (
+                  <section className="bg-brand-tan/5 p-4 rounded-lg border border-brand-tan/20">
+                    <h3 className="text-lg font-bold text-brand-tan mb-2 flex items-center gap-2">
+                      <Award size={20} />
+                      Indicador-chave da função (KPI)
+                    </h3>
+                    <p className="text-brand-dark font-medium italic">
+                      {selectedRole.kpi}
+                    </p>
+                  </section>
+                )}
+
                 <section>
                   <h3 className="text-xl font-bold text-brand-dark mb-3 border-b border-brand-stone/20 pb-2">
                     Responsabilidades-chave

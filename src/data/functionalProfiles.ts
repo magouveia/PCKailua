@@ -1,6 +1,7 @@
 export interface FunctionalProfile {
   title: string;
   mission: string;
+  kpi?: string;
   responsibilities: string[];
   technicalSkills: string[];
   behavioralSkills: string[];
@@ -646,27 +647,31 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Diretor de Serviços Técnicos (Recursos Humanos)',
-        mission: 'Definir e implementar a estratégia de recursos humanos, garantindo desenvolvimento, alinhamento cultural e sustentabilidade da organização.',
+        mission: 'Definir, liderar e garantir a estratégia de recursos humanos da organização, assegurando o alinhamento com os objetivos do negócio, a sustentabilidade da estrutura, o desenvolvimento das equipas e a coerência cultural.',
         responsibilities: [
-          'Definir políticas e estratégias de recursos humanos',
-          'Garantir processos de recrutamento, desenvolvimento e avaliação',
-          'Assegurar conformidade legal laboral',
-          'Apoiar a liderança no desenvolvimento de equipas',
-          'Promover cultura organizacional e boas práticas',
-          'Analisa indicadores de custos de recursos humanos e apoia a liderança na tomada de decisões relacionadas com estrutura e eficiência da equipa.'
+          'Definir e implementar a estratégia global de recursos humanos alinhada com a visão e os objetivos do negócio',
+          'Assegurar a sustentabilidade da estrutura de recursos humanos, garantindo equilíbrio entre custos, produtividade e necessidades operacionais',
+          'Liderar os processos de recrutamento, desenvolvimento, avaliação de desempenho e progressão de carreira',
+          'Analisar indicadores de recursos humanos (custos, produtividade, rotatividade, desempenho) e suportar decisões estratégicas',
+          'Garantir a conformidade legal laboral',
+          'Apoiar e questionar a liderança na tomada de decisão sobre equipas, estrutura e desempenho',
+          'Assegurar a coerência e consistência na aplicação de políticas e práticas de gestão de pessoas',
+          'Promover e proteger a cultura organizacional, garantindo o alinhamento entre comportamento, valores e exigência operacional'
         ],
         technicalSkills: [
-          'Gestão estratégica de recursos humanos',
-          'Legislação laboral',
-          'Sistemas de avaliação e desenvolvimento',
-          'Planeamento de recursos humanos',
+          'Gestão estratégica de recursos humanos orientada ao negócio',
+          'Planeamento e dimensionamento de equipas',
+          'Análise de indicadores de RH e impacto financeiro',
+          'Sistemas de avaliação de desempenho e gestão de carreira',
+          'Conhecimento aprofundado de legislação laboral e risco organizacional',
           'Licenciatura ou formação superior relevante na área de Recursos Humanos, Gestão, Psicologia, ou área equivalente'
         ],
         behavioralSkills: [
-          'Liderança estratégica',
-          'Capacidade de influência',
-          'Comunicação institucional',
-          'Ética e confidencialidade',
+          'Liderança estratégica e capacidade de posicionamento ao nível da Direção',
+          'Capacidade de influência e assertividade na tomada de decisão',
+          'Pensamento crítico e orientação para resultados',
+          'Comunicação institucional clara e estruturada',
+          'Elevado sentido ético, confidencialidade e responsabilidade',
           'Visão de longo prazo'
         ]
       }
@@ -950,50 +955,51 @@ export const functionalProfilesData: Sector[] = [
     roles: [
       {
         title: 'Assistente de Direção',
-        mission: 'Apoiar a Direção na coordenação estratégica e operacional da unidade, assegurando a execução eficaz dos planos, o alinhamento das equipas e o controlo de resultados.',
+        mission: 'Garantir a execução consistente da estratégia, a coordenação eficaz das operações e a continuidade da liderança, assumindo a gestão global na ausência do Diretor de R&B.',
         responsibilities: [
-          'Apoiar a Direção na gestão global da operação',
-          'Coordenar e alinhar lideranças intermédias',
-          'Acompanhar resultados financeiros e operacionais',
-          'Assegurar cumprimento de políticas e procedimentos',
-          'Representar a Direção na sua ausência',
-          'Apoiar processos de planeamento e melhoria contínua',
-          'Contribuir para decisões estratégicas da unidade'
+          'Assegurar a execução da estratégia definida pela Direção de Restauração e Bebidas',
+          'Coordenar diretamente as lideranças intermédias, garantindo o alinhamento, ritmo e foco em resultados',
+          'Acompanhar e intervir sobre indicadores operacionais e financeiros (vendas, custos, rentabilidade)',
+          'Identificar desvios e implementar ações corretivas com impacto direto na operação',
+          'Garantir o cumprimento rigoroso dos padrões operacionais, de serviço e de produto',
+          'Liderar a operação na ausência do Diretor de R&B, assumindo a tomada de decisão',
+          'Participar ativamente na definição de planos de melhoria e iniciativas estratégicas',
+          'Assegurar a ligação eficaz entre a estratégia e a operacionalização no terreno'
         ],
         technicalSkills: [
-          'Gestão global de unidades de restauração',
-          'Planeamento estratégico e operacional',
-          'Análise financeira e controlo de custos',
-          'Gestão de equipas de liderança',
-          'Conhecimento aprofundado de legislação, requisitos e procedimentos'
+          'Gestão operacional avançada em restauração e bebidas',
+          'Leitura e interpretação de indicadores de desempenho (KPIs operacionais e financeiros)',
+          'Controlo de custos e otimização de rentabilidade',
+          'Planeamento e coordenação de operações complexas',
+          'Conhecimento aprofundado de procedimentos operacionais e enquadramento legal'
         ],
         behavioralSkills: [
-          'Liderança Transversal',
-          'Visão estratégica',
-          'Capacidade analítica',
-          'Comunicação institucional',
-          'Elevado grau de maturidade profissional'
+          'Liderança executiva e capacidade de decisão',
+          'Elevado sentido de responsabilidade e accountability',
+          'Capacidade de influência sobre as equipas de liderança',
+          'Pensamento crítico e orientação para resultados',
+          'Elevado nível de maturidade e consistência sob pressão'
         ]
       },
       {
         title: 'Diretor de Restauração e Bebidas',
         mission: 'Definir, liderar e garantir a estratégia global de restauração e bebidas, assegurando rentabilidade, excelência operacional, posicionamento de marca e desenvolvimento sustentável das equipas.',
         responsibilities: [
-          'Definir estratégia global de restauração e bebidas',
-          'Garantir rentabilidade e controlo financeiro da área',
-          'Liderar gerentes e liderança de topo',
+          'Definir a estratégia global de restauração e bebidas',
+          'Garantir a rentabilidade e controlo financeiro da área',
+          'Liderar os líderes de topo de cada setor',
           'Definir padrões de qualidade, serviço e produto',
           'Analisar resultados e tomar decisões estratégicas',
-          'Representar a operação junto da administração',
-          'Promover inovação e melhoria contínua',
-          'Garantir conformidade legal e boa reputação'
+          'Representar a operação junto da direção geral',
+          'Promover a inovação e melhoria contínua',
+          'Garantir a conformidade legal e boa reputação'
         ],
         technicalSkills: [
           'Gestão estratégica de restauração e bebidas',
           'Planeamento financeiro e orçamental avançado',
           'Análise de desempenho e indicadores estratégicos',
           'Gestão de múltiplas unidades ou operações complexas',
-          'Conhecimento aprofundado de mercado e tendências'
+          'Conhecimento aprofundado do mercado e tendências'
         ],
         behavioralSkills: [
           'Liderança estratégica e inspiradora',
@@ -1309,7 +1315,8 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Chefe de Sala',
-        mission: 'Liderar e garantir o funcionamento diário da equipa das mesas, assegurando a qualidade do serviço, a organização da equipa e a consistência da experiência do cliente.\n\nIndicador-chave da função (KPI): Venda média por cliente / mesa.',
+        mission: 'Liderar e garantir o funcionamento diário da equipa das mesas, assegurando a qualidade do serviço, a organização da equipa e a consistência da experiência do cliente.',
+        kpi: 'Venda média por cliente / mesa.',
         responsibilities: [
           'Garantir organização e fluidez do serviço de mesa, assegurando atendimento eficiente mesmo em períodos de maior volume.',
           'Acompanhar o desempenho da equipa garantindo cumprimento consistente dos padrões de atendimento.',
