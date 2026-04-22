@@ -14,6 +14,19 @@
   --font-stamp: "Special Elite", system-ui, sans-serif;
 }
 
+@layer base {
+  /* Retirar o traço (slash) dos zeros para evitar confusão com o número 8 */
+  * {
+    font-variant-numeric: normal !important;
+    font-feature-settings: "zero" 0, "cv01" 0 !important;
+  }
+}
+
+.clean-zero {
+  font-variant-numeric: normal !important;
+  font-feature-settings: "zero" 0, "cv01" 0 !important;
+}
+
 .bg-dot-pattern {
   background-image: radial-gradient(var(--color-brand-gray) 1px, transparent 1px);
   background-size: 24px 24px;

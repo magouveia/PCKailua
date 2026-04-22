@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, FileText, ChevronRight, Utensils, Coffee, Package, Wrench, Sparkles, ConciergeBell, Wine, ClipboardCheck, HeartHandshake, Briefcase, Building, Layers, Award, CheckCircle2, Ban } from 'lucide-react';
+import { ArrowLeft, Home, FileText, ChevronRight, Utensils, Coffee, Package, Wrench, Sparkles, ConciergeBell, Wine, ClipboardCheck, HeartHandshake, Briefcase, Building, Layers, Award, CheckCircle2, Ban } from 'lucide-react';
 import { functionalProfilesData, Sector, FunctionalProfile } from '../data/functionalProfiles';
 
 const getSectorIcon = (sect: string, size = 24) => {
@@ -66,10 +66,17 @@ export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack
             className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
             title="Voltar"
           >
-            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="font-serif font-bold text-sm tracking-wide">
-              {selectedRole ? 'Voltar aos Cargos' : selectedSector ? (initialSectorName ? 'Voltar à Apresentação' : 'Voltar aos Setores') : 'Voltar'}
-            </span>
+            {showIntro && !selectedSector && !selectedRole ? (
+              <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
+            ) : (
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+            )}
+            
+            {!(showIntro && !selectedSector && !selectedRole) && (selectedSector || selectedRole) && (
+              <span className="font-serif font-bold text-sm tracking-wide">
+                {selectedRole ? 'Funções' : selectedSector ? (initialSectorName ? 'Apresentação' : 'Setores') : ''}
+              </span>
+            )}
           </button>
           
           <div className="h-6 w-px bg-white/10 mx-2" />

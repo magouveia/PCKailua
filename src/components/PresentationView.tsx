@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Slide } from '../services/ai';
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles, ArrowLeft, Handshake, ArrowUp, Wine, ClipboardCheck, HeartHandshake, ConciergeBell, Briefcase, Building } from 'lucide-react';
+import { ChevronLeft, Home, ChevronRight, Maximize2, Minimize2, X, Layers, ThumbsDown, AlertTriangle, CheckCircle, TrendingUp, Star, Calendar, Rocket, Check, Palmtree, Armchair, Scale, Lock, Trophy, ArrowLeftRight, Gift, Ban, Percent, Share2, Printer, Utensils, Coffee, Package, Wrench, Sparkles, ArrowLeft, Handshake, ArrowUp, Wine, ClipboardCheck, HeartHandshake, ConciergeBell, Briefcase, Building } from 'lucide-react';
 
 // ... (existing code)
 
@@ -793,15 +793,19 @@ export const PresentationView: React.FC<PresentationViewProps> = ({
                               cells[0]
                             )}
                           </div>
-                          <div className="col-span-3 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
+                          <div className="col-span-3 font-medium text-brand-dark whitespace-pre-line">
+                            {cells[1].split('\n').map((line, lidx) => (
+                              <div key={lidx}>{line}</div>
+                            ))}
+                          </div>
                           <div className="col-span-1 text-center">
                             <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-xs font-bold border border-brand-dark/10">
                               {cells[2]}
                             </span>
                           </div>
                           <div className="col-span-2 text-center text-brand-stone text-sm">{cells[3]}</div>
-                          <div className="col-span-2 text-center font-mono text-sm text-brand-gray">{cells[4]}</div>
-                          <div className="col-span-2 text-center font-mono text-sm font-bold text-brand-dark">{cells[5]}</div>
+                          <div className="col-span-2 text-center font-sans tabular-nums text-sm text-brand-gray clean-zero">{cells[4]}</div>
+                          <div className="col-span-2 text-center font-sans tabular-nums text-sm font-bold text-brand-dark clean-zero">{cells[5]}</div>
                         </>
                       ) : (
                         <>
@@ -815,14 +819,18 @@ export const PresentationView: React.FC<PresentationViewProps> = ({
                               cells[0]
                             )}
                           </div>
-                          <div className="col-span-4 font-medium text-brand-dark whitespace-pre-line">{cells[1]}</div>
+                          <div className="col-span-4 font-medium text-brand-dark whitespace-pre-line">
+                            {cells[1].split('\n').map((line, lidx) => (
+                              <div key={lidx}>{line}</div>
+                            ))}
+                          </div>
                           <div className="col-span-2 text-center">
                             <span className="bg-brand-dark/5 text-brand-dark px-2 py-1 rounded text-sm font-bold border border-brand-dark/10">
                               {cells[2]}
                             </span>
                           </div>
                           <div className="col-span-2 text-center text-brand-stone text-sm">{cells[3]}</div>
-                          <div className="col-span-2 text-center font-mono text-sm text-brand-gray">{cells[4]}</div>
+                          <div className="col-span-2 text-center font-sans tabular-nums text-sm text-brand-gray clean-zero">{cells[4]}</div>
                         </>
                       )}
                     </motion.div>
@@ -887,9 +895,9 @@ export const PresentationView: React.FC<PresentationViewProps> = ({
         <button 
           onClick={onClose} 
           className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+          title="Início"
         >
-          <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-          <span className="font-serif font-bold text-sm tracking-wide">Sair da Apresentação</span>
+          <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
         </button>
         
         <div className="flex-1 text-center hidden md:block">

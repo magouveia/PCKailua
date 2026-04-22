@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 interface OrganogramViewProps {
   onBack: () => void;
@@ -14,10 +14,9 @@ export const OrganogramView: React.FC<OrganogramViewProps> = ({ onBack }) => {
           <button 
             onClick={onBack}
             className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
-            title="Voltar"
+            title="Início"
           >
-            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="font-serif font-bold text-sm tracking-wide">Voltar</span>
+            <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
           </button>
           
           <div className="h-6 w-px bg-white/10 mx-2" />

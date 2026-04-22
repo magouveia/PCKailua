@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ChevronRight, Utensils, Coffee, Package, Wrench, Sparkles, ConciergeBell, Wine, ClipboardCheck, HeartHandshake, Briefcase, Building, Layers, Goal, CheckCircle2, Send, Users } from 'lucide-react';
+import { ArrowLeft, Home, ChevronRight, Utensils, Coffee, Package, Wrench, Sparkles, ConciergeBell, Wine, ClipboardCheck, HeartHandshake, Briefcase, Building, Layers, Goal, CheckCircle2, Send, Users } from 'lucide-react';
 import { functionalProfilesData, Sector, FunctionalProfile } from '../data/functionalProfiles';
 import { performanceIntro, performanceCriteriaData } from '../data/performanceCriteria';
 
@@ -30,6 +30,8 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
   // Form state
   const [employeeName, setEmployeeName] = useState('');
   const [evaluatorName, setEvaluatorName] = useState('');
+  const [evaluationType, setEvaluationType] = useState<'auto' | 'leader'>('leader');
+  const [quarter, setQuarter] = useState<string>('1º Trimestre');
   const [scores, setScores] = useState<Record<string, number>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string, url?: string } | null>(null);
@@ -63,10 +65,10 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
     e.preventDefault();
     if (!currentCriteria) return;
 
-    if (!employeeName.trim() || !evaluatorName.trim()) {
+    if (!employeeName.trim() || (evaluationType === 'leader' && !evaluatorName.trim())) {
       setSubmitMessage({ 
         type: 'error', 
-        text: 'Por favor, preenche o nome do colaborador e do avaliador.' 
+        text: evaluationType === 'leader' ? 'Por favor, preenche o nome do colaborador e do líder.' : 'Por favor, preenche o nome do colaborador.' 
       });
       return;
     }
@@ -93,7 +95,9 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
         },
         body: JSON.stringify({
           employeeName,
-          evaluatorName,
+          evaluatorName: evaluationType === 'auto' ? 'Autoavaliação' : evaluatorName,
+          evaluationType: evaluationType === 'auto' ? 'Autoavaliação' : 'Avaliação (Líder)',
+          quarter,
           roleTitle: selectedRole?.title,
           sectorName: selectedSector?.name,
           scores,
@@ -157,10 +161,17 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
             className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
             title="Voltar"
           >
-            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="font-serif font-bold text-sm tracking-wide">
-              {selectedRole ? 'Voltar aos Cargos' : selectedSector ? 'Voltar aos Setores' : showSectorSelection ? 'Voltar ao Início' : 'Voltar ao Início'}
-            </span>
+            {!showSectorSelection && !selectedSector && !selectedRole ? (
+              <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
+            ) : (
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+            )}
+            
+            {(!(!showSectorSelection && !selectedSector && !selectedRole)) && (
+              <span className="font-serif font-bold text-sm tracking-wide">
+                {selectedRole ? 'Funções' : selectedSector ? 'Setores' : ''}
+              </span>
+            )}
           </button>
           
           <div className="h-6 w-px bg-white/10 mx-2" />
@@ -239,9 +250,9 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
               <div className="flex justify-center">
                 <button
                   onClick={() => setShowSectorSelection(true)}
-                  className="bg-brand-tan text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-brand-tan/90 hover:-translate-y-1 transition-all flex items-center gap-2"
+                  className="bg-brand-tan text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest shadow-lg hover:bg-brand-dark hover:text-brand-tan border border-transparent hover:border-brand-tan transition-all duration-300 flex items-center gap-2"
                 >
-                  Continuar para Seleção de Setor <ChevronRight size={20} />
+                  Avançar <ChevronRight size={20} />
                 </button>
               </div>
             </>
@@ -328,27 +339,84 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                   {/* Identificação */}
                   <div className="bg-brand-cream rounded-2xl p-6 md:p-8 shadow-xl border border-brand-tan/10">
                     <h2 className="text-2xl font-serif font-bold text-brand-dark mb-6 border-b border-brand-tan/20 pb-4">Identificação</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div className="mb-6 space-y-6">
+                      {/* Trimestres */}
                       <div>
+                        <label className="block text-brand-stone text-sm font-bold mb-3 uppercase tracking-wider">Período de Avaliação</label>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                          {['1º Trimestre', '2º Trimestre', '3º Trimestre', '4º Trimestre'].map(q => (
+                            <label key={q} className={`flex items-center gap-2 p-3 rounded-lg border cursor-pointer transition-all ${quarter === q ? 'bg-brand-tan/10 border-brand-tan' : 'bg-white border-brand-stone/20 hover:border-brand-tan/50'}`}>
+                              <input 
+                                type="radio" 
+                                name="quarter" 
+                                value={q} 
+                                checked={quarter === q}
+                                onChange={(e) => setQuarter(e.target.value)}
+                                className="w-4 h-4 text-brand-tan focus:ring-brand-tan/50" 
+                              />
+                              <span className="text-sm font-bold text-brand-dark">{q}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Tipo de Avaliação */}
+                      <div>
+                        <label className="block text-brand-stone text-sm font-bold mb-3 uppercase tracking-wider">Tipo de Avaliação</label>
+                        <div className="flex flex-col md:flex-row gap-4">
+                          <label className={`flex items-center gap-3 p-4 rounded-xl border cursor-pointer transition-all flex-1 ${evaluationType === 'auto' ? 'bg-brand-tan/10 border-brand-tan shadow-sm' : 'bg-white border-brand-stone/20 hover:border-brand-tan/50'}`}>
+                            <input 
+                              type="radio" 
+                              name="evaluationType" 
+                              value="auto" 
+                              checked={evaluationType === 'auto'}
+                              onChange={(e) => {
+                                setEvaluationType('auto');
+                                setEvaluatorName(''); // Clear evaluator name when switching to auto
+                              }}
+                              className="w-5 h-5 text-brand-tan focus:ring-brand-tan/50" 
+                            />
+                            <span className="text-base font-bold text-brand-dark">Autoavaliação</span>
+                          </label>
+                          <label className={`flex items-center gap-3 p-4 rounded-xl border cursor-pointer transition-all flex-1 ${evaluationType === 'leader' ? 'bg-brand-tan/10 border-brand-tan shadow-sm' : 'bg-white border-brand-stone/20 hover:border-brand-tan/50'}`}>
+                            <input 
+                              type="radio" 
+                              name="evaluationType" 
+                              value="leader" 
+                              checked={evaluationType === 'leader'}
+                              onChange={(e) => setEvaluationType('leader')}
+                              className="w-5 h-5 text-brand-tan focus:ring-brand-tan/50" 
+                            />
+                            <span className="text-base font-bold text-brand-dark">Avaliação (pelo Líder)</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-brand-stone/10">
+                      {evaluationType === 'leader' && (
+                        <div className="md:col-span-2">
+                          <label className="block text-brand-stone text-sm font-bold mb-2">Nome do Líder</label>
+                          <input 
+                            type="text" 
+                            required
+                            value={evaluatorName}
+                            onChange={(e) => setEvaluatorName(e.target.value)}
+                            className="w-full p-4 rounded-xl border border-brand-stone/20 bg-white focus:outline-none focus:ring-2 focus:ring-brand-tan/50 text-brand-dark font-medium"
+                            placeholder="Insira o nome do líder..."
+                          />
+                        </div>
+                      )}
+                      <div className="md:col-span-2">
                         <label className="block text-brand-stone text-sm font-bold mb-2">Nome do Colaborador</label>
                         <input 
                           type="text" 
                           required
                           value={employeeName}
                           onChange={(e) => setEmployeeName(e.target.value)}
-                          className="w-full p-3 rounded-lg border border-brand-stone/20 bg-white focus:outline-none focus:ring-2 focus:ring-brand-tan/50"
-                          placeholder="Insere o nome..."
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-brand-stone text-sm font-bold mb-2">Nome do Avaliador</label>
-                        <input 
-                          type="text" 
-                          required
-                          value={evaluatorName}
-                          onChange={(e) => setEvaluatorName(e.target.value)}
-                          className="w-full p-3 rounded-lg border border-brand-stone/20 bg-white focus:outline-none focus:ring-2 focus:ring-brand-tan/50"
-                          placeholder="Insere o nome..."
+                          className="w-full p-4 rounded-xl border border-brand-stone/20 bg-white focus:outline-none focus:ring-2 focus:ring-brand-tan/50 text-brand-dark font-medium"
+                          placeholder="Insira o nome do colaborador..."
                         />
                       </div>
                     </div>

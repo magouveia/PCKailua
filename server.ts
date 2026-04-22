@@ -3,7 +3,7 @@ import path from "path";
 import nodemailer from "nodemailer";
 import * as xlsx from "xlsx";
 import PDFDocument from "pdfkit";
-import { performanceIntro } from "./src/data/performanceCriteria";
+import { performanceIntro } from "./src/data/performanceCriteria.ts";
 
 // Global transporter
 let cachedTransporter: nodemailer.Transporter | null = null;
@@ -68,15 +68,18 @@ async function startServer() {
 
   app.post("/api/evaluate", async (req, res) => {
     try {
-      const { employeeName, evaluatorName, roleTitle, sectorName, scores, criteria } = req.body;
+      const { employeeName, evaluatorName, evaluationType, quarter, roleTitle, sectorName, scores, criteria } = req.body;
 
       // 1. Generate Excel
       const excelData = [
+        { Categoria: "Informação", Critério: "Tipologia", Nota: evaluationType || 'Avaliação' },
+        { Categoria: "Informação", Critério: "Período", Nota: quarter || 'N/A' },
         { Categoria: "Informação", Critério: "Colaborador", Nota: employeeName },
         { Categoria: "Informação", Critério: "Avaliador", Nota: evaluatorName },
         { Categoria: "Informação", Critério: "Função", Nota: roleTitle },
         { Categoria: "Informação", Critério: "Setor", Nota: sectorName },
         { Categoria: "", Critério: "", Nota: "" },
+
         { Categoria: `Organizacional (${performanceIntro.criteriaTypes[0].weight})`, Critério: criteria.organizational, Nota: scores['org-0'] || 'N/A' },
         { Categoria: "", Critério: "", Nota: "" },
       ];
@@ -169,6 +172,14 @@ async function startServer() {
             <!-- Info Box -->
             <div style="background-color: #262626; border-radius: 8px; padding: 20px; margin-bottom: 40px; border-left: 4px solid #d97706;">
               <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 5px 0; color: #a8a29e; width: 100px;">Tipologia:</td>
+                  <td style="padding: 5px 0; color: #fef3c7; font-weight: bold;">${evaluationType || 'Avaliação'}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 5px 0; color: #a8a29e;">Periodo:</td>
+                  <td style="padding: 5px 0; color: #fef3c7; font-weight: bold;">${quarter || 'N/A'}</td>
+                </tr>
                 <tr>
                   <td style="padding: 5px 0; color: #a8a29e; width: 100px;">Colaborador:</td>
                   <td style="padding: 5px 0; color: #fef3c7; font-weight: bold;">${employeeName}</td>
