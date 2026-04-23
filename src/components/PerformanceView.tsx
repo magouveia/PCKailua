@@ -436,7 +436,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
                       
                       <div className="grid grid-cols-1 md:grid-cols-4 rounded-xl overflow-hidden shadow-lg mb-8">
                         {/* Level 1 */}
-                        <div className="bg-brand-tan p-6 text-white flex flex-col">
+                        <div className="bg-brand-dark p-6 text-white flex flex-col">
                           <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">1</div>
                           <div className="mb-4">
                             <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">INCUMPRIDOR</h3>
@@ -455,7 +455,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
                         </div>
 
                         {/* Level 2 */}
-                        <div className="bg-brand-gray p-6 text-white flex flex-col md:border-l border-white/10">
+                        <div className="bg-brand-stone p-6 text-white flex flex-col md:border-l border-white/10">
                           <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">2</div>
                           <div className="mb-4">
                             <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">CUMPRIDOR</h3>
@@ -474,7 +474,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
                         </div>
 
                         {/* Level 3 */}
-                        <div className="bg-brand-stone p-6 text-white flex flex-col md:border-l border-white/10">
+                        <div className="bg-brand-gray p-6 text-white flex flex-col md:border-l border-white/10">
                           <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">3</div>
                           <div className="mb-4">
                             <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">BOM</h3>
@@ -493,7 +493,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
                         </div>
 
                         {/* Level 4 */}
-                        <div className="bg-brand-dark p-6 text-white flex flex-col md:border-l border-white/10">
+                        <div className="bg-brand-tan p-6 text-white flex flex-col md:border-l border-white/10">
                           <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">4</div>
                           <div className="mb-4">
                             <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">EXCELENTE</h3>
