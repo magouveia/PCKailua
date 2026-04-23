@@ -12,7 +12,7 @@ import ReactFlow, {
   Edge
 } from 'reactflow';
 import 'reactflow/dist/style.css';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Home } from 'lucide-react';
 
 // --- JSON DATA WITH STATIC POSITIONS ---
 const rawNodes = [
@@ -200,9 +200,10 @@ const nodeTypes = { custom: CustomNode };
 // --- MAIN COMPONENT ---
 interface OrganogramaInterativoProps {
   onBack?: () => void;
+  onHome?: () => void;
 }
 
-export default function OrganogramaInterativo({ onBack }: OrganogramaInterativoProps) {
+export default function OrganogramaInterativo({ onBack, onHome }: OrganogramaInterativoProps) {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
@@ -322,18 +323,28 @@ export default function OrganogramaInterativo({ onBack }: OrganogramaInterativoP
     <div style={{ width: '100vw', height: '100vh', background: '#1a1a1a', position: 'relative' }}>
       {/* Navigation Header */}
       <div className="w-full p-4 z-10 flex items-center justify-between border-b border-brand-tan/20 bg-brand-dark/50 backdrop-blur-sm absolute top-0 left-0">
-        {onBack ? (
-          <button 
-            onClick={onBack}
-            className="flex items-center gap-2 text-brand-cream hover:text-brand-tan transition-colors font-bold uppercase tracking-widest text-sm"
-          >
-            <ArrowLeft size={20} /> Voltar
-          </button>
-        ) : (
-          <div className="w-20"></div>
-        )}
-        <h1 className="text-xl font-serif font-bold text-brand-cream">Organograma Interativo</h1>
-        <div className="w-20"></div>
+        <div className="flex items-center gap-2">
+          {onHome && (
+            <button 
+              onClick={onHome}
+              className="flex items-center justify-center w-10 h-10 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+              title="Início"
+            >
+              <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
+            </button>
+          )}
+          {onBack && (
+            <button 
+              onClick={onBack}
+              className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+              title="Voltar"
+            >
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+              <span className="font-serif font-bold text-sm tracking-wide">Voltar</span>
+            </button>
+          )}
+        </div>
+        <h1 className="text-xl font-serif font-bold text-brand-cream absolute left-1/2 -translate-x-1/2">Organograma Interativo</h1>
       </div>
 
       {/* CSS for Marching Ants Animation */}

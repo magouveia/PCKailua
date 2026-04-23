@@ -20,9 +20,10 @@ const getSectorIcon = (sect: string, size = 24) => {
 
 interface PerformanceViewProps {
   onBack: () => void;
+  onHome: () => void;
 }
 
-export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
+export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome }) => {
   const [showSectorSelection, setShowSectorSelection] = useState(false);
   const [selectedSector, setSelectedSector] = useState<Sector | null>(null);
   const [selectedRole, setSelectedRole] = useState<FunctionalProfile | null>(null);
@@ -155,24 +156,27 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
 
       {/* Header */}
       <div className="h-16 flex items-center px-6 border-b border-white/10 shrink-0 z-50 bg-brand-dark/80 backdrop-blur-md relative">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           <button 
-            onClick={handleBack}
-            className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
-            title="Voltar"
+            onClick={onHome}
+            className="flex items-center justify-center w-10 h-10 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+            title="Início"
           >
-            {!showSectorSelection && !selectedSector && !selectedRole ? (
-              <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
-            ) : (
-              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-            )}
-            
-            {(!(!showSectorSelection && !selectedSector && !selectedRole)) && (
-              <span className="font-serif font-bold text-sm tracking-wide">
-                {selectedRole ? 'Funções' : selectedSector ? 'Setores' : ''}
-              </span>
-            )}
+            <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
           </button>
+          
+          {(!(!showSectorSelection && !selectedSector && !selectedRole)) && (
+            <button 
+              onClick={handleBack}
+              className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+              title="Voltar"
+            >
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+              <span className="font-serif font-bold text-sm tracking-wide">
+                {selectedRole ? 'Funções' : selectedSector ? 'Setores' : 'Voltar'}
+              </span>
+            </button>
+          )}
           
           <div className="h-6 w-px bg-white/10 mx-2" />
           
@@ -335,7 +339,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
               </div>
 
               {currentCriteria ? (
-                <form onSubmit={handleSubmit} className="space-y-8">
+                <form onSubmit={handleSubmit} className="space-y-8 animate-fade-in">
                   {/* Identificação */}
                   <div className="bg-brand-cream rounded-2xl p-6 md:p-8 shadow-xl border border-brand-tan/10">
                     <h2 className="text-2xl font-serif font-bold text-brand-dark mb-6 border-b border-brand-tan/20 pb-4">Identificação</h2>
@@ -421,6 +425,121 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack }) => {
                       </div>
                     </div>
                   </div>
+
+                  {/* Best Practices for Leaders */}
+                  {evaluationType === 'leader' && (
+                    <div className="bg-brand-cream rounded-2xl p-6 md:p-8 shadow-xl border border-brand-tan/10 mb-8 animate-fade-in relative overflow-hidden">
+                      <div className="absolute inset-0 bg-dot-pattern opacity-5 pointer-events-none" />
+                      <h2 className="text-2xl font-serif font-bold text-center mb-6 text-brand-dark">
+                        Boas práticas para uma avaliação consistente
+                      </h2>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-4 rounded-xl overflow-hidden shadow-lg mb-8">
+                        {/* Level 1 */}
+                        <div className="bg-brand-tan p-6 text-white flex flex-col">
+                          <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">1</div>
+                          <div className="mb-4">
+                            <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">INCUMPRIDOR</h3>
+                            <p className="text-xs font-medium opacity-90 mt-1">(não faz / faz mal / cria problemas)</p>
+                          </div>
+                          <ul className="text-xs opacity-90 space-y-1.5 list-disc ml-4 mb-6 flex-1 font-medium">
+                            <li>Não cumpre o critério</li>
+                            <li>Comete erros frequentes</li>
+                            <li>Precisa de correção constante</li>
+                            <li>Impacta negativamente a operação</li>
+                          </ul>
+                          <div className="bg-black/15 p-3 rounded-lg text-xs font-semibold flex gap-2 items-start mt-auto">
+                            <span className="text-white shrink-0">✔</span>
+                            <span>Usar quando: "Não posso confiar que isto esteja bem feito"</span>
+                          </div>
+                        </div>
+
+                        {/* Level 2 */}
+                        <div className="bg-brand-gray p-6 text-white flex flex-col md:border-l border-white/10">
+                          <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">2</div>
+                          <div className="mb-4">
+                            <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">CUMPRIDOR</h3>
+                            <p className="text-xs font-medium opacity-90 mt-1">(faz o mínimo, mas sem consistência)</p>
+                          </div>
+                          <ul className="text-xs opacity-90 space-y-1.5 list-disc ml-4 mb-6 flex-1 font-medium">
+                            <li>Cumpre de forma irregular</li>
+                            <li>Precisa de supervisão</li>
+                            <li>Falha quando há pressão</li>
+                            <li>Não antecipa nem resolve</li>
+                          </ul>
+                          <div className="bg-black/15 p-3 rounded-lg text-xs font-semibold flex gap-2 items-start mt-auto">
+                            <span className="text-white shrink-0">✔</span>
+                            <span>Usar quando: "Às vezes faz bem, mas não é fiável"</span>
+                          </div>
+                        </div>
+
+                        {/* Level 3 */}
+                        <div className="bg-brand-stone p-6 text-white flex flex-col md:border-l border-white/10">
+                          <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">3</div>
+                          <div className="mb-4">
+                            <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">BOM</h3>
+                            <p className="text-xs font-medium opacity-90 mt-1">(faz bem e de forma consistente)</p>
+                          </div>
+                          <ul className="text-xs opacity-90 space-y-1.5 list-disc ml-4 mb-6 flex-1 font-medium">
+                            <li>Cumpre sempre o que é esperado</li>
+                            <li>Trabalha com autonomia</li>
+                            <li>Mantém qualidade mesmo com pressão</li>
+                            <li>Não precisa de ser acompanhado</li>
+                          </ul>
+                          <div className="bg-black/15 p-3 rounded-lg text-xs font-semibold flex gap-2 items-start mt-auto">
+                            <span className="text-white shrink-0">✔</span>
+                            <span>Usar quando: "Posso confiar — está sempre bem feito"</span>
+                          </div>
+                        </div>
+
+                        {/* Level 4 */}
+                        <div className="bg-brand-dark p-6 text-white flex flex-col md:border-l border-white/10">
+                          <div className="text-5xl font-bold mb-3 opacity-90 tracking-tighter">4</div>
+                          <div className="mb-4">
+                            <h3 className="font-bold text-sm uppercase tracking-wide leading-tight">EXCELENTE</h3>
+                            <p className="text-xs font-medium opacity-90 mt-1">(faz melhor do que o esperado e melhora a operação)</p>
+                          </div>
+                          <ul className="text-xs opacity-90 space-y-1.5 list-disc ml-4 mb-6 flex-1 font-medium">
+                            <li>Vai além do que é pedido</li>
+                            <li>Antecipa problemas e resolve antes de acontecerem</li>
+                            <li>Melhora processos, organização ou resultados</li>
+                            <li>Puxa pelo nível da equipa</li>
+                          </ul>
+                          <div className="bg-black/15 p-3 rounded-lg text-xs font-semibold flex gap-2 items-start mt-auto">
+                            <span className="text-white shrink-0">✔</span>
+                            <span>Usar quando: "Sem esta pessoa, a operação piorava"</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Dicas Finais */}
+                      <div className="bg-brand-tan/10 rounded-xl p-6 border border-brand-tan/20">
+                        <h4 className="text-lg font-bold text-brand-dark text-left mb-6">📌 Dicas finais</h4>
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-brand-tan text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-sm">1</div>
+                            <p className="text-sm text-brand-dark leading-relaxed"><strong className="uppercase tracking-wider">Não avaliar por simpatia</strong> (avalia o trabalho, não a pessoa)</p>
+                          </div>
+                          <div className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-brand-tan text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-sm">2</div>
+                            <p className="text-sm text-brand-dark leading-relaxed"><strong className="uppercase tracking-wider">Não usar momentos isolados</strong> (um erro ou um bom dia não define a avaliação)</p>
+                          </div>
+                          <div className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-brand-tan text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-sm">3</div>
+                            <p className="text-sm text-brand-dark leading-relaxed"><strong className="uppercase tracking-wider">Se tens dúvidas entre dois níveis</strong> (escolhe o mais baixo)</p>
+                          </div>
+                          <div className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-brand-tan text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-sm">4</div>
+                            <p className="text-sm text-brand-dark leading-relaxed"><strong className="uppercase tracking-wider">O "3" é o normal</strong> ("4" é raro e tem de ser genuinamente merecido)</p>
+                          </div>
+                          <div className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-brand-tan text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-sm">5</div>
+                            <p className="text-sm text-brand-dark leading-relaxed"><strong className="uppercase tracking-wider">Para "4" tem de haver provas</strong> (tens de conseguir dar exemplos)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Organizational Criteria */}
                   <div className="bg-brand-cream rounded-2xl p-6 md:p-8 shadow-xl border border-brand-tan/10">

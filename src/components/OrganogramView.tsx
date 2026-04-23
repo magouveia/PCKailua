@@ -3,21 +3,24 @@ import { Home } from 'lucide-react';
 
 interface OrganogramViewProps {
   onBack: () => void;
+  onHome?: () => void;
 }
 
-export const OrganogramView: React.FC<OrganogramViewProps> = ({ onBack }) => {
+export const OrganogramView: React.FC<OrganogramViewProps> = ({ onBack, onHome }) => {
   return (
     <div className="min-h-screen bg-brand-dark flex flex-col">
       {/* Header */}
       <div className="h-16 flex items-center px-6 border-b border-white/10 shrink-0 z-50 bg-brand-dark/80 backdrop-blur-md relative">
-        <div className="flex items-center gap-4">
-          <button 
-            onClick={onBack}
-            className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
-            title="Início"
-          >
-            <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
-          </button>
+        <div className="flex items-center gap-2">
+          {onHome && (
+            <button 
+              onClick={onHome}
+              className="flex items-center justify-center w-10 h-10 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+              title="Início"
+            >
+              <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
+            </button>
+          )}
           
           <div className="h-6 w-px bg-white/10 mx-2" />
           

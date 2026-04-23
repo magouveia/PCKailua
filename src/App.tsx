@@ -50,12 +50,16 @@ function App() {
             setCurrentView('home');
             setLastSlideIndex(0);
           }} 
+          onHome={() => {
+            setCurrentView('home');
+            setLastSlideIndex(0);
+          }}
           onNavigateToSector={handleNavigateToSector}
           onSlideChange={setLastSlideIndex}
         />
       );
     case 'organogram':
-      return <OrganogramView onBack={() => setCurrentView('home')} />;
+      return <OrganogramView onBack={() => setCurrentView('home')} onHome={() => setCurrentView('home')} />;
     case 'job-descriptions':
       return (
         <JobDescriptionsView 
@@ -68,13 +72,17 @@ function App() {
             }
             setSelectedSectorName(null);
           }} 
+          onHome={() => {
+            setCurrentView('home');
+            setSelectedSectorName(null);
+          }}
           initialSectorName={selectedSectorName || undefined}
         />
       );
     case 'performance':
-      return <PerformanceView onBack={() => setCurrentView('home')} />;
+      return <PerformanceView onBack={() => setCurrentView('home')} onHome={() => setCurrentView('home')} />;
     case 'org-chart':
-      return <OrganogramaInterativo onBack={() => setCurrentView('home')} />;
+      return <OrganogramaInterativo onBack={() => setCurrentView('home')} onHome={() => setCurrentView('home')} />;
     default:
       return <HomeView onNavigate={(view) => setCurrentView(view as ViewState)} />;
   }

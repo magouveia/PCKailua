@@ -19,10 +19,11 @@ const getSectorIcon = (sect: string, size = 24) => {
 
 interface JobDescriptionsViewProps {
   onBack: () => void;
+  onHome: () => void;
   initialSectorName?: string;
 }
 
-export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack, initialSectorName }) => {
+export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack, onHome, initialSectorName }) => {
   const [showIntro, setShowIntro] = useState(!initialSectorName);
   const [selectedSector, setSelectedSector] = useState<Sector | null>(() => {
     if (initialSectorName) {
@@ -60,24 +61,27 @@ export const JobDescriptionsView: React.FC<JobDescriptionsViewProps> = ({ onBack
 
       {/* Header */}
       <div className="h-16 flex items-center px-6 border-b border-white/10 shrink-0 z-50 bg-brand-dark/80 backdrop-blur-md relative">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           <button 
-            onClick={handleBack}
-            className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
-            title="Voltar"
+            onClick={onHome}
+            className="flex items-center justify-center w-10 h-10 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+            title="Início"
           >
-            {showIntro && !selectedSector && !selectedRole ? (
-              <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
-            ) : (
-              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-            )}
-            
-            {!(showIntro && !selectedSector && !selectedRole) && (selectedSector || selectedRole) && (
-              <span className="font-serif font-bold text-sm tracking-wide">
-                {selectedRole ? 'Funções' : selectedSector ? (initialSectorName ? 'Apresentação' : 'Setores') : ''}
-              </span>
-            )}
+            <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
           </button>
+          
+          {!(showIntro && !selectedSector && !selectedRole) && (
+            <button 
+              onClick={handleBack}
+              className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+              title="Voltar"
+            >
+              <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+              <span className="font-serif font-bold text-sm tracking-wide">
+                {selectedRole ? 'Funções' : selectedSector ? (initialSectorName ? 'Apresentação' : 'Setores') : 'Voltar'}
+              </span>
+            </button>
+          )}
           
           <div className="h-6 w-px bg-white/10 mx-2" />
           
