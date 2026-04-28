@@ -314,84 +314,60 @@ export const functionalProfilesData: Sector[] = [
       },
       {
         title: 'Assistente de Vendas de 1ª',
-        mission: 'Desenvolver a atividade comercial da empresa através da captação e gestão de clientes, assegurando a concretização de eventos e contribuindo para o crescimento da atividade.',
+        mission: 'Desenvolver e gerir a atividade comercial com autonomia, assegurando captação de clientes, conversão de oportunidades e preparação eficaz dos eventos, contribuindo diretamente para o crescimento do negócio.',
         responsibilities: [
-          'Identificar e desenvolver oportunidades comerciais.',
-          'Gerir e acompanhar processos comerciais desde o primeiro contacto até à confirmação do evento.',
-          'Elaborar propostas comerciais para eventos e serviços.',
-          'Negociar condições comerciais dentro dos limites definidos.',
-          'Acompanhar clientes desde o pedido inicial até à realização do evento.',
-          'Articular com as equipas operacionais para garantir a execução dos eventos.',
-          'Apoiar a operação sempre que necessário, garantindo disponibilidade para colaborar em funções operacionais.'
+          'Desenvolver e gerir contactos comerciais com autonomia',
+          'Acompanhar os processos comerciais do primeiro contacto até à confirmação',
+          'Elaborar propostas comerciais garantindo coerência e viabilidade',
+          'Negociar condições dentro dos limites definidos',
+          'Garantir a passagem completa e clara de informação à operação',
+          'Acompanhar clientes garantindo consistência na experiência',
+          'Identificar oportunidades de melhoria na atividade comercial',
+          'Apoiar a organização do trabalho da equipa comercial'
         ],
         technicalSkills: [
-          'Prospeção comercial e desenvolvimento de clientes.',
-          'Elaboração de propostas comerciais.',
-          'Negociação básica de condições comerciais.',
-          'Gestão de processos comerciais.',
+          'Gestão autónoma de processos comerciais',
+          'Elaboração e validação de propostas',
+          'Negociação comercial',
+          'Organização e acompanhamento de pipeline/pipedrive',
+          'Conhecimento aprofundado da oferta e operação',
           'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
         ],
         behavioralSkills: [
-          'Capacidade de persuasão.',
-          'Orientação para resultados.',
-          'Organização e acompanhamento de processos.',
-          'Comunicação profissional e boa apresentação.',
-          'Proatividade comercial.'
+          'Orientação para resultados',
+          'Capacidade de influência',
+          'Organização e consistência',
+          'Proatividade',
+          'Responsabilidade sobre o resultado'
         ]
       },
       {
         title: 'Rececionista de 1ª',
-        mission: 'Garantir a organização da receção e a gestão eficaz das reservas, assegurando um acolhimento consistente e contribuindo para a boa organização da sala.',
+        mission: 'Garantir a gestão eficaz da receção e reservas, assegurando organização, fluidez da operação e uma experiência consistente do cliente desde o primeiro contacto.',
         responsibilities: [
-          'Coordenar a gestão diária das reservas.',
-          'Organizar a distribuição de mesas de acordo com a operação.',
-          'Assegurar o acolhimento de clientes à chegada.',
-          'Gerir alterações ou situações imprevistas relacionadas com reservas.',
-          'Articular com a equipa das mesas para garantir fluxo equilibrado de clientes.',
-          'Apoiar rececionistas menos experientes na gestão do serviço.'
+          'Gerir reservas com autonomia e organização',
+          'Coordenar a distribuição de clientes garantindo o equilíbrio da operação',
+          'Assegurar um acolhimento consistente e profissional',
+          'Antecipar necessidades da operação com base nas reservas',
+          'Resolver situações de reservas e atendimento com autonomia',
+          'Garantir uma comunicação eficaz com a operação da frente',
+          'Identificar melhorias na gestão de reservas e atendimento',
+          'Apoiar a organização do trabalho da equipa de receção'
         ],
         technicalSkills: [
-          'Gestão avançada de reservas.',
-          'Organizar a distribuição de reservas garantindo equilíbrio no fluxo de clientes.',
-          'Utilização de sistemas de reservas.',
-          'Conhecimento da operação das mesas.',
+          'Gestão avançada de reservas',
+          'Organização de fluxos de clientes',
+          'Conhecimento da operação de sala',
+          'Utilização de sistemas de reservas',
+          'Capacidade de antecipação operacional',
           'Inglês fluente (obrigatório) / Francês funcional (valorizado)'
         ],
         behavioralSkills: [
-          'Capacidade de organização e antecipação.',
-          'Comunicação clara com equipa e clientes.',
-          'Gestão de situações de pressão.',
-          'Postura profissional e acolhedora.',
-          'Sentido de responsabilidade.',
-          'Boa apresentação.'
-        ]
-      },
-      {
-        title: 'Subgerente',
-        mission: 'Apoiar o Gerente na coordenação da equipa, assegurando desempenho comercial, qualidade do atendimento e alinhamento dos processos de receção e venda.',
-        responsibilities: [
-          'Coordenar equipa comercial e de receção',
-          'Garantir padrões elevados de atendimento ao cliente',
-          'Acompanhar desempenho individual e coletivo',
-          'Resolver situações comerciais e de atendimento complexas',
-          'Garantir alinhamento entre receção, comercial e operação na preparação e acompanhamento de eventos.',
-          'Apoiar desenvolvimento e formação da equipa'
-        ],
-        technicalSkills: [
-          'Gestão operacional comercial',
-          'Supervisão de atendimento e receção',
-          'Liderança de equipas',
-          'Análise de indicadores de desempenho',
-          'Conhecimento aprofundado de processos comerciais',
-          'Inglês fluente (obrigatório) / Francês fluente (valorizado)'
-        ],
-        behavioralSkills: [
-          'Liderança',
+          'Organização e antecipação',
+          'Comunicação clara e empática',
+          'Gestão de pressão',
           'Capacidade de decisão',
-          'Comunicação clara',
-          'Orientação para resultados',
-          'Sentido de responsabilidade',
-          'Boa apresentação'
+          'Responsabilidade pela experiência do cliente'
         ]
       },
       {
