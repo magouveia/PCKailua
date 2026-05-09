@@ -7,9 +7,10 @@ import { OrganogramView } from './components/OrganogramView';
 import { JobDescriptionsView } from './components/JobDescriptionsView';
 import { PerformanceView } from './components/PerformanceView';
 import OrganogramaInterativo from './components/OrganogramaInterativo';
+import { RecruitmentView } from './components/RecruitmentView';
 import { Loader2 } from 'lucide-react';
 
-type ViewState = 'home' | 'career' | 'organogram' | 'job-descriptions' | 'performance' | 'org-chart';
+type ViewState = 'home' | 'career' | 'organogram' | 'job-descriptions' | 'performance' | 'org-chart' | 'recruitment';
 
 function App() {
   const [slides, setSlides] = useState<Slide[]>([]);
@@ -83,6 +84,8 @@ function App() {
       return <PerformanceView onBack={() => setCurrentView('home')} onHome={() => setCurrentView('home')} />;
     case 'org-chart':
       return <OrganogramaInterativo onBack={() => setCurrentView('home')} onHome={() => setCurrentView('home')} />;
+    case 'recruitment':
+      return <RecruitmentView onBack={() => setCurrentView('home')} onHome={() => setCurrentView('home')} />;
     default:
       return <HomeView onNavigate={(view) => setCurrentView(view as ViewState)} />;
   }

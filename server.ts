@@ -260,6 +260,82 @@ async function startServer() {
     }
   });
 
+  app.post("/api/recruitment", async (req, res) => {
+    try {
+      const { nome, area, data, responsavel, checklist, observacoes, decisao } = req.body;
+
+      const htmlEmail = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+        </head>
+        <body style="margin: 0; padding: 0; background-color: #f7f3ed; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1a1a1a;">
+          <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 40px; border-radius: 8px; margin-top: 40px; border-top: 6px solid #d97706;">
+            <div style="text-align: center; margin-bottom: 30px;">
+              <h1 style="color: #1a1a1a; font-size: 24px; margin: 0 0 10px 0;">Checklist DNA de Seleção</h1>
+              <h2 style="color: #78716c; font-size: 16px; margin: 0; font-weight: normal;">Novo Registo - ${nome}</h2>
+            </div>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+              <tr><td style="padding: 8px 0; color: #78716c; width: 120px;">Candidato:</td><td style="padding: 8px 0; font-weight: bold; color: #1a1a1a;">${nome}</td></tr>
+              <tr><td style="padding: 8px 0; color: #78716c;">Área:</td><td style="padding: 8px 0; font-weight: bold; color: #1a1a1a;">${area}</td></tr>
+              <tr><td style="padding: 8px 0; color: #78716c;">Data:</td><td style="padding: 8px 0; font-weight: bold; color: #1a1a1a;">${data}</td></tr>
+              <tr><td style="padding: 8px 0; color: #78716c;">Responsável:</td><td style="padding: 8px 0; font-weight: bold; color: #1a1a1a;">${responsavel}</td></tr>
+            </table>
+
+            <h3 style="color: #d97706; font-size: 16px; border-bottom: 1px solid #e5e5e5; padding-bottom: 5px;">Verificações</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+              ${checklist.map((item: any, idx: number) => `
+                <tr>
+                  <td style="padding: 10px 0; border-bottom: 1px solid #f5f5f5; color: #333; font-size: 14px;">${idx + 1}. ${item.question}</td>
+                  <td style="padding: 10px 0; border-bottom: 1px solid #f5f5f5; width: 50px; text-align: right; font-weight: bold; color: ${item.answer === 'Sim' ? '#16a34a' : '#dc2626'};">${item.answer}</td>
+                </tr>
+              `).join('')}
+            </table>
+            
+            <h3 style="color: #d97706; font-size: 16px;">Observações</h3>
+            <p style="background-color: #f5f5f5; padding: 15px; border-radius: 6px; color: #333; font-size: 14px; white-space: pre-wrap;">${observacoes || 'Nenhuma observação.'}</p>
+            
+            <div style="margin-top: 30px; padding: 20px; text-align: center; border-radius: 6px; border: 2px solid ${decisao === 'Selecionado' ? '#16a34a' : '#dc2626'}; background-color: ${decisao === 'Selecionado' ? '#f0fdf4' : '#fef2f2'};">
+              <h3 style="margin: 0; color: ${decisao === 'Selecionado' ? '#16a34a' : '#dc2626'}; font-size: 20px;">DECISÃO FINAL: ${decisao.toUpperCase()}</h3>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px; color: #a8a29e; font-size: 12px;">Enviado via app de Avaliação Kailua.</p>
+          </div>
+        </body>
+        </html>
+      `;
+
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer re_BK2qGvDV_8bZth9wZS5MASdjhm1NcT9bq'
+        },
+        body: JSON.stringify({
+          from: 'Kailua Recrutamento <inscricoes@migasapp.net>',
+          to: 'daniela.gouveia@kailua.pt',
+          subject: `Formulário de Recrutamento - ${nome} (${decisao})`,
+          html: htmlEmail
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Resend API Error:", errorData);
+        return res.status(500).json({ success: false, error: "Erro na API do Resend." });
+      }
+
+      const dataRes = await response.json();
+      res.json({ success: true, data: dataRes });
+
+    } catch (error) {
+      console.error("Error generating recruitment email:", error);
+      res.status(500).json({ success: false, error: "Erro ao processar as inscrições" });
+    }
+  });
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const { createServer: createViteServer } = await import("vite");
