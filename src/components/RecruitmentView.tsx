@@ -77,46 +77,63 @@ export const RecruitmentView: React.FC<RecruitmentViewProps> = ({ onBack, onHome
   };
 
   return (
-    <div className="min-h-screen bg-brand-dark flex flex-col p-4 md:p-8 relative overflow-x-hidden">
+    <div className="flex flex-col h-screen bg-brand-dark relative overflow-hidden">
       {/* Background Elements */}
-      <div className="fixed inset-0 bg-dot-pattern opacity-10 pointer-events-none" />
-      
+      <div className="absolute inset-0 bg-dot-pattern opacity-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-brand-dark via-transparent to-brand-dark pointer-events-none" />
+
       {/* Header */}
-      <div className="w-full flex items-center justify-between mb-8 z-10 sticky top-0 bg-brand-dark/95 backdrop-blur py-4 -mx-4 px-4 md:-mx-8 md:px-8 border-b border-brand-stone/10">
-        <div className="flex gap-4">
-          <button
-            onClick={onBack}
-            className="flex items-center gap-2 text-brand-stone hover:text-brand-cream transition-colors duration-300 font-sans text-sm uppercase tracking-widest"
-          >
-            <ArrowLeft size={16} /> Voltar
-          </button>
-          <button
+      <div className="h-16 flex items-center px-6 border-b border-white/10 shrink-0 z-50 bg-brand-dark/80 backdrop-blur-md relative">
+        <div className="flex items-center gap-2">
+          <button 
             onClick={onHome}
-            className="flex items-center gap-2 text-brand-stone hover:text-brand-cream transition-colors duration-300 font-sans text-sm uppercase tracking-widest ml-4"
+            className="flex items-center justify-center w-10 h-10 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+            title="Início"
           >
-            <Home size={16} /> Início
+            <Home size={18} className="group-hover:-translate-y-0.5 transition-transform" />
           </button>
+          
+          <button 
+            onClick={onBack}
+            className="flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-cream rounded-full hover:bg-white/10 transition-colors border border-white/10 group"
+            title="Voltar"
+          >
+            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+            <span className="font-serif font-bold text-sm tracking-wide">
+              Voltar
+            </span>
+          </button>
+          
+          <div className="h-6 w-px bg-white/10 mx-2" />
+          
+          <h2 className="text-lg font-serif font-bold text-brand-cream tracking-tight">
+            Recrutamento
+          </h2>
         </div>
-        <img 
-          src="https://imgur.com/yykIOZ8.png" 
-          alt="Kailua Logo" 
-          className="h-8 object-contain mix-blend-screen opacity-90"
-          referrerPolicy="no-referrer"
-        />
+
+        <div className="flex-1 text-center hidden md:block">
+          <span className="text-brand-cream/40 text-[10px] uppercase tracking-[0.4em] font-sans">
+            Kailua Journey • Recrutamento
+          </span>
+        </div>
       </div>
 
       {/* Main Form Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="max-w-4xl w-full mx-auto relative z-10"
-      >
-        <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-5xl font-serif font-bold text-brand-cream mb-4">
-            Checklist DNA de Seleção
+      <div className="flex-1 overflow-y-auto p-4 md:p-8 z-10 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-4xl w-full mx-auto relative z-10"
+        >
+          <div className="text-center mb-10">
+          <h1 className="text-3xl md:text-5xl font-serif font-bold text-brand-cream mb-2">
+            Checklist
           </h1>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-cream/90 mb-4">
+            DNA de Seleção
+          </h2>
           <p className="text-brand-stone max-w-2xl mx-auto">
-            Preencha os dados do candidato e avalie os critérios de recrutamento.
+            Preenche os dados do candidato e avalia os critérios de seleção
           </p>
         </div>
 
@@ -296,7 +313,8 @@ export const RecruitmentView: React.FC<RecruitmentViewProps> = ({ onBack, onHome
             </button>
           </form>
         )}
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
