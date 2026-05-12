@@ -256,7 +256,6 @@ export const RecruitmentView: React.FC<RecruitmentViewProps> = ({ onBack, onHome
                 value={formData.observacoes}
                 onChange={e => setFormData({ ...formData, observacoes: e.target.value })}
                 className="w-full bg-white border-2 border-brand-stone/20 rounded-xl px-4 py-3 text-brand-dark focus:border-brand-tan focus:ring-0 outline-none transition-colors resize-y"
-                placeholder="Ex: Organizada, focada na limpeza, um pouco mais reservada..."
               />
             </div>
 
