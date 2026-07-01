@@ -135,7 +135,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
                 A DECORRER
               </span>
               <span className="text-green-600/90 font-stamp text-[10px] font-bold tracking-widest uppercase whitespace-nowrap leading-none">
-                2º SEMESTRE
+                2º TRIMESTRE
               </span>
             </div>
           </div>
