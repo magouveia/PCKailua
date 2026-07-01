@@ -130,9 +130,12 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           
           {/* Stamp "A DECORRER" */}
           <div className="absolute top-6 right-6 rotate-12 z-20 pointer-events-none opacity-70 mix-blend-multiply hidden md:block">
-            <div className="border-2 border-red-600/80 px-2 py-0.5 rounded-sm transform scale-75">
-              <span className="text-red-600/90 font-stamp text-xs font-bold tracking-widest uppercase whitespace-nowrap">
-                ENCERRADO
+            <div className="border-2 border-green-600/80 px-2 py-1 rounded-sm transform scale-75 flex flex-col items-center justify-center">
+              <span className="text-green-600/90 font-stamp text-xs font-bold tracking-widest uppercase whitespace-nowrap leading-none mb-0.5">
+                A DECORRER
+              </span>
+              <span className="text-green-600/90 font-stamp text-[10px] font-bold tracking-widest uppercase whitespace-nowrap leading-none">
+                2º SEMESTRE
               </span>
             </div>
           </div>
