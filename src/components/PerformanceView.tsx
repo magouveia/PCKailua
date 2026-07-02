@@ -31,6 +31,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
   // Form state
   const [employeeName, setEmployeeName] = useState('');
   const [evaluatorName, setEvaluatorName] = useState('');
+  const [evaluatorEmail, setEvaluatorEmail] = useState('');
   const [evaluationType, setEvaluationType] = useState<'auto' | 'leader'>('leader');
   const [quarter, setQuarter] = useState<string>('1º Trimestre');
   const [scores, setScores] = useState<Record<string, number>>({});
@@ -97,6 +98,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
         body: JSON.stringify({
           employeeName,
           evaluatorName: evaluationType === 'auto' ? 'Autoavaliação' : evaluatorName,
+          evaluatorEmail,
           evaluationType: evaluationType === 'auto' ? 'Autoavaliação' : 'Avaliação (Líder)',
           quarter,
           roleTitle: selectedRole?.title,
@@ -412,7 +414,7 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
                           />
                         </div>
                       )}
-                      <div className="md:col-span-2">
+                      <div className="md:col-span-1">
                         <label className="block text-brand-stone text-sm font-bold mb-2">Nome do Colaborador</label>
                         <input 
                           type="text" 
@@ -421,6 +423,16 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
                           onChange={(e) => setEmployeeName(e.target.value)}
                           className="w-full p-4 rounded-xl border border-brand-stone/20 bg-white focus:outline-none focus:ring-2 focus:ring-brand-tan/50 text-brand-dark font-medium"
                           placeholder="Insira o nome do colaborador..."
+                        />
+                      </div>
+                      <div className="md:col-span-1">
+                        <label className="block text-brand-stone text-sm font-bold mb-2">Email (Opcional, para receber cópia)</label>
+                        <input 
+                          type="email" 
+                          value={evaluatorEmail}
+                          onChange={(e) => setEvaluatorEmail(e.target.value)}
+                          className="w-full p-4 rounded-xl border border-brand-stone/20 bg-white focus:outline-none focus:ring-2 focus:ring-brand-tan/50 text-brand-dark font-medium"
+                          placeholder="Insira o email para receber a avaliação..."
                         />
                       </div>
                     </div>

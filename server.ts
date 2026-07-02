@@ -20,7 +20,7 @@ async function getTransporter() {
     secure: false, // TLS is used automatically on port 587
     auth: {
       user: "resend",
-      pass: "re_jiD78FDe_Biy5csyMJgvaesz4VE6yNqcr",
+      pass: "re_BK2qGvDV_8bZth9wZS5MASdjhm1NcT9bq",
     },
   });
   
@@ -68,7 +68,7 @@ async function startServer() {
 
   app.post("/api/evaluate", async (req, res) => {
     try {
-      const { employeeName, evaluatorName, evaluationType, quarter, roleTitle, sectorName, scores, criteria } = req.body;
+      const { employeeName, evaluatorName, evaluatorEmail, evaluationType, quarter, roleTitle, sectorName, scores, criteria } = req.body;
 
       // 1. Generate Excel
       const excelData = [
@@ -229,7 +229,8 @@ async function startServer() {
         from: '"Kailua RH (Sistema)" <rh@migasapp.net>',
         // Mas quando a Daniela responder ao email, a resposta vai para o email oficial
         replyTo: 'rh@kailua.pt',
-        to: "daniela.gouveia@kailua.pt", 
+        to: "daniela.gouveia@kailua.pt",
+        cc: evaluatorEmail ? evaluatorEmail : undefined,
         subject: `Avaliação de Desempenho - ${employeeName}`,
         text: `Segue em anexo a avaliação de desempenho de ${employeeName} para a função de ${roleTitle}.`,
         html: htmlEmail,
