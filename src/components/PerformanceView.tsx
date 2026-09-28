@@ -253,6 +253,12 @@ export const PerformanceView: React.FC<PerformanceViewProps> = ({ onBack, onHome
                 </div>
               </div>
 
+              {performanceIntro.note && (
+                <div className="text-xs text-brand-stone/80 text-center max-w-3xl mx-auto -mt-6 mb-10 italic leading-relaxed px-4">
+                  {performanceIntro.note}
+                </div>
+              )}
+
               <div className="flex justify-center">
                 <button
                   onClick={() => setShowSectorSelection(true)}

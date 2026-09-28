@@ -6,7 +6,7 @@ export interface PerformanceCriteria {
 }
 
 export const performanceIntro = {
-  objective: "A avaliação de desempenho tem como objetivo acompanhar o desenvolvimento dos colaboradores, garantir padrões consistentes de trabalho e apoiar decisões de progressão e atualização salarial.\n\nA avaliação é realizada trimestralmente, sendo o resultado anual obtido pela análise conjunta das 4 avaliações do ano.",
+  objective: "A avaliação de desempenho tem como objetivo acompanhar o desenvolvimento dos colaboradores, garantir padrões consistentes de trabalho e apoiar decisões de progressão e atualização salarial.\n\nA avaliação é realizada trimestralmente, sendo o resultado anual obtido pela média das 4 avaliações do ano. A classificação anual é atribuída de acordo com a escala de avaliação definida, correspondendo a classificação de Excelente a uma média anual igual ou superior a 3,75.*",
   scale: [
     { level: 1, name: "Incumpridor", description: "Não cumpre os requisitos" },
     { level: 2, name: "Cumpridor", description: "Cumpre os requisitos mínimos" },
@@ -18,7 +18,8 @@ export const performanceIntro = {
     { type: "Técnicos", weight: "60%", description: "Avaliam a capacidade para executar corretamente as tarefas da tua função." },
     { type: "Comportamentais", weight: "30%", description: "Avaliam a forma como trabalha com colegas, clientes e liderança." }
   ],
-  calculation: "A nota final resulta da média de cada grupo de critérios, aplicada ao respetivo peso."
+  calculation: "A nota final resulta da média de cada grupo de critérios, aplicada ao respetivo peso.",
+  note: "*Para efeitos de atribuição da classificação, é considerado o valor integral da média, sem arredondamento. O arredondamento a duas casas decimais é utilizado apenas para efeitos de apresentação."
 };
 
 export const performanceCriteriaData: PerformanceCriteria[] = [
